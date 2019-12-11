@@ -1,0 +1,137 @@
+// Toggle button variables;
+$blocx-toggler-padding:2px !default;
+$blocx-toggler-position:relative !default;
+$blocx-toggler-label-user-select:none !default;
+$blocx-toggler-label-display:flex !default;
+$blocx-toggler-label-align-items:center !default;
+$blocx-toggler-label-cursor:pointer !default;
+$blocx-toggler-checked-before-transform:translateX(-100%) !default;
+$blocx-toggler-checked-before-left:calc(100% - 2px) !default;
+$blocx-toggler-checked-before-animation:moveCircle2 .2s ease 1 !default;
+$blocx-toggler-before-display:block !default;
+$blocx-toggler-before-background:#ffffff !default;
+$blocx-toggler-before-position:relative !default;
+$blocx-toggler-before-left:2px !default;
+$blocx-toggler-label-color:#2699FB !default;
+
+$blocx-toggle-inner-circle-height:20px !default;
+$blocx-toggle-inner-circle-width:20px !default;
+$blocx-toggle-inner-circle-top:2px !default;
+$blocx-toggle-bg-color:#E1E1E1;
+$blocx-toggle-on-color:#16B5FF;
+$blocx-toggle-i-color:#ffffff;
+$blocx-toggle-variant-color:#B0ADAB;
+
+.blocx-toggle {
+
+    @mixin toggler($size: 24px,
+        $transition: .2s ease-out,
+        $color-bg: $blocx-toggle-bg-color,
+        $color-on: $blocx-toggle-on-color) {
+        // background: $color-bg;
+        background:$blocx-toggle-variant-color;
+        border-radius: $size/2;
+        width: $size*2;
+        height: $size;
+        transition: $transition;
+
+        &__label input:checked~.toggler {
+            background: $color-on;
+
+            // &::after{
+            //     content: "\f00c";
+            //     color:#ffffff;
+            // }
+            img{
+                display: block;
+                width:12px;
+                height:9px;
+            }
+        }
+
+        &::before {
+            border-radius: $size;
+            width:20px;
+            height:20px;
+            transition: $transition;
+        }
+
+    }
+
+    .toggler {
+        // padding: $blocx-toggler-padding;
+        position: $blocx-toggler-position;
+
+        img.tick-mark {
+            top: 7px;
+            display: none;
+            position: absolute;
+            color: $blocx-toggle-i-color;
+            font-size: 13px;
+            left: 9px;
+            width:12px;
+            height:9px;
+        }
+
+        @keyframes moveCircle1 {
+            50% {
+                padding: 0 12%;
+            }
+        }
+
+        @keyframes moveCircle2 {
+            50% {
+                padding: 0 12%;
+            }
+        }
+
+        &__label {
+            user-select: $blocx-toggler-label-user-select;
+            display: $blocx-toggler-label-display;
+            align-items: $blocx-toggler-label-align-items;
+            cursor: $blocx-toggler-label-cursor;
+
+            span {
+                margin-right: 1em;
+            }
+
+            input {
+                &:checked {
+                    ~.toggler {
+                        &::before {
+                            transform: $blocx-toggler-checked-before-transform;
+                            left: $blocx-toggler-checked-before-left;
+                            animation: $blocx-toggler-checked-before-animation;
+                        }
+                        img{
+                            display: block;
+                            width:12px;
+                            height:9px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &::before {
+            content: '';
+            display: $blocx-toggler-before-display;
+            background: $blocx-toggler-before-background;
+            position: $blocx-toggler-before-position;
+            left: $blocx-toggler-before-left;
+            top: $blocx-toggle-inner-circle-top;
+            animation: $blocx-toggler-checked-before-animation;
+        }
+    }
+
+    // extend "toggler" with specific settings
+    .toggler {
+        @include toggler(24px, .2s cubic-bezier(.7, .15, .36, 1), $blocx-toggler-label-color, $primary)
+    }
+
+    .disabled {
+        pointer-events: none;
+        cursor: not-allowed;
+        opacity: .5;
+    }
+}

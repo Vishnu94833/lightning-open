@@ -1,0 +1,110 @@
+// Alert component variables
+$blocx-alert-position:relative !default;
+$blocx-alert-padding:13px 50px !default;
+$blocx-alert-color:#ffffff !default;
+$blocx-alert-font-size:16px !default;
+$blocx-alert-border-radius:30px !default;
+$blocx-alert-span-line-height:22px !default;
+$blocx-alert-span-font-size:16px!default;
+$blocx-alert-p-margin:0 !default;
+$blocx-alert-p-font-size:12px !default;
+$blocx-alert-p-line-height:16px !default;
+$blocx-alert-warning-background:#FFB936 !default;
+$blocx-alert-warning-color:#2B2826 !default;
+$blocx-alert-warning-i-font-size:24px !default;
+$blocx-alert-color2:#A6ADB4;
+$blocx-alert-color3:#10AD67;
+$blocx-alert-color4:#FF4E4E;
+// Alert component mixins
+@mixin center-position($top, $left, $right) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    right: $right;
+    transform: translate(-$top, -$top)
+}
+
+@mixin icon-style($color, $background, $border-radius) {
+    color: $color;
+    background: $background;
+    border-radius: $border-radius;
+}
+
+// Alert component styles start
+.blocx-alert {
+    position: $blocx-alert-position;
+    padding: $blocx-alert-padding;
+    color: $blocx-alert-color;
+    font-size: $blocx-alert-font-size;
+    border-radius: $blocx-alert-border-radius;
+
+    
+    span {
+        line-height: $blocx-alert-span-line-height;
+        font-size:$blocx-alert-span-font-size;
+    }
+
+    i {
+        @include center-position(50%, 30px, none);
+    }
+
+    img {
+        @include center-position(50%, none, 2%);
+    }
+
+    p {
+        margin: $blocx-alert-p-margin;
+        font-size: $blocx-alert-p-font-size;
+        line-height: $blocx-alert-p-line-height;
+    }
+
+    &-success {
+        background: $blocx-alert-color3;
+
+        i {
+            @include icon-style($blocx-alert-color3, $blocx-alert-color, 50%);
+            padding: 5px;
+            font-size: 14px;
+        }
+    }
+
+    &-success2 {
+        background: $blocx-alert-color3;
+
+        i {
+            @include icon-style($blocx-alert-color3, $blocx-alert-color, 50%);
+            padding: 5px;
+            font-size: 14px;
+        }
+    }
+    &-error {
+        background: $blocx-alert-color4;
+
+        i {
+            @include icon-style($blocx-alert-color, none, 0);
+            font-size: 25px;
+        }
+    }
+
+    &-info {
+        background: $blocx-alert-color2;
+
+        i {
+            @include icon-style($blocx-alert-color2, $blocx-alert-color, 50%);
+            padding: 5px 10px;
+        }
+    }
+
+
+    &-warning {
+        background: $blocx-alert-warning-background;
+        color: $blocx-alert-warning-color;
+
+        i {
+            color: $blocx-alert-warning-color;
+            font-size: $blocx-alert-warning-i-font-size;
+        }
+    }
+}
+
+// Alert component styles end

@@ -1,0 +1,70 @@
+// blocx-breadcrumbs variables
+
+$blocx-breadcrumb-padding-y:              12px !default;
+$blocx-breadcrumb-padding-x:              16px !default;
+$blocx-breadcrumb-item-padding-x:         8px !default;
+$blocx-breadcrumb-item-color:#3E3E3C;
+$blocx-breadcrumb-margin-bottom:          0px !default;
+
+$blocx-breadcrumb-color:                  #2699FB !default;
+$blocx-breadcrumb-bg:                     transparent !default;
+$blocx-breadcrumb-divider-color:          #202124 !default;
+$blocx-breadcrumb-active-color:           #A6ADB4 !default;
+$blocx-breadcrumb-divider:                quote(">") !default;
+
+$blocx-breadcrumb-border-radius:          $border-radius !default;
+$blocx-breadcrumb-item-padding: 8px!default;
+$blocx-breadcrumb-item-padding:8px!default;
+$blocx-breadcrumb-list-style:none!default;
+$blocx-breadcrumb-display:flex!default;
+$blocx-breadcrumb-item-text-decoration:none!default;
+// blocx-breadcrumbs styles
+.blocx-breadcrumb {
+    display: $blocx-breadcrumb-display;
+    flex-wrap: wrap;
+    padding: $blocx-breadcrumb-padding-y $blocx-breadcrumb-padding-x;
+    margin-bottom: $blocx-breadcrumb-margin-bottom;
+    list-style: $blocx-breadcrumb-list-style;
+    background-color: $blocx-breadcrumb-bg;
+    @include border-radius($border-radius);
+  }
+  
+  .blocx-breadcrumb_item {
+    a{
+      color:$blocx-breadcrumb-color;
+      text-decoration: $blocx-breadcrumb-item-text-decoration;
+      font-size: 12px;
+      font-weight: bold;
+      line-height: 18px;
+    }
+    i
+    {
+      color:$blocx-breadcrumb-item-color;
+      padding: 0 10px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+    // The separator between blocx-breadcrumbs (by default, a forward-slash: "/")
+    + .blocx-breadcrumb_item::before {
+      display: inline-block; // Suppress underlining of the separator in modern browsers
+      padding-right: $blocx-breadcrumb-item-padding;
+      padding-left: $blocx-breadcrumb-item-padding;
+      color: $blocx-breadcrumb-divider-color;
+      // content: "#{$blocx-breadcrumb-divider}";
+    }
+  
+     + .blocx-breadcrumb_item:hover::before {
+      text-decoration: underline;
+    }
+    // stylelint-disable-next-line no-duplicate-selectors
+    + .blocx-breadcrumb_item:hover::before {
+      text-decoration: none;
+    }
+  
+    &.active {
+      color: $blocx-breadcrumb-active-color;
+      font-size: 9px;
+      line-height: 14px;
+      padding-top:2px;
+    }
+  }

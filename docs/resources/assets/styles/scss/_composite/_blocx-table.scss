@@ -1,0 +1,226 @@
+// blocx-table variables
+$blocx-table-display:table !default;
+$blocx-table-width:100% !default;
+$blocx-table-border-collapse:separate !default;
+$blocx-table-border-spacing:0 5px !default;
+$blocx-table-overflow-x:auto !default;
+$blocx-table-thead-tbody-display:table-header-group !default;
+$blocx-table-thead-td-first-child-font-size: 11px !default;
+$blocx-table-thead-td-first-child-line-height: 19px !default;
+$blocx-table-tr-display:table-row !default;
+$blocx-table-tr-border:none !default;
+$blocx-table-tr-border-bottom:1px solid #eee !default;
+$blocx-table-tr-float:none !default;
+$blocx-table-tr-margin:0 !default;
+$blocx-table-tr-box-shadow:none !default;
+$blocx-table-td-display:table-cell !default;
+$blocx-table-thead-background:#EBEDED !default;
+$blocx-table-border-top-left-radius:6px !default;
+$blocx-table-border-top-right-radius:6px !default;
+$blocx-table-td-padding:15px 12px 10px 12px  !default;
+$blocx-table-td-color:#2B2826 !default;
+$blocx-table-td-font-size:11px !default;
+$blocx-table-td-font-weight:bold !default;
+$blocx-table-td-text-transform:uppercase !default;
+$blocx-table-first-child-border-top-left-radius:6px !default;
+$blocx-table-first-child-border-bottom-left-radius:6px !default;
+$blocx-table-last-child-border-top-left-radius:6px !default;
+$blocx-table-last-child-border-bottom-left-radius:6px !default;
+$blocx-table-tr-odd-background:#F6F8F9 !default;
+$blocx-table-tr-even-background:#fff !default;
+$blocx-table-tr-even-td-border-bottom: 1px solid #EBEDED !default;
+$blocx-table-tr-even-td-border-top: 1px solid #EBEDED !default;
+$blocx-table-td-first-child-border-left:1px solid #EBEDED !default;
+$blocx-table-td-first-child-border-right:1px solid #EBEDED !default;
+$blocx-table-tbody-td-padding:10px !default;
+$blocx-table-tbody-td-color:#202124 !default;
+$blocx-table-tbody-td-font-size:13px !default;
+$blocx-table-user-card-display:flex !default;
+$blocx-table-user-card-align-items:center !default;
+$blocx-table-user-card-span-width:32px !default;
+$blocx-table-user-card-span-height:32px !default;
+$blocx-table-user-card-span-border-radius:50% !default;
+$blocx-table-user-card-span-background:#A6ADB4 !default;
+$blocx-table-user-card-span-display:inline-block !default;
+$blocx-table-user-card-h4-font-size:13px !default;
+$blocx-table-user-card-h4-font-weight:bold !default;
+$blocx-table-user-card-h4-color:#202124 !default;
+$blocx-table-user-card-h4-margin:0 !default;
+$blocx-table-user-card-label-margin:0 !default;
+$blocx-table-user-card-label-color:#A6ADB4 !default;
+$blocx-table-user-card-label-font-size:13px !default;
+$blocx-table-user-card-details-padding-left:10px !default;
+$blocx-table-stricker-background:#EBEDED !default;
+$blocx-table-stricker-font-size:11px !default;
+$blocx-table-stricker-color:#A6ADB4 !default;
+$blocx-table-stricker-padding:5px !default;
+$blocx-table-stricker-text-transform:uppercase !default;
+$blocx-table-more-links-position:relative !default;
+$blocx-table-more-links-span-font-size:25px !default;
+$blocx-table-more-links-span-color:#202124 !default;
+$blocx-table-more-links-span-position:absolute !default;
+$blocx-table-more-links-span-right:10px !default;
+$blocx-table-more-links-span-bottom:0 !default;
+$blocx-table-tr-blocx-blocx-table-alternate1-background-color:#F6F8F9!default;
+$blocx-table-tr-blocx-blocx-table-alternate-background-color:#EBEDED!default;
+$blocx-table-td-first-child-padding-left: 48px !default;
+$blocx-table-card-label-line-height: 23px !default;
+
+// blocx-table styles start
+.blocx-table {
+    display: $blocx-table-display;
+    width: $blocx-table-width;
+    border-collapse: $blocx-table-border-collapse;
+    border-spacing: $blocx-table-border-spacing;
+    overflow-x: $blocx-table-overflow-x;
+
+    thead,
+    tbody {
+        display: $blocx-table-thead-tbody-display;
+
+        tr {
+            display: $blocx-table-tr-display;
+            border: $blocx-table-tr-border;
+            border-bottom: $blocx-table-tr-border-bottom;
+            float: $blocx-table-tr-float;
+            margin: $blocx-table-tr-margin;
+            box-shadow: $blocx-table-tr-box-shadow;
+tr.blocx-blocx-table-alternate1
+{
+    background-color: $blocx-table-tr-blocx-blocx-table-alternate1-background-color;
+}
+tr.blocx-blocx-table-alternate
+{
+    background-color: $blocx-table-tr-blocx-blocx-table-alternate-background-color;
+}
+            td {
+                display: $blocx-table-td-display;
+            }
+        }
+    }
+
+    thead {
+        background: $blocx-table-thead-background;
+
+        td:first-child {
+            border-top-left-radius: $blocx-table-border-top-left-radius;
+        }
+
+        td:last-child {
+            border-top-right-radius: $blocx-table-border-top-right-radius;
+        }
+
+        td {
+            padding: $blocx-table-td-padding;
+            color: $blocx-table-td-color;
+            font-size: $blocx-table-td-font-size;
+            font-weight: $blocx-table-td-font-weight;
+            text-transform: $blocx-table-td-text-transform;
+            line-height: $blocx-table-thead-td-first-child-line-height;
+        }
+    }
+
+    tbody {
+        td:first-child {
+            border-top-left-radius: $blocx-table-first-child-border-top-left-radius;
+            border-bottom-left-radius: $blocx-table-first-child-border-bottom-left-radius;
+        }
+
+        td:last-child {
+            border-top-right-radius: $blocx-table-last-child-border-top-left-radius;
+            border-bottom-right-radius: $blocx-table-last-child-border-bottom-left-radius;
+        }
+
+        tr:nth-child(odd) {
+            background: $blocx-table-tr-odd-background;
+        }
+
+        tr:nth-child(even) {
+            background: $blocx-table-tr-even-background;
+
+            td {
+                border-bottom: $blocx-table-tr-even-td-border-bottom;
+                border-top: $blocx-table-tr-even-td-border-top;
+            }
+
+            td:first-child {
+                border-left: $blocx-table-td-first-child-border-left;
+
+            }
+
+            td:last-child {
+                border-right: $blocx-table-td-first-child-border-right;
+
+            }
+        }
+
+        td {
+            padding: $blocx-table-tbody-td-padding;
+            color: $blocx-table-tbody-td-color;
+            font-size: $blocx-table-tbody-td-font-size;
+            line-height: $blocx-table-thead-td-first-child-line-height;
+        }
+    }
+
+    .user-card {
+        display: $blocx-table-user-card-display;
+        align-items: $blocx-table-user-card-align-items;
+
+        .blocx-checkbox {
+            width: 20px;
+            margin: 0;
+            padding-right: 10px;
+        }
+
+        span {
+            width: $blocx-table-user-card-span-width;
+            height: $blocx-table-user-card-span-height;
+            border-radius: $blocx-table-user-card-span-border-radius;
+            background: $blocx-table-user-card-span-background;
+            display: $blocx-table-user-card-span-display;
+        }
+
+        h4 {
+            font-size: $blocx-table-user-card-h4-font-size;
+            font-weight: $blocx-table-user-card-h4-font-weight;
+            color: $blocx-table-user-card-h4-color;
+            margin: $blocx-table-user-card-h4-margin;
+            line-height: $blocx-table-thead-td-first-child-line-height;
+        }
+
+        label {
+            font-size: $blocx-table-user-card-label-font-size;
+            color: $blocx-table-user-card-label-color;
+            margin: $blocx-table-user-card-label-margin;
+            line-height: 23px;
+        }
+
+        .user-card_details {
+            padding-left: $blocx-table-user-card-details-padding-left;
+        }
+    }
+
+
+    .stricker {
+        background: $blocx-table-stricker-background;
+        font-size: $blocx-table-stricker-font-size;
+        color: $blocx-table-stricker-color;
+        padding: $blocx-table-stricker-padding;
+        text-transform: $blocx-table-stricker-text-transform;
+    }
+
+
+    .more_link {
+        position: $blocx-table-more-links-position;
+
+        span {
+            font-size: $blocx-table-more-links-span-font-size;
+            color: $blocx-table-more-links-span-color;
+            position: $blocx-table-more-links-span-position;
+            right: $blocx-table-more-links-span-right;
+            bottom: $blocx-table-more-links-span-bottom;
+        }
+    }
+}
+
+// blocx-table styles end

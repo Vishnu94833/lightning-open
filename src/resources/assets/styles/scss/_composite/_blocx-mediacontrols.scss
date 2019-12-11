@@ -1,0 +1,243 @@
+ //Variables
+ $blocx-mediacontrol-float:left !default;
+ $blocx-mediacontrol-position-relative:relative !default;
+ $blocx-mediacontrol-position-absolute:absolute !default;
+ $blocx-mediacontrol-video-element-width:420px !default;
+ $blocx-mediacontrol-video-element-height:231px !default;
+ $blocx-mediacontrol-video-element-border-radius:4px 4px 0 0 !default;
+ $blocx-mediacontrol-controls-border:1px solid #A6ADB4 !default;
+ $blocx-mediacontrol-margin-auto:0 auto !default;
+ $blocx-mediacontrol-controls-border-radius:0 0 4px 4px !default;
+ $blocx-mediacontrol-controls-bg:#2699FB !default;
+ $blocx-mediacontrol-list-padding-margin:0 !default;
+ $blocx-mediacontrol-display-inline-block:inline-block !default;
+ $blocx-mediacontrol-cusror:pointer !default;
+ $blocx-mediacontrol-text-intent:-9999px !default;
+ $blocx-mediacontrol-volume-v1:4px !default;
+ $blocx-mediacontrol-volume-v2:7px !default;
+ $blocx-mediacontrol-volume-v3:10px !default;
+ $blocx-mediacontrol-volume-v4:13px !default;
+ $blocx-mediacontrol-volume-v5:17px !default;
+ $blocx-mediacontrol-progressbar-font-size:12px !default;
+ $blocx-mediacontrol-progressbar-width:220px !default;
+ $blocx-mediacontrol-progressbar-height:10px !default;
+ $blocx-mediacontrol-progressbar-color:#fff !default;
+ $blocx-mediacontrol-progressbar-border-radius:9px !default;
+ //$blocx-mediacontrol-progressbar-leftmargin:5px !default;
+ $blocx-mediacontrol-volume-selected-bg:#fff !default;
+ $blocx-mediacontrol-play-pause-width:23% !default;
+ $blocx-mediacontrol-play-pause-height:20% !default;
+ $blocx-mediacontrol-play-pause-position-left:22% !default;
+ $blocx-mediacontrol-play-pause-position-top:45% !default;
+ $blocx-mediacontrol-play-pause-position-right:0 !default;
+ $blocx-mediacontrol-play-pause-zindex:999 !default;
+ $blocx-mediacontrol-border-none:none !default;
+ $blocx-mediacontrol-play-pause-border-radius:4px !default;
+ $blocx-mediacontrol-center-play-bg:url('../assets/images/blocx-mediacontrols_icon-play.png') no-repeat !default;
+ $blocx-mediacontrol-center-pause-bg:url('../assets/images/blocx-mediacontrols_icon-pause.png') no-repeat !default;
+ $blocx-mediacontrol-play-bg:url('../assets/images/blocx-mediacontrols_icon-play.png') no-repeat !default;
+ $blocx-mediacontrol-pause-bg:url('../assets/images/blocx-mediacontrols_icon-pause.png') no-repeat !default;
+ $blocx-mediacontrol-cursor-pointer:poiter !default;
+ $blocx-mediacontrol-small-play-pause-width:41px !default;
+ $blocx-mediacontrol-small-play-pause-height:25px !default;
+ $blocx-mediacontrol-small-play-pause-bgpostiont:-25px -13px !default;
+ $blocx-mediacontrol-volume-border:none!default;
+ $blocx-mediacontrol-fullscreen-width:31px !default;
+ $blocx-mediacontrol-fullscreen-height:23px !default;
+ $blocx-mediacontrol-fullscreen-bgurl:url('../assets/images/blocx-mediacontrols_icon-expend-video.png') no-repeat !default;
+ $blocx-mediacontrol-fontcolor:#fff !default;
+ $blocx-mediacontrol-time-fontsize:12px !default;
+ $blocx-mediacontrol-time-display:inline-block !default;
+ $blocx-mediacontrol-range-width:100% !default;
+ $blocx-mediacontrol-range-margin:6.8px 0 !default;
+ $blocx-mediacontrol-progress-bgcolor:#EBEDED !default;
+ $blocx-mediacontrol-progress-boxshadow:0 2px 5px rgba(0, 0, 0, 0.25) inset !default;
+ $blocx-mediacontrol-progress-bar-border-radius:6px;
+ $blocx-mediacontrol-play-pause-transform:translate(-50%, -50%) !default;
+ $blocx-mediacontrol-volume-bottom:-5px !default;
+ $blocx-mediacontrol-volume-width:4px !default;
+ $blocx-mediacontrol-volume-border-radius:4px !default;
+ $blocx-mediacontrol-volume-transform:rotate(-2deg) !default;
+ $blocx-mediacontrol-volume-background:#A6ADB4 !default;
+ $blocx-mediacontrol-progressbar-border:none !default;
+ $blocx-mediacontrol-progressbar-vertical-align:middle !default;
+ $blocx-mediacontrol-progressbar-cursor:pointer !default;
+ $blocx-mediacontrol-progressbar-margin:0 10px !default;
+ $blocx-mediacontrol-time-margin-right:10px !default;
+
+ .blocx-mediaplayer {
+     float: $blocx-mediacontrol-float;
+     position: $blocx-mediacontrol-position-relative;
+
+     &_video {
+         &_video-element {
+             width: $blocx-mediacontrol-video-element-width;
+             height: $blocx-mediacontrol-video-element-height;
+             border-radius: $blocx-mediacontrol-video-element-border-radius;
+         }
+
+         .btn-play-pause.play,
+         .btn-play-pause.pause {
+             width: $blocx-mediacontrol-play-pause-width;
+             height: $blocx-mediacontrol-play-pause-height;
+             position: $blocx-mediacontrol-position-absolute;
+             left: $blocx-mediacontrol-play-pause-position-left;
+             top: $blocx-mediacontrol-play-pause-position-top;
+             right: $blocx-mediacontrol-play-pause-position-right;
+             margin: $blocx-mediacontrol-margin-auto;
+             z-index: $blocx-mediacontrol-play-pause-zindex;
+             -webkit-transform: translate(-50%, -50%);
+             transform: $blocx-mediacontrol-play-pause-transform;
+             text-indent: $blocx-mediacontrol-text-intent;
+             border: $blocx-mediacontrol-border-none;
+             border-radius: $blocx-mediacontrol-play-pause-border-radius;
+             cursor: $blocx-mediacontrol-cusror;
+         }
+
+         .btn-play-pause.play {
+             background: $blocx-mediacontrol-center-play-bg;
+         }
+
+         .btn-play-pause.pause {
+             background: $blocx-mediacontrol-center-pause-bg;
+         }
+
+     }
+
+     &_controls {
+         border: $blocx-mediacontrol-controls-border;
+         border-radius: $blocx-mediacontrol-controls-border-radius;
+         background: $blocx-mediacontrol-controls-bg;
+         margin: $blocx-mediacontrol-margin-auto;
+
+         &-list {
+             padding: $blocx-mediacontrol-list-padding-margin;
+             margin: $blocx-mediacontrol-list-padding-margin;
+
+             &_li {
+                 display: $blocx-mediacontrol-display-inline-block;
+                 position: $blocx-mediacontrol-position-relative;
+
+                 #btnPlayPause.play,
+                 #btnPlayPause.pause {
+                     width: $blocx-mediacontrol-small-play-pause-width;
+                     height: $blocx-mediacontrol-small-play-pause-height;
+                     text-indent: $blocx-mediacontrol-text-intent;
+                     border: $blocx-mediacontrol-border-none;
+                     cursor: $blocx-mediacontrol-cusror;
+                 }
+
+                 #btnPlayPause.play {
+                     background: $blocx-mediacontrol-play-bg;
+                     background-position: $blocx-mediacontrol-small-play-pause-bgpostiont;
+                 }
+
+                 #btnPlayPause.pause {
+                     background: $blocx-mediacontrol-pause-bg;
+                     background-position: $blocx-mediacontrol-small-play-pause-bgpostiont;
+                 }
+
+             }
+
+             &_volume {
+                 text-indent: $blocx-mediacontrol-text-intent;
+                 
+                 border: $blocx-mediacontrol-volume-border;
+                 cursor: $blocx-mediacontrol-cusror;
+                 padding: $blocx-mediacontrol-list-padding-margin !important;
+                 margin: $blocx-mediacontrol-list-padding-margin !important;
+                 position: $blocx-mediacontrol-position-absolute;
+                 bottom: $blocx-mediacontrol-volume-bottom;
+                 width: $blocx-mediacontrol-volume-width;
+                 border-radius: $blocx-mediacontrol-volume-border-radius;
+                 background: $blocx-mediacontrol-volume-background;
+                 transform: $blocx-mediacontrol-volume-transform;
+
+             }
+
+             &-v1 {
+                 height: $blocx-mediacontrol-volume-v1;
+             }
+
+             &-v2 {
+                 height: $blocx-mediacontrol-volume-v2;
+             }
+
+             &-v3 {
+                 height: $blocx-mediacontrol-volume-v3;
+             }
+
+             &-v4 {
+                 height: $blocx-mediacontrol-volume-v4;
+             }
+
+             &-v5 {
+                 height: $blocx-mediacontrol-volume-v5;
+             }
+
+             &_progress_bar {
+                 color: $blocx-mediacontrol-progressbar-color;
+                 font-size: $blocx-mediacontrol-progressbar-font-size;
+                 width: $blocx-mediacontrol-progressbar-width;
+                 height: $blocx-mediacontrol-progressbar-height;
+                 border: $blocx-mediacontrol-progressbar-border;
+                 margin: $blocx-mediacontrol-progressbar-margin;
+                 background: $blocx-mediacontrol-progressbar-color;
+                 border-radius: $blocx-mediacontrol-progressbar-border-radius;
+                 vertical-align: $blocx-mediacontrol-progressbar-vertical-align;
+                 cursor: $blocx-mediacontrol-progressbar-cursor;
+                 border-radius: $blocx-mediacontrol-progress-bar-border-radius;
+             }
+
+         }
+
+         .blocx-mediaplayer_controls-list_progress_bar::-moz-progress-bar {
+             background: $blocx-mediacontrol-fontcolor;
+             cursor: $blocx-mediacontrol-cusror;
+             border-radius: $blocx-mediacontrol-progress-bar-border-radius;
+         }
+
+         progress[value]::-webkit-progress-bar {
+             background-color: $blocx-mediacontrol-fontcolor;
+             border-radius: $blocx-mediacontrol-progress-bar-border-radius;
+             box-shadow: $blocx-mediacontrol-progress-boxshadow;
+             cursor: $blocx-mediacontrol-cusror;
+         }
+
+         progress[value]::-webkit-progress-value {
+             background-color: $blocx-mediacontrol-progress-bgcolor;
+             cursor: $blocx-mediacontrol-cusror;
+             border-radius: $blocx-mediacontrol-progress-bar-border-radius;
+         }
+
+         input[type=range] {
+             -webkit-appearance: none;
+             width: $blocx-mediacontrol-range-width;
+             margin: $blocx-mediacontrol-range-margin;
+             cursor: $blocx-mediacontrol-cusror;
+             border-radius: $blocx-mediacontrol-progress-bar-border-radius;
+         }
+
+     }
+
+     #curtimetext {
+         color: $blocx-mediacontrol-fontcolor;
+         font-size: $blocx-mediacontrol-time-fontsize;
+         display: $blocx-mediacontrol-time-display;
+         margin-right: $blocx-mediacontrol-time-margin-right;
+     }
+
+     .fullscreen {
+         background: $blocx-mediacontrol-fullscreen-bgurl;
+         width: $blocx-mediacontrol-fullscreen-width;
+         height: $blocx-mediacontrol-fullscreen-height;
+         text-indent: $blocx-mediacontrol-text-intent;
+         border: $blocx-mediacontrol-border-none;
+         cursor: $blocx-mediacontrol-cusror;
+     }
+
+     .blocx-media-volume-selected {
+         background: $blocx-mediacontrol-volume-selected-bg;
+     }
+
+ }

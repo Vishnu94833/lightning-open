@@ -1,0 +1,127 @@
+// asymmetrical page template variables
+$l-asymmetrical-cards-column-gap:0 !default;
+$l-asymmetrical-cards-column-display:block !default;
+$l-asymmetrical-cards-column-padding:5px !default;
+$l-asymmetrical-cards-column-count2x:2 !default;
+$l-asymmetrical-cards-column-count3x:3 !default;
+$l-asymmetrical-item-boxsizing:border-box !default;
+$l-asymmetrical-item-padding:10px !default;
+$l-asymmetrical-item-break-inside:avoid !default;
+$l-asymmetrical-box-bg:#fff !default;
+$l-asymmetrical-box-color:#333 !default;
+$l-asymmetrical-box-display:flex !default;
+$l-asymmetrical-box-flex-direction:column !default;
+$l-asymmetrical-card-bgcolor: #EBEDED !default;
+$l-asymmetrical-card-title-color: #2699FB !default;
+$l-asymmetrical-card-font-weight-bold: bold !default;
+
+// asymmetrical page template styles start
+.L-landing-asymmetrical-1 {
+    .blocx-cards-grid {
+        column-gap: $l-asymmetrical-cards-column-gap;
+        display: $l-asymmetrical-cards-column-display;
+        padding: $l-asymmetrical-cards-column-padding;
+        -webkit-column-gap: $l-asymmetrical-cards-column-gap;
+    }
+
+    // Show card based on resolution 
+    @media (min-width: 500px) {
+        .blocx-cards-grid {
+            column-count: $l-asymmetrical-cards-column-count2x;
+            -webkit-column-count: $l-asymmetrical-cards-column-count2x;
+        }
+    }
+
+    @media (min-width: 700px) {
+        .blocx-cards-grid {
+            column-count: $l-asymmetrical-cards-column-count3x;
+            -webkit-column-count: $l-asymmetrical-cards-column-count3x;
+        }
+    }
+
+    .blocx-card_outer {
+        box-sizing: $l-asymmetrical-item-boxsizing;
+        padding: $l-asymmetrical-item-padding;
+        break-inside: $l-asymmetrical-item-break-inside;
+        -webkit-column-break-inside: $l-asymmetrical-item-break-inside;
+    }
+
+    .blocx-card_inner-box {
+        background: $l-asymmetrical-box-bg;
+        color: $l-asymmetrical-box-color;
+        display: $l-asymmetrical-box-display;
+        flex-direction: $l-asymmetrical-box-flex-direction;
+    }
+    .asymmetrical-custom-card{
+        background: $l-asymmetrical-card-bgcolor;
+        .blocx-card_title{
+            font-size: 11px;
+            color: $l-asymmetrical-card-title-color;
+            font-weight: $l-asymmetrical-card-font-weight-bold;
+            text-transform: uppercase;
+            margin: 25px 0;
+        }
+        p{
+            font-size: 20px;
+            color: $l-asymmetrical-card-title-color;
+            font-weight: $l-asymmetrical-card-font-weight-bold;
+            line-height: 1.5;
+        }
+        .blocx-card_icon{
+            position:absolute;
+            right: 20px;
+            top: 0;
+        }
+    }
+    
+    @mixin backgroundResponsiveImage($bgUrl) {
+        background: url($bgUrl);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .asymmetrical_bg1 {
+        &::before {
+            @include backgroundResponsiveImage("../assets/images/blocx-card_img-asymmetrical-default.png");
+        }
+    }
+
+    .asymmetrical_bg2 {
+        &::before {
+            @include backgroundResponsiveImage("../assets/images/blocx-card_img-asymmetrical-1.png");
+        }
+    }
+    .asymmetrical_bg3 {
+        &::before {
+            @include backgroundResponsiveImage("../assets/images/blocx-card_img-asymmetrical-2.png");
+        }
+    }
+    .asymmetrical_bg4 {
+        &::before {
+            @include backgroundResponsiveImage("../assets/images/blocx-card_img-asymmetrical-3.png");
+        }
+    }
+    .asymmetrical_bg5 {
+        &::before {
+            @include backgroundResponsiveImage("../assets/images/blocx-card_img-asymmetrical-4.png");
+        }
+    }
+    .asymmetrical_bg6 {
+        &::before {
+            @include backgroundResponsiveImage("../assets/images/blocx-card_img-asymmetrical-7.png");
+        }
+    }
+    .asymmetrical_bg7 {
+        &::before {
+            @include backgroundResponsiveImage("../assets/images/blocx-card_img-asymmetrical-5.png");
+        }
+        .blocx-card_footer{
+            justify-content: center;
+        }
+    }
+    .asymmetrical_card-bg{
+        background: $l-asymmetrical-card-bgcolor;
+    }
+}
+
+// asymmetrical page template styles end

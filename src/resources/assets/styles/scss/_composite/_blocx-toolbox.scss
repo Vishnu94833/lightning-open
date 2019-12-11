@@ -1,0 +1,42 @@
+// blocx Toolbox Component variables
+$blocx-toolbox-display:flex !default;
+$blocx-toolbox-icon-border:1px solid #ddd !default;
+$blocx-toolbox-icon-border-radius:4px !default;
+$blocx-toolbox-icon-padding:4px !default;
+$blocx-toolbox-icon-font-size:10px !default;
+$blocx-toolbox-i-last-child-padding:0 !default;
+$blocx-toolbox-i-last-child-border:none !default;
+$blocx-toolbox-i-last-child-margin-left:-10px !default;
+$blocx-toolbox-i-last-child-margin-top:5px !default;
+
+// blocx Toolbox Component styles start
+.blocx-toolbox {
+    &_items {
+        display: $blocx-toolbox-display;
+
+        i {
+            border: $blocx-toolbox-icon-border;
+            border-radius: $blocx-toolbox-icon-border-radius;
+            padding: $blocx-toolbox-icon-padding;
+            font-size: $blocx-toolbox-icon-font-size;
+
+            &:nth-child(2),
+            &:nth-child(5) {
+                margin-right: 5px;
+            }
+
+            &:nth-child(6) {
+                padding: 4px 12px 0 4px;
+            }
+
+            &:last-child {
+                padding: $blocx-toolbox-i-last-child-padding;
+                border: $blocx-toolbox-i-last-child-border;
+                margin-left: $blocx-toolbox-i-last-child-margin-left;
+                margin-top: $blocx-toolbox-i-last-child-margin-top;
+            }
+        }
+    }
+}
+
+// Toolbox Component styles end

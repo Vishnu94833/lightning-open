@@ -1,0 +1,69 @@
+// Sort list component variables
+$blocx-sortlist-display:flex !default;
+$blocx-sortlist-source-destination-flex:0 21% !default;
+$blocx-sortlist-source-destination-min-height:260px !default;
+$blocx-sortlist-select-overflow:hidden !default;
+$blocx-sortlist-select-outline:0 !default;
+$blocx-sortlist-select-width:100% !default;
+$blocx-sortlist-select-height:100% !default;
+$blocx-sortlist-select-border:1px solid #DDDBDA !default;
+$blocx-sortlist-select-border-radius:6px !default;
+$blocx-sortlist-option-font-size:13px !default;
+$blocx-sortlist-option-padding:10px !default;
+$blocx-sortlist-option-color:#706E6B !default;
+$blocx-sortlist-controls-flex:0 !default;
+$blocx-sortlist-controls-padding:20px !default;
+$blocx-sortlist-controls-a-display:flex !default;
+$blocx-sortlist-controls-a-margin-bottom:10px !default;
+$blocx-sortlist-select-option-background-color:#0070D2 !default;
+$blocx-sortlist-option-line-height:20px!default;
+$blocx-sortlist-option-border-radius:6px;
+$blocx-sortlist-select-option-checked-color:#fff;
+
+// Sort list component styles start
+.blocx-sortlist {
+    display: $blocx-sortlist-display;
+
+    &_source,
+    &_destination {
+        flex: $blocx-sortlist-source-destination-flex;
+        min-height: $blocx-sortlist-source-destination-min-height;
+
+        select {
+            overflow: $blocx-sortlist-select-overflow;
+            border: $blocx-sortlist-select-border;
+            outline: $blocx-sortlist-select-outline;
+            width: $blocx-sortlist-select-width;
+            height: $blocx-sortlist-select-height;
+            border-radius: $blocx-sortlist-select-border-radius;
+
+            option {
+                font-size: $blocx-sortlist-option-font-size;
+                padding: $blocx-sortlist-option-padding;
+                line-height:$blocx-sortlist-option-line-height;
+                color: $blocx-sortlist-option-color;
+                border-radius:$blocx-sortlist-option-border-radius;
+            }
+        }
+
+        select option:checked {
+            background: linear-gradient($blocx-sortlist-select-option-background-color, $blocx-sortlist-select-option-background-color);
+            background-color: $blocx-sortlist-select-option-background-color !important;
+            /* for IE */
+            color:  $blocx-sortlist-select-option-checked-color !important;
+            
+        }
+    }
+
+    &_controls {
+        flex: $blocx-sortlist-controls-flex;
+        padding: $blocx-sortlist-controls-padding;
+
+        a {
+            display: $blocx-sortlist-controls-a-display;
+            margin-bottom: $blocx-sortlist-controls-a-margin-bottom;
+        }
+    }
+}
+
+// Sort list component styles end

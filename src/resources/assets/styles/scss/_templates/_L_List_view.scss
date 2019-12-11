@@ -1,0 +1,115 @@
+//L-list-view template variables
+$l-list-view-left-section-bgcolor: #F6F8F9 !default;
+$l-list-view-left-list-bgcolor: #EBEDED !default;
+$l-list-view-input-date-color: #888888 !default;
+$l-list-view-table-heading-color: #333333 !default;
+$l-list-view-table-heading-h2-font-size: 20px !default;
+$l-list-view-table-heading-h2-line-height: 2.5 !default;
+$l-list-view-table-heading-h3-font-size: 18px !default;
+$l-list-view-table-heading-margin: 0 !default;
+$l-list-view-aside-menu-a-color: #2B2826 !default;
+$l-list-view-aside-menu-active-a-color: #2699FB !default;
+$l-list-view-font-weight-normal: normal !default;
+$l-list-view-font-weight-bold: bold !default;
+$l-list-view-display-flex: flex !default;
+$l-list-view-input-date-font-size: 12px !default;
+$l-list-view-header-logo-font-size: 13px !default;
+$l-list-view-width-100: 100% !default;
+
+//L-list-view template style starts
+.single-page-left-section-bg {
+    background: $l-list-view-left-section-bgcolor;
+}
+.list-hb-left-section-bg {
+    background: $l-list-view-left-list-bgcolor;
+    .list-heading-padding{
+        padding-top: 49px;
+        padding-bottom: 80px;
+        padding-left: 16px;
+    }
+}
+.blocx-input-date {
+    position: relative;
+    background: transparent;
+    display: block;
+    width: $l-list-view-width-100;
+    outline: none;
+    color: $l-list-view-input-date-color;
+    cursor: pointer;
+    z-index: 2;
+    border: none;
+    padding: 5px 0px;
+    font-size: $l-list-view-input-date-font-size;
+    text-overflow: '';
+    text-indent: 5px;
+    border: 1px solid $l-list-view-left-list-bgcolor;
+    border-radius: 4px;
+}
+.filter-options{
+    display: $l-list-view-display-flex;
+    align-items: flex-end;
+}
+@mixin flexStyle($width) {
+    display: $l-list-view-display-flex;
+    align-items: center;
+    justify-content: space-around;
+    width: $width;
+}
+.sample-template {
+    .blocx-header {
+        &_logo {
+            font-size: $l-list-view-header-logo-font-size;
+            font-weight: $l-list-view-font-weight-bold;
+            padding: 5px 15px;
+        }
+        &_right-section{
+            @include flexStyle(40%);
+            .blocx-autocomplete{
+                width: 83%;
+            }
+            .notication-icons{
+                @include flexStyle(15%);
+                i{
+                    font-size: $l-list-view-table-heading-h2-font-size;
+                    &::after{
+                        content: "";
+                    }
+                }
+                img{
+                    width:30px;
+                    height: 30px;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    
+   .list-table-heading{
+        h2{
+            font-size: $l-list-view-table-heading-h2-font-size;
+            color: $l-list-view-table-heading-color;
+            font-weight: $l-list-view-font-weight-normal;
+            margin: $l-list-view-table-heading-margin;
+            line-height: $l-list-view-table-heading-h2-line-height;
+        }
+        h3{
+            font-size: $l-list-view-table-heading-h3-font-size;
+            color: $l-list-view-table-heading-color;
+            font-weight: $l-list-view-font-weight-normal;
+            margin: $l-list-view-table-heading-margin;
+        }
+    }
+    .aside-menu-section{
+        li{
+            a{
+                color: $l-list-view-aside-menu-a-color;
+                &.active{
+                    color: $l-list-view-aside-menu-active-a-color;
+                    font-weight: $l-list-view-font-weight-bold;
+                }
+            }
+        }
+    }
+}
+//L-list-view template style ends

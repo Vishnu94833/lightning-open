@@ -1,0 +1,217 @@
+//Landing magazine page variables
+$l-landing-magazine-card-text-color: #FFFFFF !default;
+$l-landing-magazine-card-text-float: left !default;
+$l-landing-magazine-card-text-font-size-20: 20px !default;
+$l-landing-magazine-card-text-font-size-30: 30px !default;
+$l-landing-magazine-font-size-13: 13px !default;
+$l-landing-magazine-font-size-11: 10px !default;
+$l-landing-magazine-font-weight-bold: bold !default;
+$l-landing-magazine-card-text-margin-left: 25px !default;
+$l-landing-magazine-card-text-margin: 110px 0px 0px 25px !default;
+$l-landing-magazine-margin-0: 0 !default;
+$l-landing-magazine-h2-color: #000000 !default;
+$l-landing-magazine-position-absolute: absolute !default;
+$l-landing-magazine-position-relative: relative !default;
+$l-landing-magazine-display-block: block !default;
+$l-landing-magazine-top-0: 0 !default;
+$l-landing-magazine-left-0: 0 !default;
+$l-landing-magazine-width-100: 100% !default;
+$l-landing-magazine-height-100: 100% !default;
+$l-landing-magazine-border-radius-6: 6px !default;
+$l-landing-magazine-bg-color: #000000 !default;
+
+// Landing magazine page styles start
+.landing-magazine {
+    .blocx-header {
+        &_logo {
+            font-size: $l-landing-magazine-font-size-13;
+            font-weight: $l-landing-magazine-font-weight-bold;
+            padding: 5px 15px;
+        }
+
+        .blocx-menu {
+            a {
+                font-size: $l-landing-magazine-font-size-11;
+                font-weight: $l-landing-magazine-font-weight-bold;
+            }
+        }
+    }
+    @mixin overlayBackgroundImages ($bg,$bg-color,$height){
+        height: $height;
+        position: $l-landing-magazine-position-relative;
+        &::before{
+            background: url($bg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: $l-landing-magazine-display-block;
+            position: $l-landing-magazine-position-absolute;
+            top: $l-landing-magazine-top-0;
+            left: $l-landing-magazine-left-0;
+            width: $l-landing-magazine-width-100;
+            height: $l-landing-magazine-height-100;
+            z-index: -2;
+            content: "";
+            opacity: .8;
+            border-radius: $l-landing-magazine-border-radius-6;
+        }
+        &::after {
+            background-color: $bg-color;
+            content: "";
+            display: $l-landing-magazine-display-block;
+            position: $l-landing-magazine-position-absolute;
+            top: $l-landing-magazine-top-0;
+            left: $l-landing-magazine-left-0;
+            width: $l-landing-magazine-width-100;
+            height: $l-landing-magazine-height-100;
+            z-index: -1;
+            opacity: 0.51;
+            border-radius: $l-landing-magazine-border-radius-6;
+        }
+    }
+    .blocx-card-image1 {
+        @include overlayBackgroundImages('./../assets/images/blocx-landing-magazine_card-img1.png', $l-landing-magazine-bg-color,575px);
+    }
+
+    .blocx-card-image2 {
+        margin-bottom: 10px;
+        @include overlayBackgroundImages('./../assets/images/blocx-landing-magazine_card-img2.png', $l-landing-magazine-bg-color,289px);
+    }
+
+    .blocx-card-image3 {
+        @include overlayBackgroundImages('./../assets/images/blocx-landing-f-pattern_card-img4.png', $l-landing-magazine-bg-color,275px);
+        &::before,&::after{
+            width: 98%;
+            margin-right: 2%;
+        }
+    }
+
+    .blocx-card-image4 {
+        @include overlayBackgroundImages('./../assets/images/blocx-landing-magazine_card-img4.png', $l-landing-magazine-bg-color,275px);
+        &::before,&::after{
+            width: 98%;
+            margin-left: 2%;
+        }
+    }
+    .blocx-margin-0 {
+        margin:0;
+     }
+    .blocx-card{
+        align-items: flex-start;
+        &_body{
+            padding:0 20px;
+        }
+        &_title{
+            margin: $l-landing-magazine-margin-0;
+            text-transform: uppercase;
+        }
+        p{
+            line-height: 1.5;
+        }
+    }
+
+    .blocx-card-image2 .blocx-card-image2_text1 {
+        float: $l-landing-magazine-card-text-float;
+        font-size: $l-landing-magazine-card-text-font-size-20;
+        color: $l-landing-magazine-card-text-color;
+        margin: $l-landing-magazine-card-text-margin;
+    }
+
+    .blocx-card-image2 .blocx-card-image2_text2 {
+        float: $l-landing-magazine-card-text-float;
+        font-size: $l-landing-magazine-card-text-font-size-30;
+        color: $l-landing-magazine-card-text-color;
+        margin-left: $l-landing-magazine-card-text-margin-left;
+        line-height: 46px;
+        margin-top:25px;
+    }
+
+    .blocx-card-image3 .blocx-card-image2_text1 {
+        float: $l-landing-magazine-card-text-float;
+        font-size: $l-landing-magazine-card-text-font-size-20;
+        color: $l-landing-magazine-card-text-color;
+        margin: $l-landing-magazine-card-text-margin;
+    }
+
+    .blocx-card-image3 .blocx-card-image2_text2 {
+        float: $l-landing-magazine-card-text-float;
+        font-size: $l-landing-magazine-card-text-font-size-30;
+        color: $l-landing-magazine-card-text-color;
+        margin-left: $l-landing-magazine-card-text-margin-left;
+        line-height: 46px;
+    }
+
+    .blocx-card-image4 .blocx-card-image2_text1 {
+        float: $l-landing-magazine-card-text-float;
+        font-size: $l-landing-magazine-card-text-font-size-20;
+        color: $l-landing-magazine-card-text-color;
+        margin: $l-landing-magazine-card-text-margin;
+    }
+
+    .blocx-card-image4 .blocx-card-image2_text2 {
+        float: $l-landing-magazine-card-text-float;
+        font-size: $l-landing-magazine-card-text-font-size-30;
+        color: $l-landing-magazine-card-text-color;
+        margin-left: $l-landing-magazine-card-text-margin-left;
+        line-height: 46px;
+    }
+
+    .blocx-card-editors-picks h2 {
+      //  float: left;
+        font-size: $l-landing-magazine-card-text-font-size-30;
+        color: $l-landing-magazine-h2-color;
+        font-weight: $l-landing-magazine-font-weight-bold;
+        margin: $l-landing-magazine-margin-0;
+        line-height: 42px;
+    }
+
+    .blocx-card-editors-picks .blocx-card_img-left {
+        width: 174px;
+        height: 105px;
+    }
+
+    .blocx-card-editors-picks .blocx-card {
+       border: none;
+       align-items: flex-start;
+            &_body{
+                padding:0 15px;
+            }
+            &_title{
+                margin: $l-landing-magazine-margin-0;
+                text-transform: uppercase;
+                line-height: 28px!important;
+            }
+            p{
+                line-height: 20px;
+                
+            }
+        }
+    }
+
+    .blocx-tabs a {
+        text-decoration: none;
+    }
+
+    .blocx-tabs .blocx-card .blocx-card_img-left {
+        height: 233px;
+    }
+    .blocx-card-img-left{
+        flex-direction: row;
+    }
+    .blocx-tabs_content{
+        .blocx-card{
+            border:none;
+            &_body{
+                padding:15px 0;
+            }
+            &_title{
+                margin:0;
+                text-transform: uppercase;
+            }
+            &_text{
+                font-size: 20px;
+            }
+        }
+    }
+
+// Landing cards page styles end

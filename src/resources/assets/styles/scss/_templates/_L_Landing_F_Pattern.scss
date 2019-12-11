@@ -1,0 +1,254 @@
+//l-landing-f-pattern variables
+$l-landing-f-pattern-header-font-weight: bold !default;
+$l-landing-f-pattern-logo-font-size: 13px !default;
+$l-landing-f-pattern-menu-font-size: 11px !default;
+$l-landing-f-pattern-p-line-height: 1.5 !default;
+$l-landing-f-pattern-img-grid-display: block !default;
+$l-landing-f-pattern-img-grid-column-gap: 0 !default;
+$l-landing-f-pattern-card-imgtop-width: 100% !default;
+$l-landing-f-pattern-card-imgtop-border-radius: 6px !default;
+$l-landing-f-pattern-card-border: none !default;
+$l-landing-f-pattern-h4-margin: 0 !default;
+$l-landing-f-pattern-read-info-font-size: 14px !default;
+$l-landing-f-pattern-color1: #000000;
+$l-landing-f-pattern-color2: #717171;
+$l-landing-f-pattern-color3: #2B2826;
+
+// Landing f pattern page styles starts
+.f-layout-template {
+    .blocx-header {
+        &_logo {
+            font-size: $l-landing-f-pattern-logo-font-size;
+            font-weight: $l-landing-f-pattern-header-font-weight;
+            padding: 5px 15px;
+        }
+
+        .blocx-menu {
+            a {
+                font-size: $l-landing-f-pattern-menu-font-size;
+                font-weight: $l-landing-f-pattern-header-font-weight;
+            }
+        }
+    }
+    p{
+        line-height: $l-landing-f-pattern-p-line-height;
+    }
+    .blocx-padding-0 {
+        padding: 0;
+    }
+
+    @mixin textStyle($font-size, $color, $font-weight,$opacity) {
+        font-size: $font-size;
+        color: $color;
+        font-weight: $font-weight;
+        opacity: $opacity;
+    }
+
+    @mixin imageStyle($img-url, $width, $height) {
+        background: url($img-url);
+        width: $width;
+        height: $height;
+    }
+
+    .section-heading {
+        @include textStyle(20px, $l-landing-f-pattern-color2, bold,1);
+        margin: 0px 0 20px;
+        line-height: 28px;
+    }
+
+    .blocx-trending {
+        .blocx-trending_heading {
+            @include textStyle(20px, $l-landing-f-pattern-color2, bold,1);
+        }
+        .blocx-card{
+            h5{
+                @include textStyle(20px, $l-landing-f-pattern-color1, bold,.87);
+                line-height: 28px;
+            }
+        }
+        h5 {
+            @include textStyle(15px, $l-landing-f-pattern-color2, bold,1);
+            line-height: 28px;
+        }
+    }
+
+    .blocx-card {
+        border: $l-landing-f-pattern-card-border;
+        &_text{
+            line-height: 20px;
+            color: $l-landing-f-pattern-color1;
+            opacity: 0.87;;
+        }
+    }
+
+    // .blocx-card_title {
+    //     margin-bottom: 15px;
+    // }
+
+    .blocx-new-articles p {
+        @include textStyle(15px, $l-landing-f-pattern-color2, bold,1);
+        
+    }
+
+    // .blocx-card_text {
+    //     margin-bottom: 30px;
+    // }
+
+    .blocx-new-articles_info {
+        h4 {
+            @include textStyle(20px, $l-landing-f-pattern-color1, bold,.87);
+            margin: $l-landing-f-pattern-h4-margin;
+            line-height: 28px;
+        }
+
+        p {
+            
+            @include textStyle(14px, $l-landing-f-pattern-color1, normal,.87);
+            line-height: 20px;
+        }
+    }
+
+    .blocx-gallery {
+        h5 {
+            @include textStyle(15px, $l-landing-f-pattern-color2, bold,1);
+            line-height: 21px;
+        }
+
+        .blocx-gallery_image1 {
+            @include imageStyle('../../app/assets/images/blocx-landing-f-pattern_card-img5.png', 112.75px, 81.3px);
+        }
+
+        .blocx-gallery_image2 {
+            @include imageStyle('./../assets/images/blocx-landing-f-pattern_card-img7.png', 112.75px, 81.3px);
+        }
+
+        .blocx-gallery_image3 {
+            @include imageStyle('./../assets/images/blocx-landing-f-pattern_card-img5.png', 112.75px, 81.3px);
+        }
+
+        .blocx-gallery_image4 {
+            @include imageStyle('./../assets/images/blocx-landing-f-pattern_card-img8.png', 112.75px, 81.3px);
+        }
+    }
+
+    .blocx-breaking-news {
+        .col-md-4 {
+            padding-top: 0;
+            .blocx-card{
+                &_title{
+                    line-height: 28px;
+                    color: $l-landing-f-pattern-color1;
+                    opacity: 0.87;
+                }
+                &_text{
+                    font-size: 14px;
+                }
+            }
+        }
+
+        .blocx-breaking-news_heading {
+            @include textStyle(20px, $l-landing-f-pattern-color2, bold,1);
+        }
+
+        .blocx-card_img-top {
+            width: $l-landing-f-pattern-card-imgtop-width;
+            height: 110px;
+            border-radius: $l-landing-f-pattern-card-imgtop-border-radius;
+        }
+    }
+
+    .blocx-politics-news {
+        .blocx-politics-news_heading {
+            @include textStyle(20px, $l-landing-f-pattern-color2, bold,1);
+            line-height: 28px;
+        }
+
+        h4 {
+            @include textStyle(20px, $l-landing-f-pattern-color3, bold,1);
+            margin: $l-landing-f-pattern-h4-margin;
+            line-height: 28px;
+        }
+
+        p {
+            
+            @include textStyle(15px, $l-landing-f-pattern-color3, normal,1);
+            line-height: 20px;
+
+        }
+    }
+
+    .blocx-business-news {
+        .blocx-business-news_heading {
+            @include textStyle(20px, $l-landing-f-pattern-color2, bold,1);
+            line-height: 28px;
+        }
+
+        h4 {
+            @include textStyle(20px, $l-landing-f-pattern-color3, bold,1);
+            line-height: 28px;
+        }
+
+        p {
+            
+            @include textStyle(15px, $l-landing-f-pattern-color3, normal,1);
+            line-height: 20px;
+        }
+
+        .blocx-business_image1 {
+            @include imageStyle('./../assets/images/blocx-landing-f-pattern_card-img8.png', 100%, 104.99px);
+
+        }
+
+        .blocx-business_image2 {
+            @include imageStyle('./../assets/images/blocx-landing-f-pattern_card-img9.png', 100%, 104.99px);
+        }
+
+        .blocx-business_image3 {
+            @include imageStyle('./../assets/images/blocx-landing-f-pattern_card-img7.png', 100%, 104.99px);
+
+        }
+
+        .blocx-business-news_vedio {
+           iframe{
+               width:100%;
+               height: 100%;
+           }
+        }
+    }
+
+    .blocx-recommended-read {
+        h5 {
+            @include textStyle(15px, $l-landing-f-pattern-color2, bold,1);
+            line-height: 21px;
+        }
+
+
+        .blocx-recommended-read_heading {
+            @include textStyle(20px, $l-landing-f-pattern-color2, bold,1);
+        }
+
+        .blocx-recommended-read_info {
+
+            h4 {
+                @include textStyle(20px, $l-landing-f-pattern-color1, bold,.87);
+                margin: $l-landing-f-pattern-h4-margin;
+                line-height: 28px;
+            }
+            p{
+                margin:10px 0 20px 0;
+                line-height: 20px;
+                @include textStyle(14px, $l-landing-f-pattern-color1, normal, .87);
+                // font-size: $l-landing-f-pattern-read-info-font-size;
+            }
+        }
+    }
+    .blocx-images-grid {
+        column-gap: $l-landing-f-pattern-img-grid-column-gap;
+        display: $l-landing-f-pattern-img-grid-display;
+        -webkit-column-gap: $l-landing-f-pattern-img-grid-column-gap;
+        & > div{
+            margin-bottom: 10px;
+        }
+    }
+}
+// Landing f pattern page styles ends

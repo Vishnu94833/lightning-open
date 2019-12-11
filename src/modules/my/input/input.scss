@@ -1,0 +1,102 @@
+//blocx-input varibles
+$blocx-input-color: #fff !default;
+$blocx-input-border-color: #EBEDED !default;
+$blocx-input-border-radius:6px !default;
+$blocx-input-border-size:2px !default;
+$blocx-input-types: () ! default;
+$blocx-input-type1: true !default;
+$blocx-input-type2: false !default;
+$blocx-input-control-padding:10px !default;
+$label-font-size:13px !default;
+$label-font-weight:bold !default;
+$label-bottom-margin:8px !default;
+$blocx-input-group-position:relative !default;
+$blocx-input-group-display:flex !default;
+$blocx-input-group-flex-wrap: wrap !default;
+$blocx-input-group-align-items:stretch !default;
+$blocx-input-group-width:100% !default;
+$blocx-input-group-margin-bottom:20px !default;
+$blocx-input-group-error-color:#FF4D4D !default;
+$blocx-input-control-position:relative;
+$blocx-input-control-flex: 1 1 auto !default;
+$blocx-input-control-width:100% !default;
+$blocx-input-control-margin-bottom:0 !default;
+$label-display:inline-block!default;
+$blocx-input-control-color:#202124;
+$blocx-input-focus-color:#72ACFF;
+
+//blocx-input mixins start
+@mixin blocx-input-type {
+    @if ($blocx-input-type1==true) {
+        border: $blocx-input-border-size solid $blocx-input-border-color;
+        border-radius: $blocx-input-border-radius;
+    }
+
+    @else if ($blocx-input-type2==true) {
+        border: none;
+        border-bottom: $blocx-input-border-size solid $blocx-input-border-color;
+    }
+}
+
+@mixin check-type {
+    @if ($blocx-input-type1==true) {}
+
+    @else if ($blocx-input-type2==true) {
+        outline: none;
+    }
+}
+
+//blocx-input mixins end
+// blocx-input styles start
+.blocx-input-group {
+    position: $blocx-input-group-position;
+    display: $blocx-input-group-display;
+    flex-wrap: $blocx-input-group-flex-wrap;
+    align-items: $blocx-input-group-align-items;
+    width: $blocx-input-group-width;
+    margin-bottom: $blocx-input-group-margin-bottom;
+
+    .error-msg {
+        color: $blocx-input-group-error-color;
+    }
+
+    label {
+        font-size: $label-font-size;
+        font-weight: $label-font-weight;
+        display:$label-display ;
+        // margin-bottom: $label-bottom-margin;
+           line-height: 20px;
+    }
+
+    >.blocx-input-control {
+        position: $blocx-input-control-position;
+        flex: $blocx-input-control-flex;
+        width: $blocx-input-control-width;
+        color: $blocx-input-control-color;
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 16px;
+    border: 2px solid $blocx-input-border-color;
+    border-radius: 6px;
+        // margin-bottom: $blocx-input-control-margin-bottom;
+        // padding: $blocx-input-control-padding;
+        @include blocx-input-type();
+
+
+        &:focus {
+            z-index: 3;
+            @include check-type();
+            outline: 0;
+            border-color: $blocx-input-focus-color;
+        }
+
+        &.is-invalid {
+            border-color: $blocx-input-group-error-color;
+        }
+    }
+}
+
+// blocx-input styles end

@@ -1,0 +1,25 @@
+//Divider component varaibles definition
+$blocx-divider-border-top: 1px solid #A6ADB4 !default;
+$blocx-divider-width-100: 100% !default;
+$blocx-divider-margin-0: 0 !default;
+$blocx-divider-height-0: 0 !default;
+$blocx-divider-vertical-bg: #A6ADB4 !default;
+$blocx-divider-vertical-display: inline-block !default;
+$blocx-divider-vertical-height: auto !default;
+$blocx-divider-vertical-width: 2px !default;
+
+//Divider component style starts
+.blocx-divider_horizontal {
+    width: $blocx-divider-width-100;
+    border-top: $blocx-divider-border-top;
+    margin: $blocx-divider-margin-0;
+    height: $blocx-divider-height-0;
+}
+
+.blocx-divider_vertical {
+    width: $blocx-divider-vertical-width;
+    background: $blocx-divider-vertical-bg;
+    display: $blocx-divider-vertical-display;
+    height: $blocx-divider-vertical-height;
+}
+//Divider component style ends

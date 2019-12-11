@@ -1,0 +1,72 @@
+// Progressbar variables
+$blocx-progressbar-width:100% !default;
+$blocx-progressbar-height:8px !default;
+$blocx-progressbar-background:#EBEDED !default;
+$blocx-progressbar-overflow:hidden !default;
+$blocx-progressbar-div-display:block !default;
+$blocx-progressbar-div-float:left !default;
+$blocx-progressbar-div-height:8px !default;
+$blocx-progressbar-div-after-display:block !default;
+$blocx-progressbar-div-after-color:#fff !default;
+$blocx-progressbar-div-after-text-align:right !default;
+$blocx-progressbar-div-after-padding:0 12px !default;
+$blocx-progressbar-div-after-font-size:10px !default;
+$blocx-progressbar-div-after-line-height:20 !default;
+$blocx-progressbar-div-after-font-weight:bold !default;
+$blocx-progressbar-h4-font-size:13px!default;
+$blocx-progressbar-h4-color:#3E3E3C!default;
+
+// SASS Mixin to take percentage and modify
+// Progress Bars width, color and text
+@mixin progressPercentage($progress) {
+    div.progressbar div {
+        width: $progress;
+        background: $primary;
+    }
+
+    div.progressbar div:after {
+        content: "";
+    }
+}
+
+//Progress Bar Specific SASS
+.progressbar {
+    width: $blocx-progressbar-width;
+    height: $blocx-progressbar-height;
+    background: $blocx-progressbar-background;
+    overflow: $blocx-progressbar-overflow;
+    @include border-radius(6px);
+}
+
+.progressbar div {
+    display: $blocx-progressbar-div-display;
+    float: $blocx-progressbar-div-float;
+    height: $blocx-progressbar-div-height;
+}
+
+.progressbar div::after {
+    display:$blocx-progressbar-div-after-display;
+    color: $blocx-progressbar-div-after-color;
+    text-align: $blocx-progressbar-div-after-text-align;
+    padding: $blocx-progressbar-div-after-padding;
+    font-size: $blocx-progressbar-div-after-font-size;
+    line-height: $blocx-progressbar-div-after-line-height;
+    font-weight: $blocx-progressbar-div-after-font-weight;
+
+}
+
+//SASS variables for each of the progress bars.
+
+.blocx-progressbar {
+    $previous-weight: 305;
+    $goal-weight: 185;
+    $current-weight: 200;
+    $weight-progress: (($previous-weight - $current-weight) / ($previous-weight - $goal-weight)) * 100%;
+    @include progressPercentage($weight-progress);
+
+    h4 {
+        font-size: $blocx-progressbar-h4-font-size;
+        color: $blocx-progressbar-h4-color;
+        line-height: 20px;
+    }
+}

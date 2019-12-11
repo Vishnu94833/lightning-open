@@ -1,0 +1,81 @@
+.blocx-progress {
+  position: relative;
+  display: flex;
+  width: 80%; }
+  .blocx-progress_track {
+    position: absolute;
+    top: 25%;
+    width: 100%;
+    height: 2.51px;
+    background-color: #BFBEBE;
+    z-index: 0; }
+  .blocx-progress_step {
+    position: relative;
+    width: 100%;
+    font-size: 12px; }
+    .blocx-progress_step:last-child {
+      width: 13px; }
+      .blocx-progress_step:last-child :after {
+        display: none; }
+    .blocx-progress_step:before {
+      content: "";
+      display: flex;
+      margin-bottom: 18px;
+      width: 50px;
+      height: 50px;
+      background: #BFBEBE;
+      background-repeat: no-repeat;
+      border: 4px solid #fff;
+      border-radius: 100%;
+      color: white;
+      margin-top: -1px; }
+    .blocx-progress_step:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 0;
+      width: 50px;
+      transition: width 1s ease-in;
+      height: 50px;
+      background: #BFBEBE;
+      z-index: -1;
+      border-radius: 100%; }
+    .blocx-progress_step.is-active:before {
+      border-radius: 100%;
+      animation: pulse 2s infinite;
+      width: 50px;
+      height: 50px;
+      margin-top: 0px;
+      background: #BFBEBE; }
+    .blocx-progress_step.is-complete {
+      color: blue; }
+      .blocx-progress_step.is-complete:before {
+        content: "\f00c";
+        font-family: FontAwesome;
+        font-size: 7px;
+        color: white;
+        background: blue;
+        border: 4px solid;
+        width: 12px;
+        height: 10px;
+        margin-top: -3px;
+        text-indent: 3px;
+        padding-top: 2px; }
+      .blocx-progress_step.is-complete:after {
+        background: blue;
+        animation: nextStep 1s;
+        animation-fill-mode: forwards; }
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(33, 131, 221, 0.4); }
+  70% {
+    box-shadow: 0 0 0 10px rgba(33, 131, 221, 0); }
+  100% {
+    box-shadow: 0 0 0 0 rgba(33, 131, 221, 0); } }
+
+@keyframes nextStep {
+  0% {
+    width: 0%; }
+  100% {
+    width: 100%; } }

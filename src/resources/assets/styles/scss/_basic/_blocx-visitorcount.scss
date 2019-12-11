@@ -1,0 +1,122 @@
+//visitor count component variables
+$blocx-counter-width:100% !default;
+$blocx-counter-padding: 11px 16px 3px !default;
+$blocx-counter-background-color:#2699FB !default;
+$blocx-counter-border-radius:6px !default;
+$blocx-counter-display:flex !default;
+$blocx-counter-justify-content:space-around !default;
+$blocx-counter-align-items:center !default;
+$blocx-counter-flex-wrap:wrap !default;
+$blocx-counter-span-line-height:30px !default;
+$blocx-counter-span-color:#2699FB !default;
+$blocx-counter-span-margin: 0px 4px !default;
+$blocx-counter-span-font-size:32px !default;
+$blocx-counter-span-padding:1px 5px !default;
+$blocx-counter-span-background-color:#fff !default;
+$blocx-counter-span-border-radius:6px !default;
+$blocx-counter-span-display:inline-block !default;
+$blocx-counter-text-line-height:22px !default;
+$blocx-counter-text-color:#fff !default;
+$blocx-counter-text-width: 100% !default;
+$blocx-counter-text-font-size:16px !default;
+$blocx-counter-text-padding-top:4px !default;
+$blocx-counter-text-text-transform:uppercase !default;
+$blocx-counter-text-text-align:center !default;
+$blocx-counter-strike-line-height:1rem !default;
+$blocx-counter-strike-font-size:4rem !default;
+$blocx-counter-strike-position: relative !default;
+$blocx-counter-strike-after-border-bottom:0.125rem solid #2699FB !default;
+$blocx-counter-strike-after-left:0 !default;
+$blocx-counter-strike-after-right:0 !default;
+$blocx-counter-strike-after-position:absolute !default;
+$blocx-counter-strike-after-top:50% !default;
+$blocx-counter-strike-font-style:normal !default;
+$blocx-counter-strike-font-weight-500: 500 !default;
+$blocx-counter-strike-font-weight-300: 300 !default;
+
+//visitor count component style starts
+.blocx-counter {
+    width: $blocx-counter-width;
+    padding: $blocx-counter-padding;
+    background-color: $blocx-counter-background-color;
+    border-radius: $blocx-counter-border-radius;
+    display: $blocx-counter-display;
+    justify-content: $blocx-counter-justify-content;
+    align-items: $blocx-counter-align-items;
+    flex-wrap: $blocx-counter-flex-wrap;
+
+    &_block {
+        line-height: 1;
+        position: relative;
+        overflow: hidden;
+        align-items: center;
+        height: 32px;
+        font-weight: 400;
+        color: $blocx-counter-span-color;
+        padding: $blocx-counter-span-padding;
+        margin: $blocx-counter-span-margin;
+        font-size: $blocx-counter-span-font-size;
+        line-height: $blocx-counter-span-line-height;
+        background-color: $blocx-counter-span-background-color;
+        border-radius: $blocx-counter-span-border-radius;
+        display: $blocx-counter-span-display;
+        font-style: $blocx-counter-strike-font-style;
+        font-weight: $blocx-counter-strike-font-weight-500;
+
+        &::before {
+            border-bottom: $blocx-counter-strike-after-border-bottom;
+            content: "";
+            left: $blocx-counter-strike-after-left;
+            margin-top: calc(0.125rem / 2 * -1);
+            position: $blocx-counter-strike-after-position;
+            right: $blocx-counter-strike-after-right;
+            top: $blocx-counter-strike-after-top;
+        }
+        &>span {
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            transition: transform 2s ease;
+            transform: translateY(0);
+            line-height: 1;
+
+            span {
+                flex: 0 0 100%;
+                height: 100%;
+                &:first-child{
+                    opacity: 0;
+                }
+            }
+        }
+
+        $d: 0;
+        $inc: 0.375;
+
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i})>span {
+                transition-delay: #{$d * 1s};
+            }
+
+            $d: $d+$inc;
+        }
+
+        
+    }
+    &_text {
+        width: 100%;
+
+        span {
+            color: $blocx-counter-text-color;
+            font-size: $blocx-counter-text-font-size;
+            width: $blocx-counter-text-width;
+            line-height: $blocx-counter-text-line-height;
+            text-transform: $blocx-counter-text-text-transform;
+            padding-top: $blocx-counter-text-padding-top;
+            text-align: $blocx-counter-text-text-align;
+            font-style: $blocx-counter-strike-font-style;
+            font-weight: $blocx-counter-strike-font-weight-300;
+            display: inline-block;
+        }
+    }
+}

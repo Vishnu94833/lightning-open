@@ -1,0 +1,118 @@
+.blocx-login {
+    position: relative;
+    .blocx-login-border-1{
+        border: 1px solid #ddd;
+    border-right: 0;
+    }
+    .blocx-login-border-2{
+        border: 1px solid #ddd;
+    border-left: 0;
+    }
+
+img{
+    background: #EBEDED;
+    
+    width: 100%;
+}
+    &_fields {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .form-title {
+            text-transform: uppercase;
+            color: #3B86FF;
+            font-size: 35px;
+            line-height: 21px;
+            text-align: center;
+            font-weight: bold;
+            letter-spacing: 5px;
+        }
+
+       
+            .subtitle1 {
+                color: #4D4F5C;
+                opacity: 0.5;
+                font-size: 18px;
+                line-height: 13px;
+                font-weight: normal;
+                display: inline;
+            }
+
+            .subtitle2 {
+                color: #2699FB;
+                opacity: 0.5;
+                font-size: 18px;
+                line-height: 13px;
+                font-weight: normal;
+                display: inline;
+            }
+            form{
+                margin-top: 35px;
+                ::placeholder{
+                    color: #43425D;
+                    font-size: 15px;
+                    line-height: 25px;
+                }
+                .blocx-login-button-controls{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                    .blocx-button-primary{
+                        border-radius: 6px;
+                        background: #2699FB;
+                        font-size: 18px;
+                        color: #FFFFFF;
+                        line-height: 26px;
+                        padding: 10px 45px;
+    
+    
+                    }
+                    .blocx-button-outline-secondary{
+                        border-radius: 6px;
+                        font-size: 18px;
+                        line-height: 26px;
+                        padding: 10px 45px;
+                        color: #3B86FF;
+                        border: 2px solid #3B86FF;
+                        
+                    }
+                }
+                
+            }
+.blocx-login-controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .login-password{
+        margin-top: -20px;
+        a{
+        font-size: 15px;
+        
+        color: #43425D;
+        text-decoration: none;
+        }
+    }
+    .blocx-checkbox{
+        width: auto;
+        label{
+            font-size: 15px;
+        font-weight: normal;
+            color: #43425D;
+        }
+    }
+}
+    }
+    &_bottom{
+        position: absolute;
+    bottom: 5%;
+    left: 40%;
+    a{
+        font-size: 11px;
+        line-height: 13px;
+        color: #2699FB;
+        text-decoration: none;
+    }
+    }
+}

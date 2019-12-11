@@ -1,0 +1,1033 @@
+// blocx-cards variables
+
+$blocx-card-spacer-y: 12px !default;
+$blocx-card-spacer-x: 20px !default;
+$blocx-card-border-width: $border-width !default;
+$blocx-card-border-radius: $border-radius !default;
+$blocx-card-border-color: rgba($black, .125) !default;
+$blocx-card-inner-border-radius: calc(#{$blocx-card-border-radius} - #{$blocx-card-border-width}) !default;
+$blocx-card-cap-bg: rgba($black, .03) !default;
+$blocx-card-cap-color: null !default;
+$blocx-card-color: null !default;
+$blocx-card-bg: $white !default;
+$blocx-card-img-overlay-padding: 20px !default;
+$blocx-card-group-margin: 30px / 2 !default;
+$blocx-card-deck-margin: $blocx-card-group-margin !default;
+$blocx-card-columns-count: 3 !default;
+$blocx-card-columns-gap: 20px !default;
+$blocx-card-columns-margin: $blocx-card-spacer-y !default;
+$blocx-card-spacer-padding:25px !default;
+$blocx-card-position:relative !default;
+$blocx-card-display:flex !default;
+$blocx-card-flex-direction:column !default;
+$blocx-card-word-wrap:break-word !default;
+$blocx-card-background-clip:border-box !default;
+$blocx-card-body-flex: 1 1 auto !default;
+$blocx-card-body-min-height: 1px !default;
+$blocx-card-title-font-size:20px !default;
+$blocx-card-title-font-weight:bold !default;
+$blocx-card-title-color:#2B2826 !default;
+$blocx-card-subtitle-font-size:16px !default;
+$blocx-card-subtitle-color:#686969 !default;
+$blocx-card-text-font-size:14px !default;
+$blocx-card-text-color:#2B2826 !default;
+$blocx-card-links-position:relative !default;
+$blocx-card-links-padding:20px 0 !default;
+$blocx-card-links-span-font-size:14px !default;
+$blocx-card-links-span-font-weight:bold !default;
+$blocx-card-links-span-color:#2B2826 !default;
+$blocx-card-links-span-padding:0px 30px 0 0 !default;
+$blocx-card-links-i-padding-right:10px !default;
+$blocx-card-links-text-color1:#B4B4B4;
+$blocx-card-links-share-link-font-size:14px !default;
+$blocx-card-links-share-link-font-weight:bold !default;
+$blocx-card-links-share-link-position:absolute !default;
+$blocx-card-links-share-link-color:#2699FB !default;
+$blocx-card-links-share-link-right:30px !default;
+$blocx-card-links-share-link-text-transform:uppercase !default;
+$blocx-card-links-share-link-text-decoration:none !default;
+$blocx-card-img-top-flex-direction:column !default;
+$blocx-card-img-left-flex-direction:row !default;
+$blocx-card-img-right-img-order:1 !default;
+$blocx-card-img-right-img-border-top-right-radius:3px !default;
+$blocx-card-img-right-img-border-bottom-right-radius:3px !default;
+$blocx-card-img-right-img-width:50% !default;
+$blocx-card-img-right-flex-direction:row !default;
+$blocx-card-img-left-img-width:50% !default;
+$blocx-card-img-left-img-border-top-left-radius:3px !default;
+$blocx-card-img-left-img-border-bottom-left-radius:3px !default;
+$blocx-card-img-position:absolute !default;
+$blocx-card-background-image-blocx-card-position:relative !default;
+$blocx-card-img-bottom-width:100% !default;
+$blocx-card-img-bottom-order:2 !default;
+$blocx-card-img-bottom-border-bottom-left-radius:3px !default;
+$blocx-card-img-bottom-border-bottom-right-radius:3px !default;
+$blocx-card-img-background: url('../assets/images/blocx-card_img-asymmetrical-default.png') !default;
+$blocx-card-img-background-position: center center !default;
+$blocx-card-img-background-repeat: no-repeat !default;
+$blocx-card-img-background-size: cover !default;
+$blocx-card-img-position: absolute !default;
+$blocx-card-img-top: 0 !default;
+$blocx-card-img-left: 0 !default;
+$blocx-card-img-width: 100% !default;
+$blocx-card-img-height: 100% !default;
+$blocx-card-image-header-display:flex !default;
+$blocx-card-image-header-justify-content:space-between !default;
+$blocx-card-image-header-align-items:center !default;
+$blocx-card-image-header-padding:30px 40px !default;
+$blocx-card-image-header-z-index:1 !default;
+$blocx-card-image-title-margin:0 !default;
+$blocx-card-image-title-font-size:11px !default;
+$blocx-card-image-title-font-weight:bold !default;
+$blocx-card-image-title-text-transform:uppercase !default;
+$blocx-card-image-title-span-color:#ffffff !default;
+$blocx-card-image-p-color:#ffffff !default;
+$blocx-card-image-p-line-height:1.5 !default;
+$blocx-card-image-p-font-size:14px !default;
+$blocx-card-image-p-margin-top:50px !default;
+$blocx-card-image-text-font-size:20px !default;
+$blocx-card-image-text-font-weight:bold !default;
+$blocx-card-image-text-line-height:1.5 !default;
+$blocx-card-image-text-color:#ffffff !default;
+$blocx-card-image-text-margin:0 !default;
+$blocx-card-image-body-z-index:1 !default;
+$blocx-card-image-body-padding:0 40px 20px 40px !default;
+$blocx-card-image-footer-display:flex !default;
+$blocx-card-image-footer-align-items:center !default;
+$blocx-card-image-footer-background:#EBEDED !default;
+$blocx-card-image-footer-z-index:1 !default;
+$blocx-card-image-footer-padding:40px !default;
+$blocx-card-image-footer-user-icon-position:relative !default;
+$blocx-card-image-footer-user-icon-width:34px !default;
+$blocx-card-image-footer-user-icon-height:34px !default;
+$blocx-card-image-footer-user-icon-border-radius:50% !default;
+$blocx-card-image-footer-user-icon-background:#2699FB !default;
+$blocx-card-image-footer-user-icon-display:inline-block !default;
+$blocx-card-image-footer-user-icon-margin-right:20px !default;
+$blocx-card-image-footer-user-icon-color:#fff !default;
+$blocx-card-image-footer-user-text-font-size:15px !default;
+$blocx-card-image-footer-user-text-font-weight:bold !default;
+$blocx-card-image-footer-user-text-color:#2699FB !default;
+$blocx-card-image-footer-i-position:absolute !default;
+$blocx-card-image-footer-i-top:50% !default;
+$blocx-card-image-footer-i-left:50% !default;
+$blocx-card-image-footer-i-transform:translate(-50%, -50%) !default;
+$blocx-card-img-overlay-position:absolute !default;
+$blocx-card-img-overlay-top:0 !default;
+$blocx-card-img-overlay-right:0 !default;
+$blocx-card-img-overlay-bottom:0 !default;
+$blocx-card-img-overlay-left:0 !default;
+$blocx-card-image-width:100% !default;
+$blocx-card-image-bottom-width:100% !default;
+$blocx-card-image-top-width:100% !default;
+$blocx-card-deck-display:flex !default;
+$blocx-card-deck-flex-direction:column !default;
+$blocx-card-group-display:flex !default;
+$blocx-card-group-flex-direction:column !default;
+$blocx-card-accordian-blocx-card-overflow:hidden !default;
+$blocx-card-bg-color2:#F6F8F9;
+$blocx-card-title-color2:#7F7F7F;
+$blocx-card-product-view-border:  0.03125rem solid #E4E4E4!default;
+$blocx-card-product-view-border-radius: 0.1875rem!default;
+$blocx-card-product-view-images-height: 10.25rem!default;
+$blocx-card-product-view-fa-heart-top: 0.625rem!default;
+$blocx-card-product-view-fa-heart-right: 0.625rem!default;
+$blocx-card-product-view-fa-heart-width: 1.125rem!default;
+$blocx-card-product-view-fa-heart-height: 1rem!default;
+$blocx-card-product-view-card-body-padding: 0.75rem!default;
+$blocx-card-product-view-card-pricing-align-items: baseline!default;
+$blocx-card-product-view-body-border: 2px solid #E4E4E4!default;
+$blocx-card-product-view-percent-discount-color: #FF4E4E!default;
+$blocx-card-product-view-body-margin-left: 0.4375rem!default;
+$blocx-card-product-view-card-pricing-padding-bottom: 0.5rem!default;
+$blocx-card-product-view-price-value-font-size: 0.625rem!default;
+$blocx-card-product-view-card-pricing-p-margin: 0 0.5rem 0 0!default;
+$blocx-card-product-view-price-value-line-height: 0.875rem!default;
+$blocx-card-product-view-price-value-font-weight: normal!default;
+$blocx-card-product-view-price-value-color: #9B9B9B!default;
+$blocx-card-product-view-subtitle-margin: 0!default;
+$blocx-card-product-view-discount-value-color: #A6ADB4!default;
+$blocx-card-product-view-price-value-rupee-color: #717171!default;
+$blocx-card-product-view-product-delivery-color: #8E8E8E!default;
+$blocx-card-common-heading-color: #000000!default;
+$blocx-card-product-view-price-value-rupee-font-size: 0.8125rem!default;
+$blocx-card-product-view-product-delivery-line-height: 0.8125rem!default;
+$blocx-card-product-view-discount-value-line-height: 1.1875rem!default;
+$blocx-card-product-view-discount-value-font-size: 0.5625rem!default;
+
+// blocx-card styles
+.blocx-card {
+    position: $blocx-card-position;
+    display: $blocx-card-display;
+    flex-direction: $blocx-card-flex-direction;
+    word-wrap: $blocx-card-word-wrap;
+    background-color: $blocx-card-bg;
+    background-clip: $blocx-card-background-clip;
+    border: $blocx-card-border-width solid $blocx-card-border-color;
+    @include border-radius($blocx-card-border-radius);
+
+    >hr {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    >.list-group:first-child {
+        .list-group-item:first-child {
+            @include border-top-radius($blocx-card-border-radius);
+        }
+    }
+
+    >.list-group:last-child {
+        .list-group-item:last-child {
+            @include border-bottom-radius($blocx-card-border-radius);
+        }
+    }
+
+    .blocx-card_body {
+        flex: $blocx-card-body-flex;
+        min-height: $blocx-card-body-min-height;
+        padding: $blocx-card-spacer-padding;
+        color: $blocx-card-color;
+        // width:50%;
+    }
+
+
+    .blocx-card_title {
+        margin-bottom: $blocx-card-spacer-y;
+        font-size: $blocx-card-title-font-size;
+        font-weight: $blocx-card-title-font-weight;
+        color: $blocx-card-title-color;
+        line-height: 30px;
+    }
+
+
+    .blocx-card_subtitle {
+        font-size: $blocx-card-subtitle-font-size;
+        color: $blocx-card-subtitle-color;
+    }
+
+    .blocx-card_text {
+        font-size: $blocx-card-text-font-size;
+        color: $blocx-card-text-color;
+        line-height: 24px;
+    }
+
+    .blocx_blocx-card-text:last-child {
+        margin-bottom: 0;
+    }
+
+    .blocx-card_links {
+        position: $blocx-card-links-position;
+        padding: $blocx-card-links-padding;
+
+
+        span {
+            font-size: $blocx-card-links-span-font-size;
+            font-weight: $blocx-card-links-span-font-weight;
+            color: $blocx-card-links-span-color;
+            padding: $blocx-card-links-span-padding;
+
+            i {
+                padding-right: $blocx-card-links-i-padding-right;
+                color: $blocx-card-links-share-link-color;
+            }
+        }
+
+
+        .share-link {
+            position: $blocx-card-links-share-link-position;
+            right: $blocx-card-links-share-link-right;
+            text-transform: $blocx-card-links-share-link-text-transform;
+            font-size: $blocx-card-links-share-link-font-size;
+            font-weight: $blocx-card-links-share-link-font-weight;
+            color: $blocx-card-links-share-link-color;
+            text-decoration: $blocx-card-links-share-link-text-decoration;
+        }
+    }
+}
+
+.blocx-card-post-thumnails {
+    flex-direction: $blocx-card-img-top-flex-direction;
+}
+
+.blocx-card-post {
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: $blocx-card-img-left-flex-direction;
+
+
+    img {
+        width: $blocx-card-img-left-img-width;
+        border-top-left-radius: $blocx-card-img-left-img-border-top-left-radius;
+        border-bottom-left-radius: $blocx-card-img-left-img-border-bottom-left-radius;
+    }
+}
+
+
+
+.blocx-card-post-preview {
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: $blocx-card-img-right-flex-direction;
+
+    .blocx-card_subtitle {
+        font-size: 12px;
+        text-transform: $blocx-card-links-share-link-text-transform;
+        color: $blocx-card-title-color;
+        margin: $blocx-card-product-view-subtitle-margin;
+        line-height: 16px;
+    }
+
+    img {
+        order: $blocx-card-img-right-img-order;
+        border-top-right-radius: $blocx-card-img-right-img-border-top-right-radius;
+        border-bottom-right-radius: $blocx-card-img-right-img-border-bottom-right-radius;
+        width: $blocx-card-img-right-img-width;
+    }
+}
+
+.blocx-card-image-thumbnail {
+    img {
+        width: $blocx-card-img-bottom-width;
+        order: $blocx-card-img-bottom-order;
+        border-bottom-left-radius: $blocx-card-img-bottom-border-bottom-left-radius;
+        border-bottom-right-radius: $blocx-card-img-bottom-border-bottom-right-radius;
+    }
+
+    .blocx-card_body {
+        background: $blocx-card-image-footer-background;
+    }
+
+    .blocx-card_title {
+        font-size: 14px;
+        text-transform: $blocx-card-links-share-link-text-transform;
+        font-weight: bold;
+        margin: $blocx-card-product-view-subtitle-margin;
+    }
+
+    i {
+        color: $blocx-card-links-share-link-color;
+        padding-right: 10px;
+    }
+
+    .blocx-card_subtitle {
+        font-size: 14px;
+        margin: $blocx-card-product-view-subtitle-margin;
+    }
+}
+
+.blocx-card-post-thumnails-img-middle {
+    .blocx-card_header {
+        display: $blocx-card-image-header-display;
+        justify-content: $blocx-card-image-header-justify-content;
+        align-items: $blocx-card-image-header-align-items;
+        padding: 0;
+        z-index: $blocx-card-image-header-z-index;
+
+        &-left {
+            display: inherit;
+            align-items: center;
+
+            img {
+                padding-right: 10px;
+            }
+
+            .blocx-card_text {
+                font-size: 14px;
+                color: $blocx-card-text-color;
+                font-weight: bold;
+            }
+        }
+
+        &-right {
+            span {
+                font-size: 12px;
+                color: $blocx-card-links-text-color1;
+            }
+        }
+    }
+
+    .blocx-card_text {
+        font-size: 12px;
+        color: $blocx-card-links-text-color1;
+    }
+
+    .blocx-card_links {
+        padding-bottom: 0;
+    }
+}
+
+.blocx-card-review {
+    .blocx-card_body {
+        background: $blocx-card-bg-color2;
+
+        .blocx-card_title {
+            font-size: 14px;
+            color: $blocx-card-title-color2;
+            margin: 5px 0;
+            line-height: 1.5;
+        }
+
+        .blocx-card_subtitle {
+            font-size: 12px;
+            margin: $blocx-card-product-view-subtitle-margin;
+            font-weight: $blocx-card-product-view-price-value-font-weight;
+        }
+
+        .blocx-card_rating {
+            padding-top: 10px;
+
+            i {
+                font-size: 10px;
+            }
+
+            i.fa-star {
+                color: $blocx-card-links-share-link-color;
+            }
+        }
+    }
+}
+
+.blocx-card-post {
+    .blocx-card_header {
+        display: $blocx-card-image-header-display;
+        justify-content: $blocx-card-image-header-justify-content;
+        align-items: $blocx-card-image-header-align-items;
+        padding: 0;
+        z-index: $blocx-card-image-header-z-index;
+
+        &-left {
+            display: inherit;
+            align-items: center;
+
+            img {
+                padding-right: 10px;
+                width: 30px;
+            }
+
+            .blocx-card_text {
+                font-size: 14px;
+                color: $blocx-card-text-color;
+                font-weight: bold;
+            }
+        }
+
+        &-right {
+            span {
+                font-size: 12px;
+                color: $blocx-card-links-text-color1;
+            }
+        }
+    }
+
+    .blocx-card_text {
+        font-size: 12px;
+        color: $blocx-card-links-text-color1;
+        padding-left: 40px;
+        margin-bottom: 0;
+    }
+
+    .blocx-card_body {
+        background: $blocx-card-bg-color2;
+    }
+}
+
+.blocx-background-image-card {
+    position: $blocx-card-background-image-blocx-card-position;
+
+    .blocx-card_img {
+        position: $blocx-card-img-position;
+        // width: 100%;
+        // height: auto;
+        // max-height: 100%;
+    }
+
+
+    &::before {
+        content: "";
+        background: $blocx-card-img-background;
+        background-position: $blocx-card-img-background-position;
+        background-repeat: $blocx-card-img-background-repeat;
+        background-size: $blocx-card-img-background-size;
+        position: $blocx-card-img-position;
+        top: $blocx-card-img-top;
+        left: $blocx-card-img-left;
+        width: $blocx-card-img-width;
+        height: $blocx-card-img-height;
+    }
+
+
+    .blocx-card_header {
+        display: $blocx-card-image-header-display;
+        justify-content: $blocx-card-image-header-justify-content;
+        align-items: $blocx-card-image-header-align-items;
+        padding: $blocx-card-image-header-padding;
+        z-index: $blocx-card-image-header-z-index;
+
+
+
+        .blocx-card_title {
+            margin: $blocx-card-image-title-margin;
+            font-size: $blocx-card-image-title-font-size;
+            font-weight: $blocx-card-image-title-font-weight;
+            text-transform: $blocx-card-image-title-text-transform;
+        }
+
+        .blocx-card_title,
+        span {
+            color: $blocx-card-image-title-span-color;
+        }
+    }
+
+    .blocx-card_body {
+        z-index: $blocx-card-image-body-z-index;
+        padding: $blocx-card-image-body-padding;
+        min-height: 300px;
+
+
+
+        .blocx-card_text {
+            font-size: $blocx-card-image-text-font-size;
+            font-weight: $blocx-card-image-text-font-weight;
+            line-height: $blocx-card-image-text-line-height;
+            color: $blocx-card-image-text-color;
+            margin: $blocx-card-image-text-margin;
+        }
+
+
+        p {
+            color: $blocx-card-image-p-color;
+            line-height: $blocx-card-image-p-line-height;
+            font-size: $blocx-card-image-p-font-size;
+            margin-top: $blocx-card-image-p-margin-top;
+        }
+    }
+
+
+    .blocx-card_footer {
+        display: $blocx-card-image-footer-display;
+        align-items: $blocx-card-image-footer-align-items;
+        background: $blocx-card-image-footer-background;
+        z-index: $blocx-card-image-footer-z-index;
+        padding: $blocx-card-image-footer-padding;
+
+
+        .user_icon {
+            position: $blocx-card-image-footer-user-icon-position;
+            width: $blocx-card-image-footer-user-icon-width;
+            height: $blocx-card-image-footer-user-icon-height;
+            border-radius: $blocx-card-image-footer-user-icon-border-radius;
+            background: $blocx-card-image-footer-user-icon-background;
+            display: $blocx-card-image-footer-user-icon-display;
+            margin-right: $blocx-card-image-footer-user-icon-margin-right;
+            color: $blocx-card-image-footer-user-icon-color;
+
+            i {
+                position: $blocx-card-image-footer-i-position;
+                top: $blocx-card-image-footer-i-top;
+                left: $blocx-card-image-footer-i-left;
+                transform: $blocx-card-image-footer-i-transform;
+            }
+        }
+
+
+        .user_text {
+            font-size: $blocx-card-image-footer-user-text-font-size;
+            font-weight: $blocx-card-image-footer-user-text-font-weight;
+            color: $blocx-card-image-footer-user-text-color;
+        }
+    }
+}
+
+.blocx-card-link {
+    &:hover {
+        text-decoration: $blocx-card-links-share-link-text-decoration;
+    }
+
+    +.blocx-card-link {
+        margin-left: $blocx-card-spacer-x;
+    }
+}
+
+//
+// Optional textual caps
+//
+
+.blocx-card-header {
+    padding: $blocx-card-spacer-y $blocx-card-spacer-x;
+    margin-bottom: 0; // Removes the default margin-bottom of <hN>
+    color: $blocx-card-cap-color;
+    background-color: $blocx-card-cap-bg;
+    border-bottom: $blocx-card-border-width solid $blocx-card-border-color;
+
+    &:first-child {
+        @include border-radius($blocx-card-inner-border-radius $blocx-card-inner-border-radius 0 0);
+    }
+
+    +.list-group {
+        .list-group-item:first-child {
+            border-top: 0;
+        }
+    }
+}
+
+.blocx-card-footer {
+    padding: $blocx-card-spacer-y $blocx-card-spacer-x;
+    background-color: $blocx-card-cap-bg;
+    border-top: $blocx-card-border-width solid $blocx-card-border-color;
+
+    &:last-child {
+        @include border-radius(0 0 $blocx-card-inner-border-radius $blocx-card-inner-border-radius);
+    }
+}
+
+
+//
+// Header navs
+//
+
+.blocx-card-header-tabs {
+    margin-right: -$blocx-card-spacer-x / 2;
+    margin-bottom: -$blocx-card-spacer-y;
+    margin-left: -$blocx-card-spacer-x / 2;
+    border-bottom: 0;
+
+    @if $white !=$blocx-card-bg {
+        .nav-link.active {
+            background-color: $blocx-card-bg;
+            border-bottom-color: $blocx-card-bg;
+        }
+    }
+}
+
+.blocx-card-header-pills {
+    margin-right: -$blocx-card-spacer-x / 2;
+    margin-left: -$blocx-card-spacer-x / 2;
+}
+
+// blocx-card image
+
+.blocx-card-img-overlay {
+    position: $blocx-card-img-overlay-position;
+    top: $blocx-card-img-overlay-top;
+    right: $blocx-card-img-overlay-right;
+    bottom: $blocx-card-img-overlay-bottom;
+    left: $blocx-card-img-overlay-left;
+    padding: $blocx-card-img-overlay-padding;
+}
+
+.blocx-card_img {
+    width: $blocx-card-image-width; // Required because we use flexbox and this inherently applies align-self: stretch
+}
+
+// blocx-card image caps
+
+.blocx-card_img-top {
+    width: $blocx-card-image-top-width; // Required because we use flexbox and this inherently applies align-self: stretch
+    @include border-top-radius($blocx-card-inner-border-radius);
+}
+
+.blocx-card-img-bottom {
+    width: $blocx-card-image-bottom-width; // Required because we use flexbox and this inherently applies align-self: stretch
+    @include border-bottom-radius($blocx-card-inner-border-radius);
+}
+
+
+// blocx-card deck
+
+.blocx-card-deck {
+    display: $blocx-card-deck-display;
+    flex-direction: $blocx-card-deck-flex-direction;
+
+    .blocx-card {
+        margin-bottom: $blocx-card-deck-margin;
+    }
+
+}
+
+
+//
+// blocx-card groups
+//
+
+.blocx-card-group {
+    display: $blocx-card-group-display;
+    flex-direction: $blocx-card-group-flex-direction;
+
+    >.blocx-card {
+        margin-bottom: $blocx-card-group-margin;
+    }
+
+
+}
+
+
+//
+// Columns
+//
+
+.blocx-card-columns {
+    .blocx-card {
+        margin-bottom: $blocx-card-columns-margin;
+    }
+
+
+}
+
+
+//
+// Accordion
+//
+
+.accordion {
+    >.blocx-card {
+        overflow: $blocx-card-accordian-blocx-card-overflow;
+
+        &:not(:first-of-type) {
+            .blocx-card-header:first-child {
+                @include border-radius(0);
+            }
+
+            &:not(:last-of-type) {
+                border-bottom: 0;
+                @include border-radius(0);
+            }
+        }
+
+        &:first-of-type:not(:last-of-type) {
+            border-bottom: 0;
+            @include border-bottom-radius(0);
+        }
+
+        &:last-of-type {
+            @include border-top-radius(0);
+        }
+
+        .blocx-card-header {
+            margin-bottom: -$blocx-card-border-width;
+        }
+    }
+}
+
+@mixin common-heading {
+    font-size: 18px;
+    line-height: 26px;
+    margin: $blocx-card-product-view-subtitle-margin;
+    //padding-left:16px;
+    margin-bottom:8px;
+    color: $blocx-card-common-heading-color;
+    text-transform: $blocx-card-links-share-link-text-transform;
+    font-weight: $blocx-card-product-view-price-value-font-weight;
+}
+
+@mixin common-subheading {
+    color: $blocx-card-product-view-price-value-color;
+    font-size: $blocx-card-product-view-price-value-rupee-font-size;
+    line-height: 19px;
+    margin:0;
+    // padding: 4px 0;
+  //  padding-left:16px;
+    margin-bottom:12px;
+    font-weight: $blocx-card-product-view-price-value-font-weight;
+}
+
+@mixin common-starts-section {
+    display: $blocx-card-image-footer-user-icon-display;
+    width: $blocx-card-img-bottom-width;
+    color: $blocx-card-links-share-link-color;
+    // padding-bottom: 16px;
+
+    i {
+        font-size: $blocx-card-product-view-discount-value-font-size;
+    }
+}
+
+@mixin common-label-style {
+    position: $blocx-card-links-share-link-position;
+    right: 0;
+    top: 0.5rem;
+    font-size: 0.5rem;
+    text-transform: $blocx-card-links-share-link-text-transform;
+    color: $blocx-card-product-view-discount-value-color;
+    background: $blocx-card-bg-color2;
+    border-radius: 2px;
+    padding: 3.5px;
+}
+
+.blocx-card-product-view {
+    border: $blocx-card-product-view-border;
+    border-radius: $blocx-card-product-view-border-radius;
+
+    &_images {
+        // height: $blocx-card-product-view-images-height;
+        display: $blocx-card-image-footer-user-icon-display;
+        width: $blocx-card-img-bottom-width;
+
+        .fa-heart {
+            position: $blocx-card-links-share-link-position;
+            top: $blocx-card-product-view-fa-heart-top;
+            right: $blocx-card-product-view-fa-heart-right;
+            width: $blocx-card-product-view-fa-heart-width;
+            height: $blocx-card-product-view-fa-heart-height;
+        }
+    }
+
+    .blocx-card {
+        &_body {
+            padding: $blocx-card-product-view-card-body-padding;
+        }
+
+        &_body-content {
+            position: $blocx-card-position;
+
+            label {
+                @include common-label-style();
+                line-height: 12px;
+            }
+
+            .blocx-card_pricing {
+                display: $blocx-card-display;
+                align-items: $blocx-card-product-view-card-pricing-align-items;
+                padding-bottom: $blocx-card-product-view-card-pricing-padding-bottom;
+
+                p {
+                    margin: $blocx-card-product-view-card-pricing-p-margin;
+                }
+            }
+
+            .price-value {
+                font-size: $blocx-card-product-view-price-value-font-size;
+                line-height: $blocx-card-product-view-price-value-line-height;
+                font-weight: $blocx-card-product-view-price-value-font-weight;
+                display: $blocx-card-image-footer-user-icon-display;
+                margin:$blocx-card-product-view-subtitle-margin;
+                color: $blocx-card-product-view-price-value-color;
+            }
+
+            .pric-value-rupee {
+                font-size: 0.8125rem;
+                line-height: $blocx-card-product-view-discount-value-line-height;
+                color: $blocx-card-product-view-price-value-rupee-color;
+                font-weight: $blocx-card-product-view-price-value-font-weight;
+            }
+
+            .discount-value {
+                color: $blocx-card-product-view-discount-value-color;
+                font-size: $blocx-card-product-view-discount-value-font-size;
+                line-height: $blocx-card-product-view-product-delivery-line-height;
+                margin-top: 0;
+                text-decoration: line-through;
+                //         font-weight: $blocx-filter-left-section-heading-font-weight; 
+            }
+
+            .percent-discount {
+                color: $blocx-card-product-view-percent-discount-color;
+                font-size: $blocx-card-product-view-discount-value-font-size;
+                line-height: $blocx-card-product-view-product-delivery-line-height;
+                margin-top: 0;
+            }
+
+            .blocx-card_title {
+                @include common-heading;
+            }
+
+            .blocx-card_subtitle {
+                @include common-subheading;
+                
+            }
+
+            .blocx-card_text {
+                color: rgba(0, 0, 0, .6);
+                font-size: 14px;
+                line-height: 1.25rem;
+                margin: $blocx-card-product-view-subtitle-margin;
+                padding: 0.5rem 0 12px;
+            }
+
+            .blocx-card_rating {
+                @include common-starts-section;
+            }
+        }
+
+        &_links {
+            padding: 0;
+            display: $blocx-card-display;
+            align-items: center;
+            justify-content: space-around;
+            padding-bottom: 4px;
+
+            .wishlist {
+                text-decoration: $blocx-card-links-share-link-text-decoration;
+                text-transform: $blocx-card-links-share-link-text-transform;
+                font-size: 12px;
+                line-height: 16px;
+                color: $blocx-card-links-share-link-color;
+            }
+
+            .blocx-button-primary {
+                padding: 5px 16px 5px 16px;
+                font-size: 10px;
+                line-height: 16px;
+                /* margin-left: 2.125rem; */
+                text-transform: $blocx-card-links-share-link-text-transform;
+            }
+        }
+    }
+}
+
+.blocx-card-product-view-list {
+    flex-direction: row;
+    display: $blocx-card-display;
+    margin: 30px 0;
+    border: none;
+
+    &_images {
+        position: $blocx-card-position;
+
+        img {
+            width: $blocx-card-img-bottom-width;
+            height: $blocx-card-img-height;
+        }
+
+        .fa-heart {
+            position: $blocx-card-links-share-link-position;
+            top: $blocx-card-product-view-fa-heart-top;
+            right: $blocx-card-product-view-fa-heart-right;
+            width: $blocx-card-product-view-fa-heart-width;
+            height: $blocx-card-product-view-fa-heart-height;
+        }
+    }
+
+    .blocx-card {
+
+        &_body {
+            border: $blocx-card-product-view-body-border;
+            margin-left: $blocx-card-product-view-body-margin-left;
+            padding: 16px;
+
+            &-content_left {
+                position: $blocx-card-position;
+
+                label {
+                    @include common-label-style();
+                    right: 30%;
+                    line-height: 12px;
+                }
+
+                float: left;
+                display: $blocx-card-image-footer-user-icon-display;
+                width: calc(50% - 12px);
+                border-right: 2px solid #ddd;
+                margin-right: 0.625rem;
+
+                .blocx-card_title {
+                    @include common-heading;
+                }
+
+                .blocx-card_subtitle {
+                    @include common-subheading;
+                    
+                }
+
+                .blocx-card_text {
+                    color: $blocx-card-product-view-product-delivery-color;
+                    font-size: 12px;
+                    line-height: 1rem;
+                    margin: $blocx-card-product-view-subtitle-margin;
+                    // padding: 0.5rem 0;
+                    padding-left:16px;
+                    margin-bottom:15px;
+                }
+
+                .blocx-card_rating {
+                    @include common-starts-section;
+                    // padding-bottom: 2px;
+                    padding-left: 16px;
+                }
+
+                .price-value {
+                    font-size: $blocx-card-product-view-price-value-font-size;
+                    line-height: $blocx-card-product-view-price-value-line-height;
+                    font-weight: $blocx-card-product-view-price-value-font-weight;
+                    display: $blocx-card-image-footer-user-icon-display;
+                    margin: $blocx-card-product-view-subtitle-margin;
+                    color: $blocx-card-product-view-price-value-color;
+                }
+            }
+
+            &-content_right {
+                float: right;
+                display: $blocx-card-image-footer-user-icon-display;
+                width: calc(50% - 0.625rem);
+                margin-left: 0.625rem;
+
+                .blocx-card_pricing {
+                    display: $blocx-card-display;
+                    align-items: center;
+                    margin-top: 16px;
+                    padding-bottom: 12px;
+
+                    p {
+                        margin: 0 6px 0 0;
+                    }
+                }
+
+                .pric-value-rupee {
+                    font-size: $blocx-card-product-view-price-value-rupee-font-size;
+                    line-height: 19px;
+                    color: $blocx-card-product-view-price-value-rupee-color;
+                    font-weight: $blocx-card-product-view-price-value-font-weight;
+                    margin-top: 0;
+                }
+
+                .discount-value {
+                    color: $blocx-card-product-view-discount-value-color;
+                    font-size: $blocx-card-product-view-discount-value-font-size;
+                    line-height: $blocx-card-product-view-product-delivery-line-height;
+                    margin-top: 0;
+                    margin-right:6px;
+                    text-decoration: line-through;
+                    //         font-weight: $blocx-filter-left-section-heading-font-weight; 
+                }
+
+                .percent-discount {
+                    color: $blocx-card-product-view-percent-discount-color;
+                    font-size: $blocx-card-product-view-discount-value-font-size;
+                    line-height: $blocx-card-product-view-product-delivery-line-height;
+                    margin-top: 0;
+                }
+
+                .blocx-card_links {
+                    // margin-top: -0.5rem;
+                    padding: 0;
+
+                    .product-delivery {
+                        font-size: $blocx-card-product-view-discount-value-font-size;
+                        line-height: $blocx-card-product-view-product-delivery-line-height;
+                        color: $blocx-card-product-view-product-delivery-color;
+                        margin: $blocx-card-product-view-subtitle-margin;
+                        padding: 6px 0;
+                    }
+
+                    .wishlist {
+                        text-decoration: $blocx-card-links-share-link-text-decoration;
+                        text-transform: $blocx-card-links-share-link-text-transform;
+                        font-size: 12px;
+                        line-height: 16px;
+                        color: $blocx-card-links-share-link-color;
+                    }
+
+                    .blocx-button-primary {
+                        padding: 5px 16px 5px 16px;
+                        font-size: $blocx-card-product-view-price-value-font-size;
+                        line-height: 14px;
+                        /* margin-left: 2.125rem; */
+                        text-transform: $blocx-card-links-share-link-text-transform;
+                    }
+                }
+            }
+
+        }
+    }
+
+}

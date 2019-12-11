@@ -1,0 +1,17 @@
+<template>
+    <!-- Accordion html start -->
+    <div class="blocx-accordion-wrapper">
+        <template for:each={accordions} for:item="accord">
+            <div class="blocx-accordion" key={accord.id}>
+                <h2 class="blocx-accordion_heading" >{accord.Title}</h2>
+                <img class="blocx-accordion_icon"
+                    src="../../../resources/assets/images/blocx-accordion_icon-right-arrow-default.svg"
+                    alt="accordion arrow">
+                <div class="blocx-accordion_content">
+                    <p class="blocx-accordion_body">{accord.Content}</p>
+                </div>
+            </div>
+        </template>
+    </div>
+    <!-- Accordion html start -->
+</template>

@@ -1,0 +1,369 @@
+//styles for banner type 1
+.blocx-banner-offer {
+    position: relative;
+    width: 100%;
+
+    &_banner-img {
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &_label-block {
+        display: inline-block;
+        width: 95px;
+        height: 95px;
+        position: absolute;
+        top: 0;
+        background: url(../assets/images/blocx-banner-offer-image-style6.svg) no-repeat;
+        background-size: contain;
+
+        label {
+            font-size: 22px;
+            line-height: 30px;
+            color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+            position: inherit;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+        }
+
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+        .blocx-banner-offer_label-block {
+            width: 55px;
+            height: 55px;
+        }
+
+        label {
+            font-size: 16px;
+            line-height: 11px;
+            top: 50%;
+            left: 50%;
+        }
+
+    }
+}
+
+//styles for banner style 2
+.blocx-banner-offer_style1 {
+    .blocx-banner-offer_label-block {
+        background: url(../assets/images/blocx-banner-offer-image-style1.svg) no-repeat;
+        background-size: contain;
+
+        label {
+            transform: translate(-90%, -90%) rotate(-45deg);
+            -webkit-transform: translate(-90%, -90%) rotate(-45deg);
+            -ms-transform: translate(-90%, -90%) rotate(-45deg);
+            -moz-transform: translate(-90%, -90%) rotate(-45deg);
+            -o-transform: translate(-90%, -90%) rotate(-45deg);
+        }
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+
+        label {
+            // font-size:16px;
+            // line-height:11px;
+            // top:40%;
+            // left:63%;
+            top: 44%;
+            left: 60%;
+        }
+    }
+}
+
+//styles for banner style 3
+.blocx-banner-offer_style2 {
+    .blocx-banner-offer_label-block {
+        background: url(../assets/images/blocx-banner-offer-image-style2.svg) no-repeat;
+        background-size: contain;
+
+        label {
+            transform: translate(-90%, -90%) rotate(-45deg);
+            -webkit-transform: translate(-90%, -90%) rotate(-45deg);
+            -ms-transform: translate(-90%, -90%) rotate(-45deg);
+            -o-transform: translate(-90%, -90%) rotate(-45deg);
+            -moz-transform: translate(-90%, -90%) rotate(-45deg);
+
+        }
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+
+        label {
+            // font-size:16px;
+            // line-height:11px;
+            // top:40%;
+            // left:63%;
+            top: 44%;
+            left: 60%;
+        }
+    }
+}
+
+//styles for banner style 4
+.blocx-banner-offer_style3 {
+    .blocx-banner-offer_label-block {
+        background: url(../assets/images/blocx-banner-offer-image-style3.svg) no-repeat;
+        right: 0;
+        background-size: contain;
+
+        label {
+            transform: translate(-20%, -100%) rotate(45deg);
+            -webkit-transform: translate(-20%, -100%) rotate(45deg);
+            -o-transform: translate(-20%, -100%) rotate(45deg);
+            -ms-transform: translate(-20%, -100%) rotate(45deg);
+            -moz-transform: translate(-20%, -100%) rotate(45deg);
+            line-height: 33px;
+            font-weight: 23px;
+        }
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+
+        label {
+            // font-size:16px;
+            // line-height:11px;
+            top: 65%;
+            left: 46%;
+        }
+    }
+}
+
+//styles for banner style 5
+.blocx-banner-offer_style4 {
+    .blocx-banner-offer_label-block {
+        background: url(../assets/images/blocx-banner-offer-image-style4.svg) no-repeat;
+        bottom: 4px;
+        top: 70%;
+        background-size: contain;
+
+        label {
+            font-size: 13px;
+            line-height: 30px;
+            transform: translate(-90%, 0%) rotate(45deg);
+            -webkit-transform: translate(-90%, 0%) rotate(45deg);
+            -ms-transform: translate(-90%, 0%) rotate(45deg);
+            -o-transform: translate(-90%, 0%) rotate(45deg);
+            -moz-transform: translate(-90%, 0%) rotate(45deg);
+        }
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+        .blocx-banner-offer_label-block {
+            width: 55px;
+            height: 55px;
+            top: 82%;
+            background-size: contain;
+            label {
+                font-size: 11px;
+                line-height: 11px;
+                top: 46%;
+                left: 53%;
+            }
+        }
+    }
+
+    @include blocx-responsive-breakpoint('mobile') {
+        .blocx-banner-offer_label-block {
+            background-size: contain;
+            top: 64%;
+            label {
+                font-size: 5px;
+            }
+        }
+    }
+    @media screen and (max-width:350px) {
+        
+    }
+}
+
+//styles for banner style 6
+.blocx-banner-offer_style5 {
+    .blocx-banner-offer_label-block {
+        background: url(../assets/images/blocx-banner-offer-image-style5.svg) no-repeat;
+        bottom: 4px;
+        top: 70%;
+        right: 0;
+        background-size: contain;
+
+        label {
+            font-size: 11px;
+            line-height: 13px;
+            transform: translate(-10%, 10%) rotate(-45deg);
+            -o-transform: translate(-10%, 10%) rotate(-45deg);
+            -ms-transform: translate(-10%, 10%) rotate(-45deg);
+            -webkit-transform: translate(-10%, 10%) rotate(-45deg);
+            -moz-transform: translate(-10%, 10%) rotate(-45deg);
+        }
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+        .blocx-banner-offer_label-block {
+            width: 55px;
+            height: 55px;
+            top: 82%;
+        }
+
+        label {
+            font-size: 9px;
+            line-height: 11px;
+            top: 31%;
+            left: 58%;
+        }
+
+    }
+
+    @include blocx-responsive-breakpoint('mobile') {
+        .blocx-banner-offer_label-block {
+
+            top: 71%;
+        }
+        label {
+            font-size: 5px !important;
+        }
+
+    }
+}
+
+//styles for banner style 7
+.blocx-banner-offer_style6 {
+    .blocx-banner-offer_label-block {
+        background: url(../assets/images/blocx-banner-offer-image-style7.svg) no-repeat;
+        background-size: contain;
+
+        label {
+            transform: translate(-90%, -90%) rotate(-45deg);
+            -webkit-transform: translate(-90%, -90%) rotate(-45deg);
+            -o-transform: translate(-90%, -90%) rotate(-45deg);
+            -moz-transform: translate(-90%, -90%) rotate(-45deg);
+            -ms-transform: translate(-90%, -90%) rotate(-45deg);
+        }
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+
+        label {
+            // font-size:9px;
+            // line-height:11px;
+            // top:45%;
+            // left:64%;
+            top: 44%;
+            left: 60%;
+        }
+    }
+}
+
+//styles for banner style 8
+.blocx-banner-offer_style7 {
+    .blocx-banner-offer_label-block {
+        background: url(../assets/images/blocx-banner-offer-image-style8.svg) no-repeat;
+        background-size: contain;
+
+        label {
+            top: 35%;
+            left: 44%;
+        }
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+
+        label {
+            // font-size:9px;
+            // line-height:11px;
+            top: 22%;
+            left: 25%;
+        }
+    }
+}
+
+//styles for banner style9
+.blocx-banner-offer_style8 {
+    .blocx-banner-offer_label-block {
+        right: -16px;
+        background: url(../assets/images/blocx-banner-offer-image-style9.svg) no-repeat;
+        width: 200px;
+        height: 72px;
+        top: 5%;
+        background-size: contain;
+
+        label {
+            font-size: 18px;
+            line-height: 30px;
+            top: 40%;
+
+        }
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+        .blocx-banner-offer_label-block {
+            width: 110px;
+            height: 55px;
+
+            top: 3%;
+            right: -3%;
+
+            label {
+                font-size: 12px;
+                line-height: 12px;
+                top: 24%;
+
+            }
+        }
+    }
+
+    @include blocx-responsive-breakpoint('mobile') {
+        .blocx-banner-offer_label-block {
+            width: 85px;
+            height: 50px;
+
+            label {
+                font-size: 8px;
+                line-height: 11px;
+
+            }
+        }
+    }
+}
+
+//styles for banner style10
+.blocx-banner-offer_style9 {
+    .blocx-banner-offer_label-block {
+        background: url(../assets/images/blocx-banner-offer-image-style10.svg) no-repeat;
+        bottom: 0;
+        top: 70%;
+        right: 0;
+        background-size: contain;
+
+        label {
+            transform: translate(-60%, -90%) rotate(5deg);
+            -webkit-transform: translate(-60%, -90%) rotate(5deg);
+            -moz-transform: translate(-60%, -90%) rotate(5deg);
+            -ms-transform: translate(-60%, -90%) rotate(5deg);
+            -o-transform: translate(-60%, -90%) rotate(5deg);
+        }
+    }
+
+    @include blocx-responsive-breakpoint('tab') {
+        .blocx-banner-offer_label-block {
+
+            top: 82%;
+
+        }
+    }
+
+    @include blocx-responsive-breakpoint('mobile') {
+        .blocx-banner-offer_label-block {
+            top: 64%;
+        }
+    }
+}

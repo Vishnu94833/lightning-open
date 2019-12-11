@@ -1,0 +1,30 @@
+//declarations for asidenav
+$blocx-asidenav-border:1px solid #5BC6CF !default;
+$blocx-asidenav-background-color:#2699FB !default;
+$blocx-asidenav-a-display:inline-block !default;
+$blocx-asidenav-a-color:#ffffff !default;
+$blocx-asidenav-a-text-decoration:none !default;
+$blocx-asidenav-logo-margin:0 !default;
+$blocx-asidenav-logo-font-size:22px !default;
+$blocx-asidenav-logo-text-transform:uppercase !default;
+$blocx-asidenav-logo-padding:10px 15px !default;
+
+
+
+.blocx-asidenav {
+    border: $blocx-asidenav-border;
+    background-color: $blocx-asidenav-background-color;
+
+    &_logo {
+        margin: $blocx-asidenav-logo-margin;
+        font-size: $blocx-asidenav-logo-font-size;
+        text-transform: $blocx-asidenav-logo-text-transform;
+        padding: $blocx-asidenav-logo-padding;
+    }
+
+    a {
+        display: $blocx-asidenav-a-display;
+        color: $blocx-asidenav-a-color;
+        text-decoration: $blocx-asidenav-a-text-decoration;
+    }
+}

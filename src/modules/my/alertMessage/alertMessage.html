@@ -1,0 +1,62 @@
+<template>
+    <!-- Alert messages html start -->
+    <template if:true={success}>
+    <!-- Success message html start -->
+    <div class="blocx-alert blocx-alert-success">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <span>This is a primary alert—check it out!</span>
+        <img class="blocx-alert_close" src="../../../resources/assets/images/blocx-alertmessage_icon-close-white.svg"
+            alt="close icon" >
+    </div>
+</template>
+    <!-- Success message html end -->
+
+    <template if:true={successMessage}> 
+    <!-- Success message type2 html start -->
+    <h3>Alert Success type2</h3>
+    <div class="blocx-alert blocx-alert-success2">
+        <i class="fa fa-check" aria-hidden="true"></i>
+        <span>This is a primary alert—check it out!</span>
+        <img class="blocx-alert_close" src="../../../resources/assets/images/blocx-alertmessage_icon-close-white.svg"
+            alt="close icon">
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+            been the industry's standard dummy text ever since the 1500s</p>
+    </div>
+</template>
+    <!-- Success message type2 html end -->
+
+    <!-- Error message html start -->
+    <template if:true={danger}>
+    <div class="blocx-alert blocx-alert-error">
+        <i class="fa fa-ban" aria-hidden="true"></i>
+        <span>This is a primary alert—check it out!</span>
+        <img class="blocx-alert_close" src="../../../resources/assets/images/blocx-alertmessage_icon-close-white.svg"
+            alt="close icon">
+    </div>
+</template>
+    <!-- Error message html end -->
+
+    <!-- Information message html start -->
+    <template if:true={info}>
+    <h3>Alert inforamtion</h3>
+    <div class="blocx-alert blocx-alert-info">
+        <i class="fa fa-info" aria-hidden="true"></i>
+        <span>This is a primary alert—check it out!</span>
+        <img class="blocx-alert_close" src="../../../resources/assets/images/blocx-alertmessage_icon-close-white.svg"
+            alt="close icon">
+    </div>
+</template>
+    <!-- Information message html end -->
+
+    <!-- Warning message html start -->
+    <template if:true={warning}>
+    <div class="blocx-alert blocx-alert-warning">
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        <span>This is a primary alert—check it out!</span>
+        <img class="blocx-alert_close" src="../../../resources/assets/images/blocx-alertmessage_icon-close-black.svg"
+            alt="close icon">
+    </div>
+</template>
+    <!-- Warning message html end -->
+    <!-- Alert messages html end -->
+</template>

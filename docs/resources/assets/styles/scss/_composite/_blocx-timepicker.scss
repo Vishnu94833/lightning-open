@@ -1,0 +1,115 @@
+//timepicker component variables
+$blocx-timepicker-label-color: #706E6B!default;
+$blocx-timepicker-input-border-color: #DDDBDA!default;
+$blocx-timepicker-input-color: #2B2826!default;
+$blocx-timepicker-input-width: 100%!default;
+$blocx-timepicker-li-color: #3C3E3E!default;
+$blocx-timepicker-li-hover-bg: #DDDBDA!default;
+$blocx-timepicker-display-inline-block: inline-block!default;
+$blocx-timepicker-input-font-family: "Acumin Pro", sans-serif!default;
+$blocx-timepicker-input-cursor: pointer!default;
+$blocx-timepicker-label-font-size: 0.6875rem!default;
+$blocx-timepicker-label-line-height: 0.9375rem!default;
+$blocx-timepicker-label-padding-bottom: 0.25rem!default;
+$blocx-timepicker-input-font-size: 0.625rem!default;
+$blocx-timepicker-input-line-height: 0.875rem!default;
+$blocx-timepicker-input-padding: 0.375rem 0.75rem!default;
+$blocx-timepicker-input-border-radius: 0.375rem!default;
+$blocx-timepicker-clock-position: absolute!default;
+$blocx-timepicker-clock-right: 0.75rem!default;
+$blocx-timepicker-clock-top: 1.875rem!default;
+$blocx-timepicker-list-style: none!default;
+$blocx-timepicker-ul-margin: 0.125rem 0 0 0!default;
+$blocx-timepicker-ul-padding: 0!default;
+$blocx-timepicker-position-relative: relative!default;
+$blocx-timepicker-li-padding: 0.6875rem 0.625rem 0.6875rem 2rem!default;
+$blocx-timepicker-li-font-size:  0.5625rem!default;
+$blocx-timepicker-li-line-height: 0.6875rem!default;
+
+//timepicker component style starts
+.blocx-timepicker {
+    position: $blocx-timepicker-position-relative;
+
+    &_label {
+        color: $blocx-timepicker-label-color;
+        font-size: $blocx-timepicker-label-font-size;
+        line-height: $blocx-timepicker-label-line-height;
+        padding-bottom: $blocx-timepicker-label-padding-bottom;
+        display: $blocx-timepicker-display-inline-block;
+    }
+
+    &_input {
+        border-radius: $blocx-timepicker-input-border-radius;
+        border: 0.125rem solid $blocx-timepicker-input-border-color;
+        width: $blocx-timepicker-input-width;
+        box-sizing: border-box;
+        font-size: $blocx-timepicker-input-font-size;
+        line-height: $blocx-timepicker-input-line-height;
+        padding: $blocx-timepicker-input-padding;
+        color: $blocx-timepicker-input-color;
+        cursor: $blocx-timepicker-input-cursor;
+        font-family: $blocx-timepicker-input-font-family;
+
+        &:focus {
+            outline: 0;
+        }
+
+        // &::before{
+        //     content: "\f017";
+        //     font-family: FontAwesome;
+        //     font-size: 10px;
+        // }
+    }
+
+    &_clock {
+        position: $blocx-timepicker-clock-position;
+        right: $blocx-timepicker-clock-right;
+        top: $blocx-timepicker-clock-top;
+    }
+
+    &_dropdown {
+        ul {
+            list-style: $blocx-timepicker-list-style;
+            margin: $blocx-timepicker-ul-margin;
+            padding: $blocx-timepicker-ul-padding;
+            border: 0.125rem solid $blocx-timepicker-li-hover-bg;
+            border-radius: $blocx-timepicker-input-border-radius;
+            max-height: 10.625rem;
+            overflow: auto;
+
+            li {
+                padding: $blocx-timepicker-li-padding;
+                font-size: $blocx-timepicker-li-font-size;
+                line-height: $blocx-timepicker-li-line-height;
+                color: $blocx-timepicker-li-color;
+                cursor: $blocx-timepicker-input-cursor;
+
+            }
+        }
+
+        &-li-hover {
+            position: $blocx-timepicker-position-relative;
+            background: $blocx-timepicker-li-hover-bg;
+
+            &::before {
+                content: "";
+                background: url('../assets/images/blocx-timepicker_icon-tick-mark.svg') no-repeat;
+                position: $blocx-timepicker-clock-position;
+                background-size: contain;
+                top: 0.5rem;
+                left: 0.75rem;
+                height: 1rem;
+                width: 1rem;
+            }
+        }
+    }
+
+    input[type="time"] {
+
+        &::-webkit-clear-button,
+        &::-webkit-inner-spin-button,
+        &::-webkit-calendar-picker-indicator {
+            display: none;
+        }
+    }
+}

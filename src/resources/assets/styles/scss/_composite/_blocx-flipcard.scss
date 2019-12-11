@@ -1,0 +1,129 @@
+$blocx-flip-card-position-absolute: absolute !default;
+$blocx-flip-card-profile-pic-bg: #2699FB !default;
+$blocx-flip-card-position-relative: relative !default;
+$blocx-flip-card-width-100: 100% !default;
+$blocx-flip-card-footer-bg: #16325C !default;
+$blocx-flip-card-post-card-outline: 1px solid #F6F8F9 !default;
+$blocx-flip-card-height-100: 100% !default;
+$blocx-flip-card-footer-text-color: #ffffff !default;
+$blocx-flip-card-bg-color: transparent !default;
+$blocx-flip-card-text-align-center: center !default;
+$blocx-flip-card-transform-style: preserve-3d !default;
+$blocx-flip-card-perspective: 1000px !default;
+$blocx-flip-card-transition: transform 0.6s !default;
+$blocx-flip-card-backface-visibility: hidden !default;
+$blocx-flip-card-post-card-border: none !default;
+$blocx-flip-card-post-card-body-flex: unset !default;
+$blocx-flip-card-post-card-padding: 0px !default;
+$blocx-flip-card-profile-pic-padding: 29px 0px !default;
+$blocx-flip-card-profile-pic-border-radius: 6px 6px 0 0 !default;
+$blocx-flip-card-footer-border-radius: 0 0 6px 6px !default;
+$blocx-flip-card-icon-height: 95px !default;
+$blocx-flip-card-icon-width: 95px !default;
+$blocx-flip-card-footer-text-font-size: 20px !default;
+$blocx-flip-card-footer-text-line-height: 28px !default;
+$blocx-flip-card-footer-text-padding: 16px 40px !default;
+$blocx-flip-card-footer-text-margin: 0 !default;
+$blocx-flip-card-post-card-border-radius: 6px !default;
+$blocx-flip-card-post-card-min-height: 167px !default;
+$blocx-flip-card-text-align-left: left !default;
+$blocx-flip-card-hover-inner-transform: rotateY(180deg);
+
+
+.blocx-flipcard {
+  width: 100%;
+  position: relative;
+  height: 217px;
+}
+
+.blocx-flipcard_inner,
+.blocx-flipcard_front,
+.blocx-flipcard_back {
+  border-radius: 6px;
+  overflow: hidden;
+  // background: hsl(0, 0%, 50%);
+  height: 217px;
+  width: 100%;
+  transition: all 800ms ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  /* needed */
+}
+
+.blocx-flipcard_back {
+  transform: rotateY(180deg);
+  /* needed */
+  -ms-transform: rotateY(180deg);
+
+  /* needed */
+  .blocx-card-post {
+    outline: 1px solid #F6F8F9;
+    border: none;
+    border-radius: 6px;
+    height: 217px;
+    box-sizing: border-box;
+
+
+    .blocx-card_body {
+      border-radius: 6px;
+      padding: 50px 30px;
+    }
+
+    .blocx-card_text {
+      text-align: left;
+    }
+  }
+}
+
+.blocx-flipcard:hover .blocx-flipcard_front {
+  transform: rotateY(-180deg);
+  /* needed */
+  -ms-transform: rotateY(-180deg);
+  /* needed */
+}
+
+.blocx-flipcard:hover .blocx-flipcard_back {
+  transform: rotateY(0deg);
+  /* needed */
+  -ms-transform: rotateY(0deg);
+  /* needed */
+}
+
+.blocx-card-post {
+  border: none;
+  box-sizing: border-box;
+
+  .blocx-card_body {
+    padding: 0px;
+    flex: unset;
+    width: 100%;
+  }
+
+  .profile-pic-section {
+    background: $blocx-flip-card-profile-pic-bg;
+    text-align: $blocx-flip-card-text-align-center;
+    padding: $blocx-flip-card-profile-pic-padding;
+    border-radius: $blocx-flip-card-profile-pic-border-radius;
+  }
+
+  img.user-icon-img {
+    height: $blocx-flip-card-icon-height;
+    width: $blocx-flip-card-icon-width;
+  }
+
+  .blocx-card_footer {
+    background: $blocx-flip-card-footer-bg;
+    border-radius: $blocx-flip-card-footer-border-radius;
+
+    p.footer-text {
+      font-size: $blocx-flip-card-footer-text-font-size;
+      line-height: $blocx-flip-card-footer-text-line-height;
+      text-align: $blocx-flip-card-text-align-center;
+      color: $blocx-flip-card-footer-text-color;
+      padding: $blocx-flip-card-footer-text-padding;
+      margin: $blocx-flip-card-footer-text-margin;
+    }
+  }
+}

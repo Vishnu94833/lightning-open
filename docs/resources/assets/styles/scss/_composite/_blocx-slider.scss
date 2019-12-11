@@ -1,0 +1,113 @@
+// Slider component variables
+// Range Slider
+$blocx-rangeslider-width: 100% !default;
+
+$blocx-rangeslider-handle-color: $primary !default;
+$blocx-rangeslider-handle-color-hover: $primary !default;
+$blocx-rangeslider-handle-size: 20px !default;
+
+$blocx-rangeslider-track-color: $primary !default;
+$blocx-rangeslider-track-height: 4px !default;
+
+$blocx-rangeslider-label-color: $primary !default;
+$blocx-rangeslider-label-width: 60px !default;
+$blocx-rangeslider-slider-value-display:inline-block !default;
+$blocx-rangeslider-slider-value-position:relative !default;
+$blocx-rangeslider-slider-value-color:#3E3E3C !default;
+$blocx-rangeslider-slider-value-line-height:20px !default;
+$blocx-rangeslider-slider-value-text-align:center !default;
+$blocx-rangeslider-slider-value-padding:5px 10px !default;
+$blocx-rangeslider-slider-value-margin-left:8px !default;
+$blocx-rangeslider-slider-value-font-size: 13px !default;
+$blocx-rangeslider-border-radius:5px!default;
+$blocx-rangeslider-border-outline:none!default;
+$blocx-rangeslider-border-padding:0!default;
+$blocx-rangeslider-border-margin:0!default;
+
+.range-slider {
+  width: $blocx-rangeslider-width;
+}
+
+.range-slider__range {
+ 
+  -webkit-appearance: none;
+  width: calc(100% - (#{$blocx-rangeslider-label-width + 33px}));
+  height: $blocx-rangeslider-track-height;
+  border-radius: $blocx-rangeslider-border-radius;
+  background: $blocx-rangeslider-track-color;
+  outline: $blocx-rangeslider-border-outline;
+  padding: $blocx-rangeslider-border-padding;
+  margin: $blocx-rangeslider-border-margin;
+
+  // blocx-rangeslider Handle
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: $blocx-rangeslider-handle-size;
+    height: $blocx-rangeslider-handle-size;
+    border-radius: 50%;
+    background: $blocx-rangeslider-handle-color;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+
+    &:hover {
+      background: $blocx-rangeslider-handle-color-hover;
+    }
+  }
+
+  &:active::-webkit-slider-thumb {
+    background: $blocx-rangeslider-handle-color-hover;
+  }
+
+  &::-moz-range-thumb {
+    width: $blocx-rangeslider-handle-size;
+    height: $blocx-rangeslider-handle-size;
+    border: 0;
+    border-radius: 50%;
+    background: $blocx-rangeslider-handle-color;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+
+    &:hover {
+      background: $blocx-rangeslider-handle-color-hover;
+    }
+  }
+
+  &:active::-moz-range-thumb {
+    background: $blocx-rangeslider-handle-color-hover;
+  }
+
+  // Focus state
+  &:focus {
+
+    &::-webkit-slider-thumb {
+      box-shadow: 0 0 0 3px $primary,
+        0 0 0 6px #dddddd;
+    }
+  }
+}
+
+
+// Range Label
+.range-slider__value {
+  display: $blocx-rangeslider-slider-value-display;
+  position: $blocx-rangeslider-slider-value-position;
+  width: $blocx-rangeslider-label-width;
+  color: $blocx-rangeslider-slider-value-color;
+  line-height: $blocx-rangeslider-slider-value-line-height;
+  text-align: $blocx-rangeslider-slider-value-text-align;
+  padding: $blocx-rangeslider-slider-value-padding;
+  margin-left: $blocx-rangeslider-slider-value-margin-left;
+  font-size: $blocx-rangeslider-slider-value-font-size;
+}
+
+
+// Firefox Overrides
+::-moz-range-track {
+  background: $blocx-rangeslider-track-color;
+  border: 0;
+}
+
+input::-moz-focus-inner,
+input::-moz-focus-outer {
+  border: 0;
+}

@@ -1,0 +1,89 @@
+// Header component variables
+$blocx-header-padding-top:18px !default;
+$blocx-header-padding-bottom:18px !default;
+$blocx-header-border:1px solid #2699FB !default;
+$blocx-header-background-color:#2699FB !default;
+$blocx-header-ul-margin:0 !default;
+$blocx-header-ul-padding:0 !default;
+$blocx-header-ul-list-style:none !default;
+$blocx-header-logo-margin:0 !default;
+$blocx-header-logo-font-size:22px !default;
+$blocx-header-logo-text-transform:uppercase !default;
+$blocx-header-logo-padding:0px 15px !default;
+$blocx-header-logo-a-text-decoration:none !default;
+$blocx-header-nav-margin-top:5px !default;
+$blocx-header-nav-a-display:block !default;
+$blocx-header-nav-a-color:#ffffff !default;
+$blocx-header-nav-a-text-decoration:none !default;
+$blocx-header-nav-a-font-size:10px!default;
+$blocx-header-nav-a-line-height:12px!default;
+$blocx-header-nav-a-padding:10px!default;
+
+// Header component styles start
+.blocx-header {
+    padding-top: $blocx-header-padding-top;
+    padding-bottom: $blocx-header-padding-bottom;
+    border: $blocx-header-border;
+    background-color: $blocx-header-background-color;
+
+    ul {
+        margin: $blocx-header-ul-margin;
+        padding: $blocx-header-ul-padding;
+        list-style: $blocx-header-ul-list-style;
+    }
+
+    &_logo {
+        margin: $blocx-header-logo-margin;
+        font-size: $blocx-header-logo-font-size;
+        text-transform: $blocx-header-logo-text-transform;
+        padding: $blocx-header-logo-padding;
+
+        a {
+            text-decoration: $blocx-header-logo-a-text-decoration;
+        }
+    }
+
+    &_nav {
+        margin-top: $blocx-header-nav-margin-top;
+
+        a {
+            display: $blocx-header-nav-a-display;
+            color: $blocx-header-nav-a-color;
+            font-size:$blocx-header-nav-a-font-size;
+            line-height:$blocx-header-nav-a-line-height;
+            text-decoration: $blocx-header-nav-a-text-decoration;
+            padding: $blocx-header-nav-a-padding;
+        }
+    }
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 769px) {
+
+    .blocx-header,
+    .blocx-header_nav {
+        display: flex;
+    }
+
+    .blocx-header {
+        flex-direction: column;
+        align-items: center;
+
+        .blocx-header {
+            width: 80%;
+            margin: 0 auto;
+            max-width: 1150px;
+        }
+    }
+}
+
+@media (min-width: 1025px) {
+    .blocx-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+// Header component styles end

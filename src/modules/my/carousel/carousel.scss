@@ -1,0 +1,125 @@
+// @import '../../../resources/assets/styles/scss/_base/index';
+// blocx-carousel component variables
+$primary:blue;
+$blocx-carousel-inner-border:2px solid #DDDBDA !default;
+$blocx-carousel-inner-border-bottom:none !default;
+$blocx-carousel-inner-img-width:100% !default;
+$blocx-carousel-inner-img-height:240px !default;
+$blocx-carousel-inner-img-margin-left:auto !default;
+$blocx-carousel-inner-img-margin-right:auto !default;
+$blocx-carousel-item-display:none !default;
+$blocx-carousel-item-width:100% !default;
+$blocx-carousel-item-position:relative !default;
+$blocx-carousel-item-overflow:hidden !default;
+$blocx-carousel-item-height:240px !default;
+$blocx-carousel-caption-text-align:center !default;
+$blocx-carousel-caption-border:2px solid #DDDBDA !default;
+$blocx-carousel-caption-padding:20px !default;
+$blocx-carousel-caption-margin-bottom:10px !default;
+$blocx-carousel-caption-border-top:none !default;
+$blocx-carousel-caption-h4-font-size:18px !default;
+$blocx-carousel-caption-h4-font-weight:bold !default;
+$blocx-carousel-caption-h4-color:#2B2826 !default;
+$blocx-carousel-controls-text-align:center;
+$blocx-carousel-controls-a-width:20px;
+$blocx-carousel-controls-a-height:20px;
+$blocx-carousel-controls-a-border-radius:50%;
+$blocx-carousel-controls-a-display:inline-block;
+$blocx-carousel-controls-a-border:1px solid #DDDBDA;
+$blocx-carousel-controls-a-position:relative;
+$blocx-carousel-controls-a-margin:0 5px;
+$blocx-carousel-controls-a-a-border-radius:4px !default;
+$blocx-carousel-controls-a-a-cursor:pointer !default;
+$blocx-carousel-controls-i-font-size:11px !default;
+$blocx-carousel-controls-i-color:#706E6B !default;
+$blocx-carousel-controls-i-position:absolute !default;
+$blocx-carousel-controls-i-top:50% !default;
+$blocx-carousel-controls-i-left:50% !default;
+$blocx-carousel-controls-i-transform:translate(-50%, -50%) !default;
+$blocx-carousel-controls-active-display:inline-block !default;
+
+//blocx-carousel component styles start
+.blocx-carousel {
+    &_inner {
+        border: $blocx-carousel-inner-border;
+        margin-bottom: 10px;
+        border-radius: 6px;
+
+        img {
+            width: $blocx-carousel-inner-img-width;
+            height: $blocx-carousel-inner-img-height;
+            margin-left: $blocx-carousel-inner-img-margin-left;
+            margin-right: $blocx-carousel-inner-img-margin-right;
+        }
+
+
+    }
+
+    &_item {
+        display: $blocx-carousel-item-display;
+        width: $blocx-carousel-item-width;
+        position: $blocx-carousel-item-position;
+        overflow: $blocx-carousel-item-overflow;
+    }
+
+
+    &_caption {
+        text-align: $blocx-carousel-caption-text-align;
+        padding: $blocx-carousel-caption-padding;
+        margin-bottom: $blocx-carousel-caption-margin-bottom;
+        min-height: 100px;
+
+        h4 {
+            font-size: $blocx-carousel-caption-h4-font-size;
+            font-weight: $blocx-carousel-caption-h4-font-weight;
+            color: $blocx-carousel-caption-h4-color;
+            text-transform: capitalize;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+            padding: 10px 0;
+        }
+    }
+
+    &_controls {
+        text-align: $blocx-carousel-controls-text-align;
+
+        a,
+        .a {
+            width: $blocx-carousel-controls-a-width;
+            height: $blocx-carousel-controls-a-height;
+            border-radius: $blocx-carousel-controls-a-border-radius;
+            display: $blocx-carousel-controls-a-display;
+            border: $blocx-carousel-controls-a-border;
+            position: $blocx-carousel-controls-a-position;
+            margin: $blocx-carousel-controls-a-margin;
+
+            &.active {
+                background: $primary;
+            }
+        }
+
+
+        .a {
+            border-radius: $blocx-carousel-controls-a-a-border-radius;
+            cursor: $blocx-carousel-controls-a-a-cursor;
+        }
+
+        i {
+            font-size: $blocx-carousel-controls-i-font-size;
+            color: $blocx-carousel-controls-i-color;
+            position: $blocx-carousel-controls-i-position;
+            top: $blocx-carousel-controls-i-top;
+            left: $blocx-carousel-controls-i-left;
+            transform: $blocx-carousel-controls-i-transform;
+        }
+    }
+
+    .active {
+        display: $blocx-carousel-controls-active-display;
+    }
+}
+
+//blocx-carousel component styles start

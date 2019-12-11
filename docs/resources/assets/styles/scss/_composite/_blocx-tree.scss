@@ -1,0 +1,137 @@
+// blocx Tree Component variables
+$blocx-tree-ul-list-style:none!default;
+$blocx-tree-ul-margin:0!default;
+$blocx-tree-ul-li-padding:0.3125rem!default;
+$blocx-tree-ul-li-a-text-decoration:none!default;
+$blocx-tree-ul-li-a-font-size:0.8125rem!default;
+$blocx-tree-ul-li-a-color:#2B2826!default;
+$blocx-tree-ul-li-a-font-weight:normal!default;
+$blocx-tree-ul-li-a-line-height:2.25rem!default;
+$blocx-tree-ul-li-a-padding-left:0.75rem!default;
+$blocx-tree-ul-li-a-position:relative!default;
+$blocx-tree-ul-li-a-active-color:#2699FB!default;
+$blocx-tree-ul-li-a-before-color:#A6ADB4!default;
+$blocx-tree-ul-li-a-before-font-family:FontAwesome!default;
+$blocx-tree-ul-li-a-before-font-size:1rem!default;
+$blocx-tree-ul-li-a-before-position:absolute!default;
+$blocx-tree-ul-li-a-before-left:0!default;
+$blocx-tree-list-padding:0!default;
+$blocx-tree-list-list-style-type:none!default;
+$blocx-tree-list-width:100%!default;
+$blocx-tree-list-sub-padding-left:0.875rem!default;
+$blocx-tree-list-heading-font-size:0.875rem!default;
+$blocx-tree-list-heading-line-height:1.3125rem!default;
+$blocx-tree-list-heading-font-weight:bold!default;
+$blocx-tree-list-heading-text-transform:uppercase!default;
+$blocx-tree-list-heading-padding-top:0.875rem!default;
+$blocx-tree-list-heading-padding-left:1.5rem!default;
+$blocx-tree-nav-list-padding:3.125rem 2.5rem 17.0625rem 1.5rem!default;
+$blocx-tree-border-color: #DDDBDA!default;
+$blocx-tree-anchor-active-bg: #EBEDED!default;
+$blocx-tree-display-inline-block: inline-block!default;
+$blocx-tree-cursor-pointer: pointer!default;
+$blocx-tree-anchor-padding: 0 0 0 1.5rem!default;
+
+// blocx Tree Component styles start
+.blocx-tree {
+    border: 2px solid $blocx-tree-border-color;
+
+    &_nav-list {
+        // padding: $blocx-tree-nav-list-padding;
+    }
+
+    ul {
+        list-style: $blocx-tree-ul-list-style;
+        margin: $blocx-tree-ul-margin;
+
+        >li {
+            // padding: $blocx-tree-ul-li-padding;
+
+            >a {
+                text-decoration: $blocx-tree-ul-li-a-text-decoration;
+                font-size: $blocx-tree-ul-li-a-font-size;
+                color: $blocx-tree-ul-li-a-color;
+                font-weight: $blocx-tree-ul-li-a-font-weight;
+                line-height: $blocx-tree-ul-li-a-line-height;
+               
+                position: $blocx-tree-ul-li-a-position;
+                cursor: $blocx-tree-cursor-pointer;
+                padding:$blocx-tree-anchor-padding;
+                width:$blocx-tree-list-width;
+                border-left: 4px solid transparent;
+                display: $blocx-tree-display-inline-block;
+    box-sizing: border-box;
+            }
+
+            >a.active {
+                color: $blocx-tree-ul-li-a-active-color;
+                border-left:4px solid $blocx-tree-ul-li-a-active-color;
+                background: $blocx-tree-anchor-active-bg;
+            }
+
+            >a.blocx-tree_item-collapse {
+                &::before {
+                    content: "\f105";
+                    font-family: $blocx-tree-ul-li-a-before-font-family;
+                    color: $blocx-tree-ul-li-a-before-color;
+                    font-size: $blocx-tree-ul-li-a-before-font-size;
+                    position: $blocx-tree-ul-li-a-before-position;
+                    left: $blocx-tree-ul-li-a-before-left;
+                }
+            }
+
+            >a.open-sublist {
+                &::before {
+                    content: "\f105";
+                    transform: rotate(90deg);
+                }
+             
+            }
+            a.active{
+                &::before{
+                    content: "";
+                }
+            }
+        }
+    }
+
+    &_list {
+        padding: $blocx-tree-list-padding;
+        width: $blocx-tree-list-width;
+        list-style-type: $blocx-tree-list-list-style-type;
+    }
+
+    &_list-sub {
+        padding-left: $blocx-tree-list-sub-padding-left;
+        display: none; //for toggle function when child is toben hidden
+    }
+
+    &_heading {
+        font-size: $blocx-tree-list-heading-font-size;
+        line-height: $blocx-tree-list-heading-line-height;
+        font-weight: $blocx-tree-list-heading-font-weight;
+        text-transform: $blocx-tree-list-heading-text-transform;
+        padding-top: $blocx-tree-list-heading-padding-top;
+        padding-left: $blocx-tree-list-heading-padding-left;
+    }
+
+    // .rotate {
+    //     -moz-transition: all .5s linear;
+    //     -webkit-transition: all .5s linear;
+    //     transition: all .5s linear;
+    // }
+
+    // .rotate.down {
+    //     -moz-transform: rotate(90deg);
+    //     -webkit-transform: rotate(90deg);
+    //     transform: rotate(90deg);
+    // }
+    .open-sublist{
+            -webkit-transition: all 1s ease;
+            -moz-transition: all 1s ease;
+            -o-transition: all 1s ease;
+            transition: all 1s ease;
+    }
+}
+
+// Tree Component styles end

@@ -1,0 +1,114 @@
+// Common variables
+// Color system
+
+
+$blue:    #F7AB00 !default;
+$indigo:  #2699FB !default;
+$purple:  #6f42c1 !default;
+$pink:    #e83e8c !default;
+$red:     #dc3545 !default;
+$orange:  #fd7e14 !default;
+$yellow:  #ffc107 !default;
+$green:   #28a745 !default;
+$teal:    #20c997 !default;
+$cyan:    #17a2b8 !default;
+
+//colors
+$blocx-theme-color: #F7AB00 !default;
+$blocx-white: #FFFFFF !default;
+$blocx-floral-white:#FFFBF2 !default;
+$blocx-floral-white-lighter: #FFFCF5 !default;
+$blocx-swirl: #C9C7C5 !default;
+$blocx-gray75: #BFBFBF !default;
+$blocx-light-dim-gray: #717171 !default;
+$blocx-red: #FF4D4D !default;
+$blocx-bokara-grey: #2B2826 !default;
+$blocx-sunset-orange: #FF4E4E !default;
+$blocx-mischka: #A6ADB4 !default;
+$blocx-black-russian: #202124 !default;
+$blocx-green: #1DBD8E !default;
+$blocx-gray20: #333333 !default;
+$blocx-grey-lighter: #797979 !default;
+$blocx-black: #000000 !default;
+$blocx-sandstone: #706E6B !default;
+$blocx-alice-blue: #F6F8F9 !default;
+$blocx-gray50: #7F7F7F !default;
+$blocx-pink-swan: #B4B4B4 !default;
+$blocx-blue: #2699FB !default;
+$blocx-zircon: #EBEDED !default;
+$blocx-gray80: #CCCCCC !default;
+$blocx-light-grey: #777777 !default;
+$blocx-dandelion: #FFD065 !default;
+$blocx-heavy-metal: #3E3E3C !default;
+$blocx-light-hawkes-blue: #D8DDE6 !default;
+$blocx-old-lace: #FEF6E5 !default;
+$blocx-gainsboro:  #D8D8D8  !default;
+$blocx-moccasin: #FFEABA !default;
+$blocx-bon-jour: #DDDBDA !default;
+$blocx-dodger-blue: #008DEF !default;
+$blocx-banana-mania: #FDE6B2 !default;
+$blocx-medium-turquoise: #C23934 !default;
+$blocx-peach: #FFE9B9 !default;
+$blocx-palette-gray7: #B0ADAB !default;
+$blocx-catalina-blue: #16325C !default;
+$blocx-desert-storm: #ECEBEA !default;
+$blocx-emerald: #4BCA81 !default;
+$blocx-dark-black: #080707 !default;
+$blocx-dim-gray: #707070 !default;
+$blocx-wheatfield: #DED6BF !default;
+$blocx-dark-salmon: #F05670 !default;
+$blocx-light-cyan: #5BC6CF !default;
+$blocx-dark-navy-blue: #383C77 !default;
+$blocx-cosmos: #FFD2D2  !default;
+$blocx-light-dodger-blue: #C7E5FE !default;
+$blocx-mauve: #FEF3B5 !default;
+$blocx-silver-tree: #C1ECD3 !default;
+$blocx-tulip-tree: #F2C765 !default;
+$blocx-solitude: #E0E5EE !default;
+
+
+$colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$colors: map-merge(
+  (
+    "blue":       $blue,
+    "indigo":     $indigo,
+    "purple":     $purple,
+    "pink":       $pink,
+    "red":        $red,
+    "orange":     $orange,
+    "yellow":     $yellow,
+    "green":      $green,
+    "teal":       $teal,
+    "cyan":       $cyan
+  ),
+  $colors
+);
+
+$primary:       $blue !default;
+$secondary:     $indigo !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+
+$theme-colors: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger
+  ),
+  $theme-colors
+);
+// theme specific colors
+$theme-card-backgroud:#F6F8F9!default;
+$theme-card-font-color:#1E1F22!default;
+$theme-dependent-background:$theme-card-backgroud;
+$theme-dependent-font-color:$blue;
+$theme-background-checkbox-before:url("/../../../assets/images/Checkbox.svg") no-repeat center center!default;
+$theme-background-checkbox-after:url("/../../../assets/images/blocx-checkbox_icon-checked-theme2.svg") no-repeat center center!default;

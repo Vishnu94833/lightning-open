@@ -1,0 +1,105 @@
+.blocx-header {
+    .sub-menu {
+        &::after {
+            content: "\f107";
+            font-family: FontAwesome;
+            margin-left: 6px;
+            font-size:12px;
+        }
+
+        &-open {
+            &::after {
+                font-size:12px;
+                content: "\f106"; 
+                font-family: FontAwesome;
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+.blocx-sub_menu {
+    width: 100%;
+    display: none;
+    // z-index: 9;
+    &_left-section {
+        padding: 21px;
+        background: #EBEDED;
+
+        .about-section-heading {
+            color: #2B2826;
+            margin: 0;
+            font-size: 21px;
+            text-align: center;
+            line-height: 25px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+        }
+
+        .about-section-img {
+            width: 114px;
+            height: 108px;
+            margin: auto;
+        }
+
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .about-section-text {
+            margin: 0;
+            text-align: center;
+            width: 50%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 16px;
+            font-size: 12px;
+            line-height: 21px;
+            color: #868990;
+        }
+    }
+
+    .blocx-sub_menu-right-section {
+        padding: 32px 55px;
+    }
+
+    .blocx-sub_menu-options-outer {
+        padding: 0;
+    }
+
+    .mega-menu-close-icon {
+        float: right;
+        cursor: pointer;
+    }
+
+    .blocx-sub_menu-options {
+        &_heading {
+            margin: 0;
+            color: #2699FB;
+            font-size: 14px;
+            margin-bottom: 25px;
+            line-height: 16px;
+            font-style: normal;
+            font-weight: 700;
+            text-align: left;
+        }
+
+        .mega-menu a {
+            font-size: 13px;
+            line-height: 23px;
+            text-transform: none;
+            padding: 0;
+            text-align: left;
+            color: #85888F;
+            font-style: normal;
+            font-weight: 400;
+        }
+    }
+  
+}
+ .sub-menu-open{
+    display: block;
+}

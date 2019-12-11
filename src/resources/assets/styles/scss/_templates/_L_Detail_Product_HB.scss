@@ -1,0 +1,174 @@
+//L Detail variables
+
+$content-container-border-color:#E0E0E0;
+$content-container-bg-color: #EBEDED;
+$content-container-color3:#8E8E8E;
+$content-container-color7:#F6F8F9;
+$content-container-color11:#0F4398;
+$content-container-color12:#fff;
+// L Detail product hb styles
+.l-details-product-hb {
+    .container-full .blocx-grid:not(:first-child):not(:last-child){
+        border-bottom: 2px solid $content-container-border-color;
+    }
+    background: $content-container-bg-color;
+
+    .l-details-product_breadcrumbs {
+        padding: 0;
+
+        .blocx-breadcrumb {
+            margin: 0;
+            padding-bottom: 0;
+        }
+    }
+
+    .product-image {
+        text-align: center;
+    }
+
+    .product-images-list {
+        position: relative;
+        margin-top: 20px;
+
+        .product-images {
+            display: inline-block;
+            width: calc(100% - 40px);
+            padding: 0 20px;
+
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+
+                li {
+                    display: inline-block;
+                    float: left;
+                    width: calc(100% / 3);
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .controls {
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+        }
+    }
+
+    .product-details {
+        width: 60%;
+
+        .product_name {
+            h3 {
+                margin: 0;
+                line-height: inherit;
+            }
+
+            p {
+                color: $content-container-color3;
+                margin: 0;
+                padding: 5px 0;
+            }
+        }
+
+        .product_cost {
+
+            h4,
+            p {
+                display: inline-block;
+            }
+
+            p {
+                text-decoration: line-through;
+                margin: 0;
+                padding: 10px 0;
+            }
+        }
+
+        .product_overview {
+            .blocx-tabs {
+                &_navigation {
+                    display: inline-block;
+                    width: auto;
+                    background: $content-container-color12;
+
+                    li {
+                        &.active {
+
+                            >a,
+                            >a:hover,
+                            >a:focus {
+                                background: $content-container-color7;
+                                border-radius: 0;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .blocx-content-container {
+                display: flex;
+                margin-bottom: 20px;
+
+                h6 {
+                    width: 23%;
+                    flex: 0 0 auto;
+                    margin: 0;
+                }
+
+                p {
+                    margin: 0;
+                }
+            }
+        }
+
+        .product_quantity {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .blocx-input-group {
+                width: 20%;
+
+                input {
+                    max-width: 50px;
+                }
+            }
+        }
+
+        .product_color,
+        .product_quantity,
+        .product_delivery {
+            width: 60%;
+        }
+    }
+
+    .product-ads {
+        position: absolute;
+        right: 0;
+        top: 15px;
+        width: 25%;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+
+    .festival-offers {
+        display: flex;
+        background: $content-container-color11;
+        align-items: center;
+
+        .blocx-content-container {
+            background: $content-container-color12;
+            padding: 20px;
+        }
+    }
+}

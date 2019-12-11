@@ -1,0 +1,37 @@
+//blocx-menu declarations
+$blocx-menu-list-style:none !default;
+$blocx-menu-margin:0 !default;
+$blocx-menu-padding:0 !default;
+$blocx-menu-a-color:#2699FB !default;
+$blocx-menu-a-font-size:10px !default;
+$blocx-menu-a-padding:10px 15px !default;
+$blocx-menu-a-text-transform:uppercase !default;
+$blocx-menu-a-text-align:left !default;
+$blocx-menu-a-display:inline-block !default;
+$blocx-menu-a-text-decoration:none !default;
+$blocx-menu-a-hover-color:#0269c1 !default;
+
+
+
+
+//blocx-menu style starts
+.blocx-menu {
+    list-style: $blocx-menu-list-style;
+    margin: $blocx-menu-margin;
+    padding: $blocx-menu-padding;
+
+    a {
+        color: $blocx-menu-a-color;
+        font-size: $blocx-menu-a-font-size;
+        padding: $blocx-menu-a-padding;
+        text-transform: $blocx-menu-a-text-transform;
+        text-align: $blocx-menu-a-text-align;
+        display: $blocx-menu-a-display;
+        text-decoration: $blocx-menu-a-text-decoration;
+        line-height: 12px;
+
+        &:hover {
+            color: $blocx-menu-a-hover-color;
+        }
+    }
+}

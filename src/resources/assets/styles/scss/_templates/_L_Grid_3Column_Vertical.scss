@@ -1,0 +1,275 @@
+// Vertical three column grid variables
+$veritcal-border-margin-none:none!default;
+$veritcal-display-block:block!default;
+$veritcal-display-flex:flex!default;
+$veritcal-align-center:center!default;
+$veritcal-padding-magin-zero:0!default;
+$veritcal-width-percent:100%!default;
+$veritcal-height-percent:100%!default;
+$veritcal-heading-padding:20px 10px!default;
+$veritcal-heading-background:#EBEDED!default;
+$veritcal-card-padding:10px!default;
+$veritcal-card-img-width:17%!default;
+$vertical-span-display:inline-block!default;
+$vertical-span-width:40px!default;
+$vertical-span-height:40px!default;
+$vertical-span-background:#EBEDED!default;
+$vertical-span-border-radius:20px!default;
+$vertical-img-border-radius:50%!default;
+$vertical-details-p-lnheight:1.5!default;
+$vertical-gridcard-display:grid!default;
+$vertical-gridcard-gap:10px!default;
+$vertical-gridcard-padding-bottom:20px!default;
+$vertical-grid-column:2!default;
+$vertical-right-h5-padding-bottom:5px!default;
+$vertical-right-p-padding-bottom:5px!default;
+$vertical-right-a-text-transform:uppercase!default;
+$vertical-grid-img-border-radius:6px!default;
+$vertical-imggrid-display:grid!default;
+$vertical-imggrid-grid-template-columns:100px 100px 100px!default;
+$vertical-imggrid-grid-gap:20px!default;
+$vertical-imggrid-img-border-radius:3px!default;
+$vertical-details-h5-padding:30px 0!default;
+$vertical-details-h5-line-height:1.5!default;
+$vertical-details-p-line-height:1.5!default;
+$vertical-subscribe-dsiplay:grid!default;
+$vertical-subscribe-grid-template-columns:64% 33%!default;
+$vertical-subscribe-grid-gap:10px!default;
+$vertical-primary-button-height:39px!default;
+$vertical-primary-button-text-transform:uppercase!default;
+$vertical-primary-button-font-size:11px!default;
+$vertical-sponsored-min-height:250px!default;
+$vertical-sponsored-img-position:absolute!default;
+$vertical-sponsored-img-top:15%!default;
+$vertical-sponsored-h5-left:7%!default;
+$vertical-sponsored-h5-color:#fff!default;
+$vertical-sponsored-h5-font-size:18px!default;
+$vertical-sponsored-h5-font-weight:normal!default;
+$vertical-sponsored-img-right:7%!default;
+$vertical-sponsored-img-cursor:pointer!default;
+$vertical-before-bgurl:url('../assets/images/blocx-grid-3coloumn-vertical_img-default2.png') no-repeat!default;
+$vertical-before-bgposition:center center!default;
+$vertical-before-min-height:250px!default;
+$vertical-before-bg-size:cover!default;
+$vertical-img-after-bg-color: #000000 !default;
+$vertical-img-after-bg-color2:#2699FB;
+
+// Vartical three column grid mixin
+@mixin headingStyle($font-size, $font-weight, $color, $opacity) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    color: $color;
+    opacity: $opacity;
+}
+
+// Vertical three column grid styles start
+.vertical-grid {
+    .blocx-card {
+        border: $veritcal-border-margin-none;
+
+        img {
+            height: $veritcal-height-percent;
+        }
+        
+
+        &_heading {
+            padding: $veritcal-heading-padding;
+            background: $veritcal-heading-background;
+
+            h5,
+            h6 {
+                margin: $veritcal-padding-magin-zero;
+            }
+
+            h5 {
+                @include headingStyle(16px, normal, $vertical-img-after-bg-color, .87);
+            }
+
+            h6 {
+                @include headingStyle(16px, normal, $vertical-img-after-bg-color, .54);
+            }
+        }
+
+        &_links {
+            display: $veritcal-display-flex;
+            align-items: $veritcal-align-center;
+        }
+    }
+
+    .user-card {
+        
+        display: $veritcal-display-flex;
+        width: $veritcal-width-percent;
+        align-items: $veritcal-align-center;
+        padding: $veritcal-card-padding;
+       
+
+        &_img {
+            width: $veritcal-card-img-width;
+
+            span {
+                display: $vertical-span-display;
+                width: $vertical-span-width;
+                height: $vertical-span-height;
+                background: $vertical-span-background;
+                border-radius: $vertical-span-border-radius;
+            }
+
+           
+            img {
+                width: $veritcal-width-percent;
+                border-radius: $vertical-img-border-radius;
+            }
+           
+        }
+
+        &_details {
+
+            h5 {
+                margin: $veritcal-padding-magin-zero;
+                @include headingStyle(16px, normal, $vertical-img-after-bg-color, .87);
+            }
+
+            p {
+                margin: $veritcal-padding-magin-zero;
+                @include headingStyle(14px, normal, $vertical-img-after-bg-color, .54);
+                line-height: $vertical-details-p-lnheight; 
+            }
+        }
+    }
+ 
+    .vertical-gridcard {
+        display: $vertical-gridcard-display;
+        width: $veritcal-width-percent;
+        grid-gap: $vertical-gridcard-gap;
+        padding-bottom: $vertical-gridcard-padding-bottom;
+
+        &_left {
+            grid-column: 1;
+            display: $veritcal-display-flex;
+            justify-content: $veritcal-align-center;
+            align-items: $veritcal-align-center;
+        }
+
+        &_right {
+            grid-column: $vertical-grid-column;
+
+            h5 {
+                margin: $veritcal-padding-magin-zero;
+                @include headingStyle(16px, bold, $vertical-img-after-bg-color, .87);
+                padding-bottom: $vertical-right-h5-padding-bottom;
+            }
+
+            p {
+                margin: $veritcal-padding-magin-zero;
+                @include headingStyle(14px, normal, $vertical-img-after-bg-color, .87);
+                padding-bottom: $vertical-right-p-padding-bottom;
+            }
+
+            a {
+                @include headingStyle(10px, bold, $vertical-img-after-bg-color2, 1);
+                text-transform: $vertical-right-a-text-transform;
+            }
+        }
+
+        img {
+            width: $veritcal-width-percent;
+            border-radius: $vertical-grid-img-border-radius;
+        }
+    }
+
+    .images-grid {
+        display: $vertical-imggrid-display;
+        grid-template-columns: $vertical-imggrid-grid-template-columns;
+        grid-gap: $vertical-imggrid-grid-gap;
+
+        img {
+            width: $veritcal-width-percent;
+            border-radius: $vertical-imggrid-img-border-radius;
+        }
+    }
+
+    .details {
+        h5 {
+            margin: $veritcal-padding-magin-zero;
+            @include headingStyle(16px, bold, $vertical-img-after-bg-color, .87);
+            padding: $vertical-details-h5-padding;
+            line-height:$vertical-details-h5-line-height;
+        }
+
+        p {
+            margin: $veritcal-padding-magin-zero;
+            @include headingStyle(14px, normal, $vertical-img-after-bg-color, .54);
+            line-height: $vertical-details-p-line-height;
+        }
+    }
+
+    .sponsored-grid {
+        .subscribe-info {
+            display: $vertical-subscribe-dsiplay;
+            grid-template-columns: $vertical-subscribe-grid-template-columns;
+            grid-gap: $vertical-subscribe-grid-gap;
+
+            .blocx-button-primary {
+                padding: $veritcal-padding-magin-zero;
+                margin: $veritcal-padding-magin-zero;
+                height: $vertical-primary-button-height;
+                text-transform: $vertical-primary-button-text-transform;
+                font-size: $vertical-primary-button-font-size;
+               
+            }
+        }
+
+        .sponsored-grid_img {
+            min-height: $vertical-sponsored-min-height;
+
+            h5,
+            img {
+                position: $vertical-sponsored-img-position;
+                top: $vertical-sponsored-img-top;
+            }
+
+            h5 {
+                left: $vertical-sponsored-h5-left;
+                color: $vertical-sponsored-h5-color;
+                font-size: $vertical-sponsored-h5-font-size;
+                font-weight: $vertical-sponsored-h5-font-weight;
+                margin: $veritcal-padding-magin-zero;
+                padding-top: 10px;
+            }
+
+            
+            img {
+                right: $vertical-sponsored-img-right;
+                cursor: $vertical-sponsored-img-cursor;
+                padding-top: 10px;
+            }
+
+            &::before {
+                background: $vertical-before-bgurl;
+                background-position: $vertical-before-bgposition;
+                //background-repeat: no-repeat;
+                background-size: $vertical-before-bg-size;
+                min-height: $vertical-before-min-height;
+                width: $veritcal-width-percent;
+                z-index: -2;
+                content: "";
+                display: $veritcal-display-block;
+                border-radius: 6px;
+            }
+            
+
+            &::after{
+                background-color: $vertical-img-after-bg-color;
+               // opacity: .5;
+                z-index: -1;
+                content: "";
+                display: $veritcal-display-block;
+            }
+        }
+    }
+    .blocx-tabs_navigation > li > a{
+        padding: 8px 10px;
+    }
+}
+// Vertical three column grid styles end

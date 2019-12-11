@@ -1,0 +1,20 @@
+// image placehoder declarations
+$blocx-placehoder-circle-img-border-radius:50%!default;
+$blocx-placehoder-circle-img-width:100%!default;
+$blocx-placehoder-circle-img-height:auto!default;
+$blocx-placehoder-recangle-img-width:100%!default;
+$blocx-placehoder-recangle-img-height:auto!default;
+
+// image placehoder styles
+.blocx-placehoder-circle-img{
+    width: $blocx-placehoder-circle-img-width;
+    height: $blocx-placehoder-circle-img-height;
+}
+
+.blocx-placehoder-recangle-img{
+    width: $blocx-placehoder-recangle-img-width;
+    height: $blocx-placehoder-recangle-img-height;
+}
+.blocx-placehoder-circle-img{
+    border-radius: $blocx-placehoder-circle-img-border-radius;
+}

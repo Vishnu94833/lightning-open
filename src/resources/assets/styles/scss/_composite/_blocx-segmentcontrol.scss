@@ -1,0 +1,74 @@
+// blocx-segmentcontrol control component variables
+$blocx-segmentcontrol-width:100% !default;
+$blocx-segmentcontrol-ul-list-style:none !default;
+$blocx-segmentcontrol-ul-margin:0 !default;
+$blocx-segmentcontrol-ul-padding:0 !default;
+$blocx-segmentcontrol-li-display:inline-block !default;
+$blocx-segmentcontrol-li-float:left !default;
+$blocx-segmentcontrol-li-padding:2.5px !default;
+$blocx-segmentcontrol-li-border-top:2px solid #EBEDED !default;
+$blocx-segmentcontrol-li-border-bottom:2px solid #EBEDED !default;
+$blocx-segmentcontrol-a-font-size:15px !default;
+$blocx-segmentcontrol-a-font-weight:bold !default;
+$blocx-segmentcontrol-a-color:#2B2826 !default;
+$blocx-segmentcontrol-li-first-child-border:2px solid #EBEDED !default;
+$blocx-segmentcontrol-li-first-child-topleft-radius:6px !default;
+$blocx-segmentcontrol-li-first-child-bottomleft-radius:6px !default;
+$blocx-segmentcontrol-li-last-child-border:2px solid #EBEDED !default;
+$blocx-segmentcontrol-li-last-child-topleft-radius:6px !default;
+$blocx-segmentcontrol-li-last-child-bottomleft-radius:6px !default;
+$blocx-segmentcontrol-li-a-line-height:21px;
+$blocx-segmentcontrol-text-decooration:none;
+
+// blocx-segmentcontrol component styles start
+
+.blocx-segment-control {
+    width: $blocx-segmentcontrol-width;
+
+    ul {
+        list-style: $blocx-segmentcontrol-ul-list-style;
+        margin: $blocx-segmentcontrol-ul-margin;
+        padding: $blocx-segmentcontrol-ul-padding;
+
+        li {
+            display: $blocx-segmentcontrol-li-display;
+            float: $blocx-segmentcontrol-li-float;
+            padding: $blocx-segmentcontrol-li-padding;
+            border-top: $blocx-segmentcontrol-li-border-top;
+            border-bottom: $blocx-segmentcontrol-li-border-bottom;
+
+            a {
+                font-size: $blocx-segmentcontrol-a-font-size;
+                font-weight: $blocx-segmentcontrol-a-font-weight;
+                color: $blocx-segmentcontrol-a-color;
+               line-height:$blocx-segmentcontrol-li-a-line-height;
+                text-decoration:$blocx-segmentcontrol-text-decooration;
+
+            }
+
+        }
+
+        .active {
+            background: $primary;
+
+            a {
+                color: $white;
+            }
+        }
+
+        li:first-child {
+            border: $blocx-segmentcontrol-li-first-child-border;
+            border-top-left-radius: $blocx-segmentcontrol-li-first-child-topleft-radius;
+            border-bottom-left-radius: $blocx-segmentcontrol-li-first-child-bottomleft-radius;
+        }
+
+        li:last-child {
+            border: $blocx-segmentcontrol-li-last-child-border;
+            border-top-right-radius: $blocx-segmentcontrol-li-last-child-topleft-radius;
+            border-bottom-right-radius: $blocx-segmentcontrol-li-last-child-bottomleft-radius;
+        }
+
+    }
+}
+
+// blocx-segmentcontrol component styles end

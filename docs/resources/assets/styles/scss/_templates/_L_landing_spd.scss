@@ -1,0 +1,275 @@
+// Landing spd template variables
+$landing-spd-font-14: 14px !default;
+$landing-spd-font-11: 11px !default;
+$landing-spd-font-16: 16px !default;
+$landing-spd-font-9: 9px !default;
+$landing-spd-font-8: 8px !default;
+$landing-spd-font-10: 10px !default;
+$landing-spd-font-12: 12px !default;
+$landing-spd-font-13: 13px !default;
+$landing-spd-center: center;
+$landing-spd-color-lightest-gray:#A6ADB4;
+$landing-spd-width-100:100%;
+$landing-spd-left-section-bg:#F6F8F9;
+$landing-spd-left-section-container-bg: #EBEDED !default;
+$landing-spd-profile-name-color: #000000 !default;
+$landing-spd-profile-title-color: #2699FB !default;
+$landing-spd-profile-bgcolor: #ffffff !default;
+$landing-spd-profile-img-border-color: lightgray !default;
+$landing-spd-your-activities-color: #333333 !default;
+$landing-spd-accordion-heading-color: #2B2826 !default;
+$landing-spd-profile-border-radius: 3px !default; 
+$landing-spd-line-height:30px!default;
+$landing-spd-profile-margin-bottom: 10px !default;
+$landing-spd-left-section-border-radius: 4px !default;
+
+// Landing spd template styles start
+.landing-spd {
+    h4 {
+        font-size: $landing-spd-font-14;
+        text-align: $landing-spd-center;
+        color: $landing-spd-color-lightest-gray;
+        width: $landing-spd-width-100;
+        line-height: 24px;
+    }
+
+    .single-page-left-section-bg {
+        background: $landing-spd-left-section-bg;
+        border-radius: $landing-spd-left-section-border-radius;
+
+        .single-page-left-pagging-gap {
+            padding-left: 45px;
+            padding-right: 45px;
+            border-radius: $landing-spd-left-section-border-radius;
+        }
+
+        .profile-section {
+            background: $landing-spd-profile-bgcolor;
+            border-radius: $landing-spd-profile-border-radius;
+            width: 100%;
+            margin-bottom: $landing-spd-profile-margin-bottom;
+
+            .blocx-card {
+                border: none;
+
+                &_body {
+                    padding: 0;
+                }
+
+                &_title {
+                    margin: 10px 0;
+                    font-size: $landing-spd-font-16;
+                    line-height: 30px;
+                }
+
+                &_links {
+                    width: 50%;
+                }
+            }
+
+            p {
+                line-height: 24px;
+                font-size: $landing-spd-font-14;
+            }
+        }
+
+        .section-profile-img {
+            border: 1px solid $landing-spd-profile-img-border-color;
+            border-radius: $landing-spd-left-section-border-radius;
+            height: 62px;
+            display: inline-block;
+            width: 62px;
+        }
+
+        .section-profile-related-container {
+            float: left;
+            margin-right: 1%;
+            width: 24%;
+            height: 60px;
+            border-radius: $landing-spd-left-section-border-radius;
+            background: $landing-spd-left-section-container-bg;
+            
+        }
+
+        .profile-name {
+            font-size: $landing-spd-font-16;
+            color: $landing-spd-profile-name-color;
+            line-height: $landing-spd-line-height;
+        }
+
+        .section-profile-related-icons {
+            margin: 0 auto;
+            width: 16px;
+            height: 16px;
+            display: inherit;
+            margin-top: 14px;
+        }
+
+        .section-profile-related-title {
+            margin: 0 auto;
+            width: auto;
+            height: 16px;
+            display: inherit;
+            margin-top: 3px;
+            text-align: center;
+            font-size: $landing-spd-font-14;
+            color: $landing-spd-profile-title-color;
+            font-weight: bold;
+            line-height: 20px;
+        }
+    }
+
+    .single-page-right-activity-section {
+        background: $landing-spd-left-section-container-bg;
+        border-radius: $landing-spd-left-section-border-radius;
+        width: 94%;
+        height: auto;
+        padding: 30px 7%;
+        float: left;
+
+        .your-activites {
+            font-size: $landing-spd-font-13;
+            color: $landing-spd-your-activities-color;
+        }
+
+        .blocx-accordion_heading {
+            font-size: $landing-spd-font-12;
+            color: $landing-spd-accordion-heading-color;
+            padding:12px 0;
+            font-weight: bold;
+            line-height: 16px;
+        }
+
+        .open .blocx-accordion_content {
+            background-color: transparent;
+            border: none;
+            padding: 0px;
+            padding-top: 0px;
+        }
+
+        .all-activities-list {
+            list-style: none;
+            float: left;
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            width: 100%;
+
+            .all-activities-list-items {
+                width: 100%;
+                display: block;
+                float: left;
+                margin-bottom: 15px;
+
+                .all-activities-list-items-name {
+                    font-size: $landing-spd-font-12;
+                    color: $landing-spd-color-lightest-gray;
+                    font-weight: bold;
+                    float: left;
+                    line-height: 16px;
+                }
+
+                .all-activities-list-items-numb {
+                    font-size: $landing-spd-font-10;
+                    color: $landing-spd-your-activities-color;
+                    font-weight: bold;
+                    float: right;
+                    line-height: 16px;
+                }
+            }
+        }
+
+        .accordian-border-top-w {
+            border-top: 1px solid $landing-spd-profile-bgcolor;
+        }
+
+        .single-page-right-readmore-section {
+            float: left;
+            border-top: 1px solid white;
+            padding-top: 15px;
+
+            .blocx-card {
+                padding: 5px 10px;
+                border: none;
+                background: $landing-spd-left-section-container-bg;
+
+                img {
+                    width: 60px;
+                    height: 60px;
+                }
+
+                &_body {
+                    padding: 0 0 0 5px;
+
+                    h5 {
+                        margin: 0;
+                        font-size: $landing-spd-font-11;
+						line-height:15px;
+                    }
+
+                    p {
+                        font-size: $landing-spd-font-8;
+                        margin: 0;
+                        line-height: 12px;
+                    }
+                }
+
+                &_links {
+                    padding: 5px;
+
+                    a {
+                        font-size: $landing-spd-font-9;
+                        left: 0;
+                        right: auto;
+                        line-height: 13px;
+                    }
+                }
+            }
+
+            .section-profile-text {
+                width: 62%;
+                float: left;
+
+                h6 {
+                    font-size: $landing-spd-font-11;
+                    font-weight: bold;
+                    color: $landing-spd-profile-name-color;
+                }
+
+                p {
+                    font-size: $landing-spd-font-8;
+                    color: $landing-spd-profile-name-color;
+                    padding-bottom: 0px;
+                    margin-bottom: 0px;
+                    margin-top: 7px;
+                }
+
+                .section-profile-readmore {
+                    font-size: $landing-spd-font-9;
+                    font-weight: bold;
+                    color: $landing-spd-profile-title-color;
+                }
+            }
+
+            .section-profile-img-container {
+                margin: 0px;
+                padding: 0px 0px 0px 0px;
+                float: left;
+                width: 38%;
+
+                .section-profile-img {
+                    border: 1px solid $landing-spd-profile-img-border-color;
+                    border-radius: $landing-spd-left-section-border-radius;
+                    height: 62px;
+                    display: inline-block;
+                    width: 62px;
+                }
+            }
+        }
+    }
+    .blocx-card-img-left{
+        flex-direction: row;
+    }
+}
+
+// Landing spd template styles end

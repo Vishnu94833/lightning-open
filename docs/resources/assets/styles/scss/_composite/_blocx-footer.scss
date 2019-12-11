@@ -1,0 +1,96 @@
+// blocx-footer component variables
+$blocx-footer-background:#2699FB !default;
+$blocx-footer-input-background:#2699FB !default;
+$blocx-footer-placeholder-color:#ffffff !default;
+$blocx-footer-span-color:#ffffff !default;
+$blocx-footer-span-font-size:11px !default;
+$blocx-footer-span-padding-top:15px !default;
+
+$blocx-footer-i-position:absolute !default;
+$blocx-footer-i-right:10px !default;
+$blocx-footer-i-top:12px !default;
+$blocx-footer-i-font-size:16px !default;
+$blocx-footer-i-z-index:4 !default;
+$blocx-footer-i-color:#ffffff !default;
+
+$blocx-footer-h4-text-transform:uppercase !default;
+$blocx-footer-h4-line-height: 20px !default;
+$blocx-footer-h4-color:#ffffff !default;
+$blocx-footer-h4-font-weight:bold !default;
+$blocx-footer-h4-font-size:13px !default;
+$blocx-footer-menu-font-size:13px !default;
+$blocx-footer-menu-color:#ffffff !default;
+$blocx-footer-menu-font-weight: bold !default;
+$blocx-footer-menu-text-align: left !default;
+$blocx-footer-menu-text-transform:none !default;
+$blocx-footer-social-media-li-display:inline-block !default;
+$blocx-footer-email-box-padding: 8px !default;
+
+// blocx-footer component styles start
+.blocx-footer {
+    background: $blocx-footer-background;
+
+    .blocx-input-group {
+        input {
+            background: $blocx-footer-input-background;
+            color: #ffffff;
+            padding: $blocx-footer-email-box-padding;
+
+            &::placeholder {
+                color: $blocx-footer-placeholder-color;
+            }
+            &:focus{
+                border-color:unset;
+            }
+        }
+
+        span {
+            color: $blocx-footer-span-color;
+            font-size: $blocx-footer-span-font-size;
+            padding-top: $blocx-footer-span-padding-top;
+            line-height: $blocx-footer-h4-line-height;
+        }
+
+        span.error-msg {
+            display: none;
+            color: #ff4d4dd9;
+        }
+
+        i {
+            position: $blocx-footer-i-position;
+            right: $blocx-footer-i-right;
+            top: $blocx-footer-i-top;
+            font-size: $blocx-footer-i-font-size;
+            z-index: $blocx-footer-i-z-index;
+            color: $blocx-footer-i-color;
+        }
+    }
+
+    h1 {
+        font-size: $blocx-footer-h4-font-size;
+        font-weight: $blocx-footer-h4-font-weight;
+        text-transform: $blocx-footer-h4-text-transform;
+        color: $blocx-footer-h4-color;
+        line-height: $blocx-footer-h4-line-height;
+    }
+
+
+    .blocx-menu {
+        a {
+            font-size: $blocx-footer-menu-font-size;
+            color: $blocx-footer-menu-color;
+            text-transform: $blocx-footer-menu-text-transform;
+            line-height: $blocx-footer-h4-line-height;
+            font-weight: $blocx-footer-menu-font-weight;
+            text-align: $blocx-footer-menu-text-align;
+        }
+    }
+
+    .social-media {
+        li {
+            display: $blocx-footer-social-media-li-display;
+        }
+    }
+}
+
+// blocx-footer component styles end

@@ -1,0 +1,129 @@
+//Typography component variables
+$blocx-typoraphy-font-family:'Acumin Pro',
+sans-serif;
+$blocx-typoraphy-font-style:italic!default;
+$blocx-typography-text-align:left !default;
+$blocx-typography-text-align1:right !default;
+$blocx-typography-font-weight:bold !default;
+$blocx-typography-mainheader-text-transform:uppercase !default;
+$blocx-typography-color1:#333333 !default;
+$blocx-typography-color2:#2699FB !default;
+$blocx-typography-color3:#999999 !default;
+$blocx-typography-color4:#7F7F7F !default;
+$blocx-typography-color5:#B4B4B4 !default;
+
+// typography mixin
+@mixin typography-font-styles($font-size, $line-height, $color, $text-align) {
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    text-align: $text-align;
+    font-family: $blocx-typoraphy-font-family;
+}
+
+@mixin typography-font-styles-mobile($font-size, $line-height) {
+    font-size: $font-size;
+    line-height: $line-height;
+}
+
+//Typography component styles start
+.blocx-content-container {
+
+    h1,.blocx-h1 {
+        @include typography-font-styles(34px, 48px, $blocx-typography-color1, $blocx-typography-text-align);
+        font-weight: $blocx-typography-font-weight;
+     }
+
+    h2,.blocx-h2 {
+        @include typography-font-styles(30px, 42px, $blocx-typography-color1, $blocx-typography-text-align);
+        font-weight: $blocx-typography-font-weight;
+    }
+
+    h3,.blocx-h3 {
+        @include typography-font-styles(26px, 36px, $blocx-typography-color1, $blocx-typography-text-align);
+        font-weight: $blocx-typography-font-weight;
+    }
+
+    h4,.blocx-h4 {
+        @include typography-font-styles(22px, 30px, $blocx-typography-color1, $blocx-typography-text-align);
+        font-weight: $blocx-typography-font-weight;
+    }
+    h5,.blocx-h5 {
+        @include typography-font-styles(18px, 26px, $blocx-typography-color1, $blocx-typography-text-align);
+        font-weight: $blocx-typography-font-weight;
+    }
+    h6,.blocx-h6 {
+        @include typography-font-styles(14px, 20px, $blocx-typography-color1, $blocx-typography-text-align);
+        font-weight: $blocx-typography-font-weight;
+    }
+
+    .b-para-large {
+        @include typography-font-styles(18px, 26px, $blocx-typography-color1, $blocx-typography-text-align);
+    }
+
+    .b-para-medium {
+        @include typography-font-styles(14px, 20px, $blocx-typography-color1, $blocx-typography-text-align);
+    }
+
+    .b-para-small {
+        @include typography-font-styles(12px, 16px, $blocx-typography-color1, $blocx-typography-text-align);
+    }
+    .blocx-blockquote {
+        @include typography-font-styles(18px, 26px, $blocx-typography-color1, $blocx-typography-text-align);
+        font-style:$blocx-typoraphy-font-style;
+    }
+    .blocx-cite {
+        @include typography-font-styles(14px, 20px, $blocx-typography-color3, $blocx-typography-text-align);
+        font-style:$blocx-typoraphy-font-style;
+    }
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+// Mobile resolution styles
+@include blocx-responsive-breakpoint('mobile'){
+    h1,.blocx-h1 {
+        @include typography-font-styles-mobile(28px, 40px);
+     }
+
+    h2,.blocx-h2 {
+        @include typography-font-styles-mobile(24px, 34px);
+    }
+
+    h3,.blocx-h3 {
+        @include typography-font-styles-mobile(20px, 28px);
+    }
+
+    h4,.blocx-h4 {
+        @include typography-font-styles-mobile(16px, 22px);
+    }
+    h5,.blocx-h5 {
+        @include typography-font-styles-mobile(12px, 16px);
+    }
+    h6,.blocx-h6 {
+        @include typography-font-styles-mobile(6px, 8px);
+    }
+
+    .b-para-large {
+        @include typography-font-styles-mobile(12px, 16px);
+    }
+
+    .b-para-medium {
+        @include typography-font-styles-mobile(10px, 14px);
+    }
+
+    .b-para-small {
+        @include typography-font-styles-mobile(8px, 12px);
+    }
+    .blocx-blockquote {
+        @include typography-font-styles-mobile(12px, 16px);
+    }
+    .blocx-cite {
+        @include typography-font-styles-mobile(10px, 14px);
+    }
+}
+}
+
+//typography component styles end

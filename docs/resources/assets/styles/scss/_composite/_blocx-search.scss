@@ -1,0 +1,101 @@
+$blocx-search-background:rgba(0, 0, 0, 0.44);
+$blocx-search-color:#ffffff;
+$blocx-search-label-font-size:16px !default;
+$blocx-search-label-font-weight:normal !default;
+$blocx-search-padding-10-padding:5px 20px !default;
+$blocx-search-start-enddate-margin-top:-20.5px !default;
+$blocx-search-start-enddate-label-font-weight:bold !default;
+$blocx-search-start-enddate-label-font-size:13px !default;
+$blocx-search-button-primary-line-height:29px !default;
+$blocx-search-map-marker-left:5px !default;
+$blocx-search-map-marker-color:#2699FB !default;
+$blocx-search-map-marker-font-size:20px !default;
+$blocx-search-map-marker-top:5px !default;
+$blocx-search-i-right:5px !default;
+$blocx-search-i-color:#706E6B !default;
+$blocx-search-i-font-size:16px !default;
+$blocx-search-i-top:28px !default;
+$blocx-search-i-z-index:4 !default;
+$blocx-search-position-absolute:absolute !default;
+$blocx-search-padding-magin-zero:0 !default;
+
+.blocx-search {
+    background: $blocx-search-background;
+    color: $blocx-search-color;
+
+    .blocx-grid {
+        width: 100%;
+
+        .return-date {
+            display: none;
+        }
+    }
+
+    .blocx-radio{
+        [type="radio"]:checked + label,[type="radio"]:not(:checked) + label {
+            color: $blocx-search-color;
+            font-size: $blocx-search-label-font-size;
+            font-weight: $blocx-search-label-font-weight;
+        }
+    } 
+    .padding-10 {
+        padding: $blocx-search-padding-10-padding;
+    }
+
+    .filter-options {
+        width:100%;
+        padding-left:10px;
+        padding-top:24px;
+        .blocx-grid {
+            &>div {
+                padding: 15px 5px;
+            }
+        }
+    }
+
+    .start-date,
+    .end-date {
+        margin-top: $blocx-search-start-enddate-margin-top;
+
+        label {
+            font-weight: $blocx-search-start-enddate-label-font-weight;
+            font-size: $blocx-search-start-enddate-label-font-size;
+        }
+    }
+
+    .blocx-radio {
+        margin: $blocx-search-padding-magin-zero;
+        margin-right: 15%;
+    }
+
+    // .blocx-button-primary {
+    //     line-height: $blocx-search-button-primary-line-height;
+    // }
+
+    .fa-map-marker {
+        position: $blocx-search-position-absolute;
+        left: $blocx-search-map-marker-left;
+        color: $blocx-search-map-marker-color;
+        font-size: $blocx-search-map-marker-font-size;
+        top: $blocx-search-map-marker-top;
+        width: 5%;
+    }
+
+    i {
+        position: $blocx-search-position-absolute;
+        right: $blocx-search-i-right;
+        color: $blocx-search-i-color;
+        font-size: $blocx-search-i-font-size;
+        top: $blocx-search-i-top;
+        z-index: $blocx-search-i-z-index;
+    }
+    .blocx-input-group{
+        margin-bottom: 22px;
+    }
+    .blocx-input-group input{
+        padding: 4px 20px;
+    }
+    .blocx-button-primary button{
+        padding: 6.34px 20px;
+    }
+}

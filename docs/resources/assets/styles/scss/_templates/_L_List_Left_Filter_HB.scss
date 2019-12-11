@@ -1,0 +1,221 @@
+//L List Left Filter Template style starts
+.l-list-left-filter {
+    .header-section nav {
+        li {
+            text-transform: capitalize;
+
+            a {
+                font-size: 10px;
+                font-weight: normal;
+                line-height: 14px;
+            }
+
+            .fa-angle-right {
+                color: #C9C7C5;
+            }
+
+        }
+
+        .active {
+            font-size: 10px;
+            font-weight: normal;
+            line-height: 14px;
+        }
+
+    }
+
+    .blocx-accordion_icon-blue {
+        transform: rotate(270deg);
+        position: absolute;
+        top: 0.9375rem;
+        right: 0.625rem;
+        left: unset;
+    }
+
+    .discount-display {
+        .blocx-accordion_heading {
+            padding: 28px 12px;
+        }
+
+        .blocx-accordion_icon {
+            top: 29px;
+        }
+
+    }
+
+    .review-products-wrapper {
+        
+        .blocx-filter-top_title {
+            width: 19%;
+            margin-top: 7px;
+        }
+
+        .blocx-filter-top_subtitle {
+            line-height: 19px;
+            margin-bottom: 20px;
+        }
+
+        .review-products {
+            display: flex;
+            border-top: 1px solid #BCC2C7;
+
+            .blocx-card {
+                flex-direction: row;
+                border: none;
+
+                .blocx-card-product-view-list_images {
+                    width: 55%;
+                }
+
+                .blocx-card_body {
+                    padding: 0 25px;
+                    width: 45%;
+
+                    .blocx-card_title {
+                        font-size: 18px;
+                        line-height: 26px;
+                        color: #000000;
+                        margin-top: 23px;
+                        font-weight: normal;
+                    }
+
+                    label {
+                        position: absolute;
+                        top: 10px;
+                        font-size: 8px;
+                        line-height: 12px;
+                        text-transform: uppercase;
+                        color: #A6ADB4;
+                    }
+
+                    .blocx-card_pricing {
+
+                        display: flex;
+                        align-items: center;
+                        margin-top: 0px;
+                        padding-bottom: 0px;
+
+                        p {
+                            margin: 0 0.5rem 0 0;
+                        }
+
+                        .pric-value-rupee {
+                            font-size: 0.8125rem;
+                            line-height: 19px;
+                            color: #717171;
+                            font-weight: normal;
+                        }
+
+                        .discount-value {
+                            color: #A6ADB4;
+                            font-size: 0.5625rem;
+                            line-height: 0.8125rem;
+                            margin-top: 0;
+                            text-decoration: line-through;
+                        }
+
+                        .percent-discount {
+                            color: #FF4E4E;
+                            font-size: 0.5625rem;
+                            line-height: 0.8125rem;
+                        }
+
+                    }
+
+                    .blocx-card_rating {
+                        margin-top: 5px;
+
+                        .fa-star {
+                            color: #2699FB;
+                        }
+
+                        .fa-star-o {
+                            color: #2699FB;
+                        }
+
+                        .star-rating {
+                            margin-left: 10px;
+                            font-size: 19px;
+                            line-height: 27px;
+                            color: #9B9B9B;
+                        }
+                    }
+
+                    .blocx-card_text {
+                        color: rgba($color: #000000, $alpha: 0.6);
+                        line-height: 20px;
+                    }
+
+                    .blocx-button-primary {
+                        padding: 5px 16px 5px 16px;
+                        font-size: 0.625rem;
+                        line-height: 14px;
+                        /* margin-left: 2.125rem; */
+                        text-transform: uppercase;
+                    }
+
+                }
+            }
+
+            .blocx-card-review {
+
+                border: none;
+
+                .blocx-card_body {
+                    background: #FFFFFF;
+                    padding-bottom: 24px;
+
+                    .blocx-card_title {
+                        font-size: 13px;
+                        line-height: 19px;
+
+                        color: #9B9B9B;
+                        font-weight: normal;
+                    }
+
+                    .blocx-card_subtitle {
+                        font-size: 15px;
+                        line-height: 21px;
+                        color: #717171;
+                        display: inline-block;
+                        width: 24%;
+                    }
+
+                    .blocx-card_rating {
+                        display: inline-block;
+
+                        padding-top: 0;
+
+                        i {
+                            font-size: inherit;
+                        }
+
+                        .star-rating {
+                            margin-left: 10px;
+                        }
+                    }
+
+                    .blocx-card_text {
+                        margin-bottom: 15px;
+                    }
+
+                    .user-identity {
+                        font-size: 10px;
+                        line-height: 14px;
+                        color: #C9C7C5;
+                        margin-top: 0;
+                    }
+
+                    .review-link {
+                        color: #2699FB;
+                        text-decoration: none;
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+
+            }
+        }
+    }
+
+}

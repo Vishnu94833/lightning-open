@@ -1,0 +1,279 @@
+//Date picker input variables
+$blocx-datepicker-input-width:  100%;
+$blocx-datepicker-input-border: 2px solid #EBEDED;
+$blocx-datepicker-input-font-size: 13px;
+$blocx-datepicker-input-color: #706E6B;
+$blocx-datepicker-input-border-radius: 6px;
+$blocx-datepicker-input-padding: 6px!default;
+$blocx-datepicker-input-position: relative;
+$blocx-datepicker-input-focus-outline:  0;
+$blocx-datepicker-image-holder-position: relative;
+$blocx-datepicker-image-position: absolute;
+$blocx-datepicker-image-top: -23px;
+$blocx-datepicker-image-right: 10px;
+$blocx-datepicker-calendar-position: absolute;
+$blocx-datepicker-calendar-display: inline-block;
+$blocx-datepicker-calendar-border: 2px solid #EBEDED;
+$blocx-datepicker-calendar-background:  #F6F8F9;
+$blocx-datepicker-calendar-width: 283px;
+$blocx-datepicker-calendar-border-radius: 2px;
+$blocx-datepicker-calendar-color: #706E6B;
+$blocx-datepicker-calendar-header-display: flex;
+$blocx-datepicker-calendar-header-flex-direction: row;
+$blocx-datepicker-calendar-header-flex-wrap: wrap;
+$blocx-datepicker-calendar-header-justify-content: space-around;
+$blocx-datepicker-calendar-header-margin: 2px 2px 0px 2px;
+$blocx-datepicker-calendar-header-padding-top: 5px;
+$blocx-datepicker-calendar-header-font-weight: bold; 
+$blocx-datepicker-calendar-header-align-items: center;
+$blocx-datepicker-calendar-header-nav-width: 28px;
+$blocx-datepicker-calendar-header-nav-cursor: pointer; 
+$blocx-datepicker-calendar-header-nav-display: inline-block;
+$blocx-datepicker-calendar-header-nav-text-align: center;
+$blocx-datepicker-calendar-header-nav-next-transform: rotate(180deg);
+$blocx-datepicker-calendar-header-nav-yearnext-transform: rotate(90deg);
+$blocx-datepicker-calendar-header-nav-yearnext-position: absolute;
+$blocx-datepicker-calendar-header-nav-yearnext-right: 10px;
+$blocx-datepicker-calendar-header-nav-yearnext-top: 1px;
+$blocx-datepicker-calendar-header-nav-yearnext-width: auto;
+$blocx-datepicker-calendar-header-nav-yearprev-transform: rotate(270deg); 
+$blocx-datepicker-calendar-header-nav-yearprev-position: absolute;
+$blocx-datepicker-calendar-header-nav-yearprev-right: 11.5px;
+$blocx-datepicker-calendar-header-nav-yearprev-bottom: 1px;
+$blocx-datepicker-calendar-header-nav-yearprev-width: auto;
+$blocx-datepicker-year-position: relative;
+$blocx-datepicker-year-padding: 8px 16px;
+$blocx-datepicker-year-display: inline-block;
+$blocx-datepicker-year-border: 1px solid #DDDBDA;
+$blocx-datepicker-year-border-radius: 6px;
+$blocx-datepicker-year-background: #ffffff;
+$blocx-datepicker-year-image-width: 5px;
+$blocx-datepicker-year-holder-margin-right: 15px;
+$blocx-datepicker-year-holder-font-size: 13px;
+$blocx-datepicker-year-holder-color: #3E3E3C;
+$blocx-datepicker-month-width: 120px;
+$blocx-datepicker-month-text-align: center;
+$blocx-datepicker-month-text-line-height: 20px;
+$blocx-datepicker-month-padding-top: 3px;
+$blocx-datepicker-month-display: inline-block;
+$blocx-datepicker-month-font-size: 12px;
+$blocx-datepicker-month-color: #3E3E3C;
+$blocx-datepicker-body-display: flex;
+$blocx-datepicker-body-flex-direction: row;
+$blocx-datepicker-body-flex-wrap: wrap; 
+$blocx-datepicker-body-justify-content: space-around;
+$blocx-datepicker-body-width: 283px;
+$blocx-datepicker-body-padding-bottom: 2px;
+$blocx-datepicker-day-width: 36px;
+$blocx-datepicker-day-height: 36px;
+$blocx-datepicker-day-line-height: 36px;
+$blocx-datepicker-day-text-align: center;
+$blocx-datepicker-day-margin-top: 4px;
+$blocx-datepicker-day-cursor: pointer;
+$blocx-datepicker-day-font-size: 12px;
+$blocx-datepicker-day-col-border: 0px;
+$blocx-datepicker-day-col-padding: 1px;
+$blocx-datepicker-day-today-background: #ccc;
+$blocx-datepicker-day-today-border-radius: 50%;
+$blocx-datepicker-day-selected-background: #2699FB;
+$blocx-datepicker-day-selected-color: #ffffff;
+$blocx-datepicker-day-other-month-color: #D8DDE6;
+$blocx-datepicker-footer-padding: 10px;
+$blocx-datepicker-footer-text-align: center;
+$blocx-datepicker-footer-color: #2699FB;
+$blocx-datepicker-footer-span-cursor: pointer;
+$blocx-datepicker-footer-selected-background: none;
+$blocx-datepicker-footer-selected-color: #2699FB;
+$blocx-datepicker-image-width:14px!default;
+$blocx-datepicker-image-height:14px!default;
+
+$blocx-datepicker-wrapper-position:relative!default;
+$blocx-datepicker-wrapper-display:flex!default;
+$blocx-datepicker-wrapper-align-items:stretch!default;
+$blocx-datepicker-wrapper-width:100%!default;
+$blocx-datepicker-wrapper-margin-bottom:20px!default;
+$blocx-datepicker-wrapper-label-font-size:13px!default;
+$blocx-datepicker-wrapper-label-font-weight:600!default;
+$blocx-datepicker-wrapper-label-display:inline-block!default;
+$blocx-datepicker-wrapper-label-margin-bottom:8px!default;
+// Date picker input styles
+.blocx-datepicker-wrapper {
+    position: $blocx-datepicker-wrapper-position;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: $blocx-datepicker-wrapper-display;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: $blocx-datepicker-wrapper-align-items;
+    width: $blocx-datepicker-wrapper-width;
+    margin-bottom: $blocx-datepicker-wrapper-margin-bottom;
+
+    label {
+        font-size: $blocx-datepicker-wrapper-label-font-size;
+        font-weight: $blocx-datepicker-wrapper-label-font-weight;
+        display: $blocx-datepicker-wrapper-label-display;
+        margin-bottom: $blocx-datepicker-wrapper-label-margin-bottom;
+    }
+    input {
+        width: $blocx-datepicker-input-width;
+        border: $blocx-datepicker-input-border;
+        font-size: $blocx-datepicker-input-font-size;
+        color: $blocx-datepicker-input-color;
+        border-radius: $blocx-datepicker-input-border-radius;
+        padding: $blocx-datepicker-input-padding;
+        position: $blocx-datepicker-input-position;
+
+        &:focus {
+            outline: $blocx-datepicker-input-focus-outline;
+        }
+    }
+
+    .blocx-datepicker_img {
+        position: relative;
+        width: 100%;
+
+        img {
+            position: $blocx-datepicker-image-position;
+            top: $blocx-datepicker-image-top;
+            right: $blocx-datepicker-image-right;
+            height:$blocx-datepicker-image-height;
+            width:$blocx-datepicker-image-width;
+        }
+    }
+}
+
+// Date picker calender styles
+.blocx-datepicker {
+    position: $blocx-datepicker-calendar-position;
+    display: $blocx-datepicker-calendar-display;
+    border: $blocx-datepicker-calendar-border;
+    background: $blocx-datepicker-calendar-background;
+    width: $blocx-datepicker-calendar-width;
+    border-radius: $blocx-datepicker-calendar-border-radius;
+    color: $blocx-datepicker-calendar-color;
+
+
+    &_header {
+        display: $blocx-datepicker-calendar-header-display;
+        flex-direction: $blocx-datepicker-calendar-header-flex-direction;
+        flex-wrap: $blocx-datepicker-calendar-header-flex-wrap;
+        justify-content: $blocx-datepicker-calendar-header-justify-content;
+        margin: $blocx-datepicker-calendar-header-margin;
+        padding-top: $blocx-datepicker-calendar-header-padding-top;
+        font-weight: $blocx-datepicker-calendar-header-font-weight;
+        align-items: $blocx-datepicker-calendar-header-align-items;
+
+        .dpNav {
+            width: $blocx-datepicker-calendar-header-nav-width;
+            cursor: $blocx-datepicker-calendar-header-nav-cursor;
+            display: $blocx-datepicker-calendar-header-nav-display;
+            text-align: $blocx-datepicker-calendar-header-nav-text-align;
+        }
+
+        .dpNav_next {
+            transform: $blocx-datepicker-calendar-header-nav-next-transform;
+        }
+
+        .dpNav_yearnext {
+            transform: $blocx-datepicker-calendar-header-nav-yearnext-transform;
+            position: $blocx-datepicker-calendar-header-nav-yearnext-position;
+            right: $blocx-datepicker-calendar-header-nav-yearnext-right;
+            top: $blocx-datepicker-calendar-header-nav-yearnext-top;
+            width: $blocx-datepicker-calendar-header-nav-yearnext-width;
+        }
+
+        .dpNav_yearprev {
+            transform: $blocx-datepicker-calendar-header-nav-yearprev-transform;
+            position: $blocx-datepicker-calendar-header-nav-yearprev-position;
+            right: $blocx-datepicker-calendar-header-nav-yearprev-right;
+            bottom: $blocx-datepicker-calendar-header-nav-yearprev-bottom;
+            width: $blocx-datepicker-calendar-header-nav-yearprev-width;
+        }
+
+        .blocx_year {
+            position: $blocx-datepicker-year-position;
+            padding: $blocx-datepicker-year-padding;
+            display: $blocx-datepicker-year-display;
+            border: $blocx-datepicker-year-border;
+            border-radius: $blocx-datepicker-year-border-radius;
+            background: $blocx-datepicker-year-background;
+
+            img {
+                width: $blocx-datepicker-year-image-width;
+            }
+        }
+
+        .blocx-datepicker_year {
+            margin-right: $blocx-datepicker-year-holder-margin-right;
+            font-size: $blocx-datepicker-year-holder-font-size;
+            color: $blocx-datepicker-year-holder-color;
+        }
+    }
+
+    &_month {
+        width: $blocx-datepicker-month-width;
+        text-align: $blocx-datepicker-month-text-align;
+        line-height: $blocx-datepicker-month-text-line-height;
+        padding-top: $blocx-datepicker-month-padding-top;
+        display: $blocx-datepicker-month-display;
+        font-size: $blocx-datepicker-month-font-size;
+        color: $blocx-datepicker-month-color;
+    }
+
+    &_body {
+        display: $blocx-datepicker-body-display;
+        flex-direction: $blocx-datepicker-body-flex-direction;
+        flex-wrap: $blocx-datepicker-body-flex-wrap;
+        justify-content: $blocx-datepicker-body-justify-content;
+        width: $blocx-datepicker-body-width;
+        padding-bottom: $blocx-datepicker-body-padding-bottom;
+    }
+
+    .dpDay,
+    .dpDayCol {
+        width: $blocx-datepicker-day-width;
+        height: $blocx-datepicker-day-height;
+        line-height: $blocx-datepicker-day-line-height;
+        text-align: $blocx-datepicker-day-text-align;
+        margin-top: $blocx-datepicker-day-margin-top;
+        cursor: $blocx-datepicker-day-cursor;
+        font-size: $blocx-datepicker-day-font-size;
+    }
+
+    .dpDayCol {
+        border: $blocx-datepicker-day-col-border;
+        padding: $blocx-datepicker-day-col-padding;
+    }
+
+    .dpDay.today {
+        background: $blocx-datepicker-day-today-background;
+        border-radius: $blocx-datepicker-day-today-border-radius;
+    }
+
+    .dpDay.selected,
+    .dpDay:hover {
+        background: $blocx-datepicker-day-selected-background;
+        color: $blocx-datepicker-day-selected-color;
+    }
+
+    .dpDay.other_month {
+        color: $blocx-datepicker-day-other-month-color;
+    }
+
+    &_footer {
+        padding: $blocx-datepicker-footer-padding;
+        text-align: $blocx-datepicker-footer-text-align;
+        color: $blocx-datepicker-footer-color;
+
+        span {
+            cursor: $blocx-datepicker-footer-span-cursor;
+        }
+
+        .selected {
+            background: $blocx-datepicker-footer-selected-background;
+            color: $blocx-datepicker-footer-selected-color;
+        }
+    }
+}

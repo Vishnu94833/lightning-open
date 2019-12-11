@@ -1,0 +1,58 @@
+.blocx-carousel_inner {
+  border: 2px solid #DDDBDA;
+  margin-bottom: 10px;
+  border-radius: 6px; }
+  .blocx-carousel_inner img {
+    width: 100%;
+    height: 240px;
+    margin-left: auto;
+    margin-right: auto; }
+
+.blocx-carousel_item {
+  display: none;
+  width: 100%;
+  position: relative;
+  overflow: hidden; }
+
+.blocx-carousel_caption {
+  text-align: center;
+  padding: 20px;
+  margin-bottom: 10px;
+  min-height: 100px; }
+  .blocx-carousel_caption h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2B2826;
+    text-transform: capitalize;
+    margin: 0; }
+  .blocx-carousel_caption p {
+    margin: 0;
+    padding: 10px 0; }
+
+.blocx-carousel_controls {
+  text-align: center; }
+  .blocx-carousel_controls a,
+  .blocx-carousel_controls .a {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid #DDDBDA;
+    position: relative;
+    margin: 0 5px; }
+    .blocx-carousel_controls a.active,
+    .blocx-carousel_controls .a.active {
+      background: blue; }
+  .blocx-carousel_controls .a {
+    border-radius: 4px;
+    cursor: pointer; }
+  .blocx-carousel_controls i {
+    font-size: 11px;
+    color: #706E6B;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+.blocx-carousel .active {
+  display: inline-block; }

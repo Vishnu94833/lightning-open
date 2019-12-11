@@ -1,0 +1,88 @@
+// blocx-loader variables
+$blocx-loader-dispaly:inline-block !default;
+$blocx-loader-position:relative !default;
+$blocx-loader-div-position:absolute !default;
+$blocx-loader-div-width:4px !default;
+$blocx-loader-div-height:4px !default;
+
+$blocx-loader-div-border-radius:50% !default;
+$blocx-loader-div-animation:lds-default 1.2s linear infinite !default;
+
+
+
+// blocx-loader Component styles start
+.blocx-loader-small {
+    display: $blocx-loader-dispaly;
+    position: $blocx-loader-position;
+
+    div {
+        position: $blocx-loader-div-position;
+        width: $blocx-loader-div-width;
+        height: $blocx-loader-div-height;
+        background: $primary;
+        border-radius: $blocx-loader-div-border-radius;
+        animation: $blocx-loader-div-animation;
+    }
+
+    // blocx-loader mixin
+    @mixin icon-position($animation-delay, $top, $left) {
+        animation-delay: $animation-delay;
+        top: $top;
+        left: $left;
+    }
+
+    div:nth-child(1) {
+        @include icon-position(0s, 55.83px, 53.74px);
+    }
+
+    div:nth-child(2) {
+        @include icon-position(-0.3s, 49.67px, 56.92px);
+        // animation-delay: -0.3s;
+        // top: 49.6768px;
+        // left: 56.9282px;
+    }
+
+    div:nth-child(3) {
+        @include icon-position(-0.6s, 43.83px, 53.18px);
+        // animation-delay: -0.6s;
+        // top: 43.8384px;
+        // left: 53.1842px;
+    }
+
+    div:nth-child(4) {
+        @include icon-position(-0.9s, 44.16px, 46.25px);
+        // animation-delay: -0.9s;
+        // top: 44.1616px;
+        // left: 46.256px;
+    }
+
+    div:nth-child(5) {
+        @include icon-position(-0.12s, 50.32px, 43.07px);
+        // animation-delay: -0.12s;
+        // top: 50.3232px;
+        // left: 43.0718px;
+    }
+
+    div:nth-child(6) {
+        @include icon-position(-0.15s, 56.16px, 46.81px);
+        // animation-delay: -0.15s;
+        // top: 56.1616px;
+        // left: 46.8158px;
+    }
+
+    @keyframes lds-default {
+
+        0%,
+        20%,
+        80%,
+        100% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.5);
+        }
+    }
+}
+
+// blocx-loader Component styles end

@@ -1,0 +1,348 @@
+//file upload component variables
+$blocx-file-upload-width-100: 100%!default;
+$blocx-file-upload-width-50: 50%!default;
+$blocx-file-upload-align-items: center!default;
+$blocx-file-upload-box-sizing: border-box!default;
+$blocx-file-upload-flex-wrap: wrap!default;
+$blocx-file-upload-padding: 0!default;
+$blocx-file-upload-display: flex!default;
+$blocx-file-upload-img-width: 0.625rem!default;
+$blocx-file-upload-img-position: absolute!default;
+$blocx-file-upload-img-top: 0.75rem!default;
+$blocx-file-upload-img-left: 0.6875rem!default;
+$blocx-file-upload-text-upload-position: relative!default;
+$blocx-file-upload-text-upload-left: 0.25rem!default;
+$blocx-file-upload-options-border-radius: 0.375rem!default;
+$blocx-file-upload-options-border-color: #DDDBDA!default;
+$blocx-file-upload-drag-drop-margin: 0.9375rem!default;
+$blocx-file-upload-drag-drop-bg: #EBEDED!default;
+$blocx-file-upload-file-over-bg: #2699FB!default;
+$blocx-file-upload-error-bar-bg: #F4593D!default;
+$blocx-file-upload-float-right: right!default;
+$blocx-file-upload-margin-0: 0!default;
+$blocx-file-upload-success-text-padding: 0.125rem 1.75rem!default;
+$blocx-file-upload-text-transform-uppercase: uppercase !default;
+$blocx-file-upload-drag-drop-file-over-border: #fff!default;
+$blocx-file-upload-inner-block-text-padding: 2.75rem 6.75rem!default;
+$blocx-file-upload-progress-bar-bg: #ed9f80!default;
+$blocx-file-upload-bar-margin: 0.3125rem 1.875rem 0!default;
+$blocx-file-upload-error-icon-margin-right: 0.3125rem!default;
+$blocx-file-upload-font-weight-bold: bold!default;
+$blocx-file-upload-font-weight-normal: normal!default;
+$blocx-file-upload-display-none: none!default;
+$blocx-file-upload-para-style-color: #3E3E3C!default;
+$blocx-file-upload-para-style-color2: #2B2826!default;
+$blocx-file-upload-para-style-color3: #10AD67!default;
+$blocx-file-upload-para-style-color4: #ffffff!default;
+$blocx-file-upload-error-icon-margin: 0.3125rem 0.3125rem 0!default;
+$blocx-file-upload-button-margin-right: 2.1875rem!default;
+$blocx-file-upload-justify-content: center!default;
+
+//file upload component style starts
+.blocx-file-upload {
+    input[type='file'] {
+        display: $blocx-file-upload-display-none;
+    }
+
+    &_options {
+        margin-bottom: 20px;
+        display: $blocx-file-upload-display;
+        padding: $blocx-file-upload-padding;
+        justify-content: $blocx-file-upload-justify-content;
+        width: $blocx-file-upload-width-100;
+        align-items: $blocx-file-upload-align-items;
+        box-sizing: $blocx-file-upload-box-sizing;
+        flex-wrap: $blocx-file-upload-flex-wrap;
+        border: 0.125rem solid $blocx-file-upload-options-border-color;
+        border-radius: $blocx-file-upload-options-border-radius;
+
+        img {
+            width: $blocx-file-upload-img-width;
+            position: $blocx-file-upload-img-position;
+            top: $blocx-file-upload-img-top;
+            left: $blocx-file-upload-img-left;
+        }
+
+        .blocx-file-upload_text-upload{
+            position: $blocx-file-upload-text-upload-position;
+            left: $blocx-file-upload-text-upload-left;
+        }
+
+        .upload:active {
+            left: $blocx-file-upload-text-upload-left;
+
+        }
+    }
+
+    &_draganddrop-block {
+        border: 0.125rem solid $blocx-file-upload-options-border-color;
+        border-radius: $blocx-file-upload-options-border-radius;
+
+    }
+
+    &_draganddrop-inner-block {
+        border: 0.125rem dotted $blocx-file-upload-options-border-color;
+        border-radius: $blocx-file-upload-options-border-radius;
+        margin: $blocx-file-upload-drag-drop-margin;
+        background-color: $blocx-file-upload-drag-drop-bg;
+    }
+    @mixin file-upload-para-style($font-size, $color,$line-height) {
+        font-size:$font-size;
+        color: $color;
+        line-height:$line-height;
+    }
+    p.blocx-file-upload_draganddrop-inner-section-text{
+        @include file-upload-para-style(16px, $blocx-file-upload-para-style-color,15px);
+               margin: $blocx-file-upload-margin-0;
+        padding: $blocx-file-upload-inner-block-text-padding;
+      
+    }
+    p.blocx-file-upload_draganddrop-block-file_over-inner-block-text {
+        @include file-upload-para-style(16px, $blocx-file-upload-para-style-color2,15px);
+                margin: $blocx-file-upload-margin-0;
+        padding: $blocx-file-upload-inner-block-text-padding;
+      
+    }
+
+    &_draganddrop-block-file_over {
+        border: 0.125rem solid $blocx-file-upload-options-border-color;
+        border-radius: $blocx-file-upload-options-border-radius;
+    }
+
+    &_draganddrop-block-file_over-inner-block {
+        border: 0.125rem dotted $blocx-file-upload-drag-drop-file-over-border;
+        border-radius: $blocx-file-upload-options-border-radius;
+        margin: $blocx-file-upload-drag-drop-margin;
+        background-color: $blocx-file-upload-file-over-bg;
+    }
+   
+    p.blocx-file-upload_text-second {
+        @include file-upload-para-style(16px, $blocx-file-upload-para-style-color,15px);
+        text-transform: $blocx-file-upload-text-transform-uppercase;
+      
+        margin-right: 1.5rem;
+    }
+
+    p.blocx-file-upload_text-first {
+        @include file-upload-para-style(16px, $blocx-file-upload-para-style-color,15px);
+        
+        padding: 3.75rem 2rem;
+        margin: $blocx-file-upload-margin-0;
+    }
+
+    &_progess-state {
+        border: 0.125rem solid $blocx-file-upload-options-border-color;
+position: $blocx-file-upload-text-upload-position;
+        img {
+            float: $blocx-file-upload-float-right;
+        }
+    }
+
+    &_progress-error, &_progress-success, &_progress-success-state2 {
+      
+
+        margin: 0 1.875rem;
+    width: calc(100% - 3.75rem);
+    margin-bottom: 1.625rem;
+    }
+
+    .file-upload-h6 {
+
+       
+      
+        font-weight: $blocx-file-upload-font-weight-normal;
+        padding-left: 1.875rem;
+        padding-top: 0.625rem;
+        clear: both;
+
+        @include file-upload-para-style(13px, $blocx-file-upload-para-style-color,1.25rem);
+        margin: $blocx-file-upload-margin-0;
+       
+       
+       
+      
+    
+
+        span {
+            float: $blocx-file-upload-float-right;
+            margin-right: 2.5rem;
+        }
+    }
+
+    .error-state {
+        border: 0.125rem solid $blocx-file-upload-options-border-color;
+        border-radius: $blocx-file-upload-options-border-radius;
+
+        img {
+            float: $blocx-file-upload-float-right;
+        }
+    }
+    @mixin error-message-style($font-size, $color, $line-height,$margin,$text-align) {
+     
+       color: $color;
+       font-size:$font-size;
+      line-height: $line-height;
+      margin:$margin;
+      text-align:$text-align;
+    }
+    &_error-message-text {
+        @include error-message-style(0.8125rem,$blocx-file-upload-error-bar-bg,1.25rem,0, $blocx-file-upload-align-items);
+       
+        padding: 0.625rem 7.6875rem 0.1875rem 7.6875rem;
+       
+    }
+    .error-file-upload.progressbar{
+        background: $blocx-file-upload-progress-bar-bg;
+    }
+   
+    &_error-message-text2{
+        @include error-message-style(0.75rem,$blocx-file-upload-para-style-color,0.9375rem,0, $blocx-file-upload-align-items);
+       
+        padding: 0.375rem 4.125rem 1.0625rem 4.125rem;
+       
+    }
+    &_error-message-text3 {
+        @include error-message-style(0.75rem,$blocx-file-upload-para-style-color,0.9375rem,0, $blocx-file-upload-align-items);
+      
+        padding: 0.375rem 5.4375rem 1.0625rem 5.4375rem;
+        
+    }
+
+    div.progressbar div {
+        width: 83.5%;
+        background: $blocx-file-upload-file-over-bg;
+    }
+
+    &_progess-state2 {
+        border: 0.125rem solid $blocx-file-upload-options-border-color;
+position: $blocx-file-upload-text-upload-position;
+        .blocx-fileupload-clear-icon {
+            cursor: pointer;
+            float: $blocx-file-upload-float-right;
+        }
+
+        .blocx-fileupload-success-text{
+
+            position: $blocx-file-upload-img-position;
+            
+          
+            right: 1.875rem;
+            bottom: 0.3125rem;
+
+
+         
+            margin: $blocx-file-upload-margin-0;
+            
+            @include file-upload-para-style(0.75rem, $blocx-file-upload-para-style-color3,0px);
+          
+          
+            // padding: 2px 28px;
+
+            .blocx-fileupload-success-icon {
+                margin:$blocx-file-upload-error-icon-margin;
+            }
+        }
+
+        .file-upload-bar {
+            margin: $blocx-file-upload-bar-margin;
+        }
+    }
+
+    &_error-state {
+        border: 0.125rem solid $blocx-file-upload-options-border-color;
+position: $blocx-file-upload-text-upload-position;
+        .blocx-fileupload-clear-icon {
+            float: $blocx-file-upload-float-right;
+            cursor: pointer;
+        }
+
+        .blocx-file-upload_error-text {
+
+            position: $blocx-file-upload-img-position;
+            
+          
+            right: 1.875rem;
+            bottom: 0.3125rem;
+
+
+         
+            margin: $blocx-file-upload-margin-0;
+            
+          
+
+            @include file-upload-para-style(0.75rem,$blocx-file-upload-error-bar-bg,0.9375rem);
+            
+           
+            .blocx-fileupload-error-icon {
+                margin: $blocx-file-upload-error-icon-margin;
+            }
+        }
+
+        &_progress-error {
+            margin: $blocx-file-upload-bar-margin;
+        }
+    }
+
+    &_error-message {
+        border: 0.125rem solid $blocx-file-upload-options-border-color;
+
+        .blocx-fileupload-clear-icon {
+            float: $blocx-file-upload-float-right;
+            cursor: pointer;
+        }
+
+        .file-upload-status {
+            @include file-upload-para-style(0.75rem, $blocx-file-upload-error-bar-bg,0.9375rem);
+            float: $blocx-file-upload-float-right;
+            margin: $blocx-file-upload-margin-0;
+           
+            padding: $blocx-file-upload-success-text-padding;
+        }
+
+        .file-upload-bar {
+            margin: $blocx-file-upload-bar-margin;
+        }
+    }
+
+  &_error-message-state2 {
+        border: 0.125rem solid $blocx-file-upload-options-border-color;
+
+        .blocx-fileupload-clear-icon {
+            float: $blocx-file-upload-float-right;
+            cursor: pointer;
+        }
+
+        .file-upload-status {
+            @include file-upload-para-style(0.75rem, $blocx-file-upload-error-bar-bg,0.9375rem);
+            float: $blocx-file-upload-float-right;
+            margin: $blocx-file-upload-margin-0;
+            
+            padding: $blocx-file-upload-success-text-padding;
+        }
+
+        .file-upload-bar {
+            margin: $blocx-file-upload-bar-margin;
+        }
+    }
+
+    div.progressbar div.blocx-file-upload_error-bar {
+        width: $blocx-file-upload-width-50;
+        background: $blocx-file-upload-error-bar-bg;
+    }
+
+    div.progressbar div.blocx-fileupload-success-variant {
+        width: $blocx-file-upload-width-100;
+        background: $blocx-file-upload-file-over-bg;
+    }
+
+    &-upload-btn {
+        @include file-upload-para-style(0.6875rem, $blocx-file-upload-para-style-color4,1.25rem);
+      
+        padding: 0.5625rem 1.625rem;
+        font-weight: $blocx-file-upload-font-weight-bold;
+       
+        margin-right: $blocx-file-upload-button-margin-right;
+        text-align: $blocx-file-upload-align-items;
+        text-transform: $blocx-file-upload-text-transform-uppercase;
+    }
+}

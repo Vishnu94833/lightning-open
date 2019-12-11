@@ -1,0 +1,67 @@
+// Horizontal grid template variables
+$horizontal-sec-display:flex !default;
+$horizontal-sec-justify:space-between !default;
+$horizontal-sec-padding-top:15px !default;
+$horizontal-sec-align-items:center !default;
+$horizontal-h2-margin:0 !default;
+$horizontal-h2-text-transform:uppercase !default;
+$horizontal-card-border:none !default;
+$horizontal-img-height:100% !default;
+$horizontal-body-padding:10px !default;
+$horizontal-h5-margin:0 !default;
+$horizontal-para-margin:5px 0 !default;
+$horizontal-links-padding:10px 0 !default;
+$horizontal-sharelinks-right:0 !default;
+$horizontal-template-border-color: #ddd !default;
+
+
+// Horizontal grid template styles start
+.horizontal-template {
+    section {
+        border-bottom: 1px solid $horizontal-template-border-color;
+    }
+
+    .section_head {
+        display: $horizontal-sec-display;
+        justify-content: $horizontal-sec-justify;
+        padding-top: $horizontal-sec-padding-top;
+        align-items: $horizontal-sec-align-items;
+
+        h2 {
+            margin: $horizontal-h2-margin;
+            text-transform: $horizontal-h2-text-transform;
+        }
+
+    }
+
+    .blocx-card {
+        border: $horizontal-card-border;
+
+        img {
+            height: $horizontal-img-height;
+        }
+
+        &_body {
+            padding: $horizontal-body-padding;
+
+            h5 {
+                margin: $horizontal-h5-margin;
+                text-transform: $horizontal-h2-text-transform;
+            }
+
+            p {
+                margin: $horizontal-para-margin;
+            }
+        }
+
+        &_links {
+            padding: $horizontal-links-padding;
+
+            .share-link {
+                right: $horizontal-sharelinks-right;
+            }
+        }
+    }
+}
+
+// Horizontal grid template styles end

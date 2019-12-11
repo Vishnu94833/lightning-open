@@ -1,0 +1,163 @@
+.center {
+    text-align: center;
+}
+.link {
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: #ff6000;
+    color: white;
+    margin-left: 33%;
+    margin-right: 33%;
+    display: inline-block;
+    margin-top: 1em;
+}
+.info {
+    color: black;
+    background-color: #e4f2f8;
+    margin: auto;
+    padding: 15px 10px;
+    text-align: left;
+    width: 300px;
+    border-radius: 5px;
+}
+.code {
+    font-family: monospace;
+}
+.container {
+    margin-top: 30px;
+}
+
+img {
+    max-width: 150px;
+}
+
+.greeting {
+    height: 75px;
+}
+
+.wcf-slider{
+    border: 1px solid black;
+}
+.wcf-slider_body {
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	height: 300px;
+	text-align: center;
+}
+
+.wcf-slider_body h1 {
+	color: #2B2826;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.wcf-slider_body h4 {
+	font-size: 16px;
+	color: #4a4a4a;
+}
+
+.wcf-slider_navigation {
+	position: relative;
+	top: -175px;
+}
+
+.wcf-slider_navigation :hover {
+	cursor: pointer;
+}
+
+.wcf-slider_navigation img {
+	border: 1px solid #DDDBDA;
+	padding: 5px;
+	border-radius: 6px;
+	background: #ffffff;
+}
+
+.wcf-slider_navigation-leftbtn {
+	position: relative;
+	float: left;
+	left: 50px;
+}
+
+.wcf-slider_navigation-rightbtn {
+	position: relative;
+	float: right;
+	right: 50px;
+	text-align: right;
+}
+
+.wcf-slider_block {
+	background-size: cover;
+	height: 300px;
+	position: absolute;
+	left: 100%;
+	width: 100%;
+	top: 0px;
+}
+
+.wcf-slider_block .wcf-slider_block_content {
+	position: inherit;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes slideIn {
+	100% {
+		left: 0;
+	}
+}
+
+@keyframes slideIn {
+	100% {
+		left: 0;
+	}
+}
+
+.slideInRight {
+	left: -100%;
+	-webkit-animation: slideIn 1s forwards;
+	animation: slideIn 1s forwards;
+}
+
+.slideInLeft {
+	left: 100%;
+	-webkit-animation: slideIn 1s forwards;
+	animation: slideIn 1s forwards;
+}
+
+@-webkit-keyframes slideOutLeft {
+	100% {
+		left: -100%;
+	}
+}
+
+@keyframes slideOutLeft {
+	100% {
+		left: -100%;
+	}
+}
+
+.slideOutLeft {
+	-webkit-animation: slideOutLeft 1s forwards;
+	animation: slideOutLeft 1s forwards;
+}
+
+@-webkit-keyframes slideOutRight {
+	100% {
+		left: 100%;
+	}
+}
+
+@keyframes slideOutRight {
+	100% {
+		left: 100%;
+	}
+}
+
+.slideOutRight {
+	-webkit-animation: slideOutRight 1s forwards;
+	animation: slideOutRight 1s forwards;
+}

@@ -1,0 +1,70 @@
+@import '../../../resources/assets/styles/scss/_base/index';
+.container{
+
+    padding: 0px 30px;
+    margin: 0px 111.5px;
+}
+p{
+    margin: 0px;
+}
+
+.doctorBock{
+    border: 1px solid gray;
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 15px;
+}
+.docName{
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+}
+.docImg{
+    width: 50px;
+    float: right;
+}
+.doctorIntro{
+    border-bottom: 1px solid gray;
+    margin: 0 10px 0 10px;
+}
+.timeImage{
+    padding: 0;
+    border-bottom: 1px solid gray;
+    margin: 0 10px 0 10px;
+    .active{
+        background: #D5D5D5;
+    }
+}
+.timeDisplay.active{
+     background: #D5D5D5;
+}
+.timeDisplay {
+    border: 1px solid gray;
+    margin: 5px;
+    border-radius: 8px;
+    padding: 9px 9px 9px 13px;;
+    // width: 11%;
+    display: inline-block;
+}
+.docSelect{
+    display: inline-block;
+    float: right;
+}
+.confirmDetail1{
+    border-bottom: 1px solid gray;
+    color: gray;
+}
+.headingConfirm {
+    font-size: 18px;
+    font-weight: bold;
+}
+.contentConfirm {
+    font-size: 12px;
+    margin-top: 7px;
+}
+.docDegree {
+    font-size: 10px;
+}
+.marginTop10{
+    margin-top: 5px;
+}

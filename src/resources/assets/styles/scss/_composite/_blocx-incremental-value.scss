@@ -1,0 +1,26 @@
+.blocx-incremental-value {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 6px;
+    border: 1px solid #CCCCCC;
+    width: 100%;
+    padding: 8px 4px;
+    box-sizing: border-box;
+
+    &_value{
+        color: #2B2B2B;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    &_decrement{
+        height:8px;
+        width:8px;
+        cursor: pointer;
+    }
+    &_increment{
+        cursor: pointer;
+        height:8px;
+        width:8px;
+    }
+}

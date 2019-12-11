@@ -1,0 +1,144 @@
+.blocx-input-group label {
+  font-size: 13px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 20px; }
+
+.blocx-input-select {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  width: 100%; }
+
+.blocx-select-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: 13px;
+  color: #A6ADB4; }
+  .blocx-select-dropdown_button {
+    padding: 8px 15px;
+    background-color: #fff;
+    color: #616161;
+    border: 2px solid #EBEDED;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    line-height: 20px; }
+    .blocx-select-dropdown_button:focus {
+      outline: none;
+      border: 2px solid #72ACFF; }
+    .blocx-select-dropdown_button .fa-angle-down {
+      position: absolute;
+      right: 10px;
+      top: 12px;
+      color: #A6ADB4; }
+  .blocx-select-dropdown_list {
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    max-height: 300px;
+    overflow: auto;
+    margin: 0;
+    padding: 0;
+    border: 2px solid #EBEDED;
+    border-top: 0px solid transparent;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    list-style-type: none;
+    opacity: 0;
+    pointer-events: none;
+    transform-origin: top left;
+    transform: scale(1, 0);
+    transition: all ease-in-out .3s;
+    z-index: 2; }
+    .blocx-select-dropdown_list.active {
+      opacity: 1;
+      pointer-events: auto;
+      transform: scale(1, 1); }
+  .blocx-select-dropdown_list-item {
+    display: block;
+    list-style-type: none;
+    padding: 10px 15px;
+    background: #fff;
+    font-size: 13px;
+    line-height: 20px;
+    cursor: pointer;
+    color: #616161;
+    text-align: left;
+    transition: all ease-in-out .3s; }
+    .blocx-select-dropdown_list-item:hover {
+      background-color: #F6F8F9;
+      color: #72ACFF;
+      transition: all ease-in-out .3s; }
+  .blocx-select-dropdown_button:focus ~ .blocx-select-dropdown_list {
+    border: 2px solid #72ACFF;
+    border-top: 0px solid transparent; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_button.zero-bottom {
+  border-bottom: 2px solid #EBEDED;
+  border-radius: 6px; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_button {
+  padding: 4px 15px; }
+  .blocx-multi-select-dropdown .blocx-select-dropdown_button .fa-angle-down {
+    position: absolute;
+    right: 14px;
+    top: 8px;
+    font-size: 16px;
+    color: #A6ADB4; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_list-item {
+  color: #2B2826;
+  font-style: normal;
+  font-weight: 400; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: 13px;
+  color: #706E6B;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 19px;
+  font-family: "Acumin Pro", sans-serif; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_list {
+  border-top: 2px solid #EBEDED;
+  margin-top: 8px;
+  border-radius: 6px; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_button:focus ~ .blocx-select-dropdown_list {
+  border-top: 2px solid #EBEDED;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_button:focus {
+  border: 2px solid #EBEDED; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_list-item {
+  padding-left: 40px;
+  position: relative;
+  font-size: 12px; }
+  .blocx-multi-select-dropdown .blocx-select-dropdown_list-item .blocx-option-selected {
+    display: none;
+    position: absolute;
+    left: 15px;
+    top: 15px; }
+  .blocx-multi-select-dropdown .blocx-select-dropdown_list-item:hover .blocx-option-selected {
+    display: inline-block;
+    width: 12px;
+    height: 8px; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_button:focus ~ .blocx-select-dropdown_list {
+  border-color: #EBEDED; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_list-item:hover {
+  background-color: #EBEDED; }
+
+.blocx-multi-select-dropdown .blocx-select-dropdown_list-item-selected .blocx-option-selected {
+  display: inline-block; }

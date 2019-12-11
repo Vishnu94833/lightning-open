@@ -1,0 +1,43 @@
+$padding-for-text:10px;
+$font-size-text:16px;
+// $font-weight-first-row-contents: 100;
+// $font-family: "Acumin Pro", sans-serif;
+// $font-style: normal;
+
+.first-row{
+        .first-row-contents{
+        display: flex;
+        justify-content: flex-end;
+        margin: 25px;
+    }
+}
+
+.verticalBorder {
+    padding-right: $padding-for-text;
+    border-right: 1px solid gray;
+    padding-left: $padding-for-text;
+    color: gray;
+    font-size: $font-size-text;
+}
+.withoutBorder {
+    padding-right: $padding-for-text;
+    padding-left: $padding-for-text;
+    color: gray;
+    font-size: $font-size-text;
+}
+.second-row{
+.centerMenus{
+    text-align: center;
+    display: flex;
+justify-content: center;
+    .active{
+        font-weight: bold;
+    }
+    .centerMenu{
+        padding-right: $padding-for-text;
+        padding-left: $padding-for-text;
+        color: gray;
+        font-size: 20px;
+    }
+}
+}

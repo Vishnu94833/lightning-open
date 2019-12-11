@@ -1,0 +1,159 @@
+// Sample page variables
+$blocx-horizontal-product-view-border-margin-none:0 !default;
+$blocx-horizontal-product-view-align-center:center !default; //
+$blocx-horizontal-product-view-logo-font-size:13px !default;
+$blocx-horizontal-product-view-logo-font-weight:bold !default;
+$blocx-horizontal-product-view-logo-padding:5px 15px !default;
+$blocx-horizontal-product-view-menu-font-size:11px !default;
+$blocx-horizontal-product-view-menu-font-weight:bold !default;
+$blocx-horizontal-product-view-slider-block-height:600px !default;
+$blocx-horizontal-product-view-slider-navigation-top:-225px !default;
+$blocx-horizontal-product-view-slider-navigation-rightbtn-right:0 !default;
+$blocx-horizontal-product-view-slider-navigation-lefttbtn-left:0 !default;
+$blocx-horizontal-product-view-latest-h2-font-size:20px !default;
+$blocx-horizontal-product-view-latest-h2-font-weight:bold !default;
+$blocx-horizontal-product-view-latest-h2-color:#2B2826 !default;
+$blocx-horizontal-product-view-card-img-height:100% !default;
+$blocx-horizontal-product-view-card-link-display:flex !default;
+$blocx-horizontal-product-view-details-h2-font-size:32px !default;
+$blocx-horizontal-product-view-details-h2-font-weight:bold !default;
+$blocx-horizontal-product-view-details-h2-color:#2B2826 !default;
+$blocx-horizontal-product-view-details-p-color:#A6ADB4 !default;
+$blocx-horizontal-product-view-details-p-line-height:30px !default;
+$blocx-horizontal-product-view-card-full-margin:30px 0 !default;
+$blocx-horizontal-product-view-card_details-bg:#EBEDED !default;
+$blocx-horizontal-product-view-card_details-padding:20px !default;
+
+// Sample page template styles start
+
+
+.l-landing-horizontal-product-view {
+    .blocx-header {
+        padding-top: 8px;
+        padding-bottom: 8px;
+    
+        &_logo {
+            font-size: $blocx-horizontal-product-view-logo-font-size;
+            font-weight: $blocx-horizontal-product-view-logo-font-weight;
+            padding: $blocx-horizontal-product-view-logo-padding;
+        }
+    
+        .blocx-menu {
+            a {
+                font-size: $blocx-horizontal-product-view-menu-font-size;
+                font-weight: $blocx-horizontal-product-view-menu-font-weight;
+            }
+        }
+    }
+    .blocx-slider {
+
+        &_body,
+        &_block {
+            height: $blocx-horizontal-product-view-slider-block-height;
+        }
+
+        &_body {
+            .blocx-slider_heading {
+                text-transform: capitalize;
+            }
+        }
+
+        &_navigation {
+            margin: 0;
+            width: 100%;
+            // top: $blocx-horizontal-product-view-slider-navigation-top;
+            // &-rightbtn{
+            //     right:$blocx-horizontal-product-view-slider-navigation-rightbtn-right;
+            // }
+            // &-leftbtn{
+            //     left:$blocx-horizontal-product-view-slider-navigation-lefttbtn-left;
+            // }
+        }
+    }
+
+    .latest {
+        h2 {
+            font-size: $blocx-horizontal-product-view-latest-h2-font-size;
+            font-weight: $blocx-horizontal-product-view-latest-h2-font-weight;
+            color: $blocx-horizontal-product-view-latest-h2-color;
+        }
+
+        .blocx-card {
+            img {
+                height: $blocx-horizontal-product-view-card-img-height;
+            }
+
+            &_links {
+                display: $blocx-horizontal-product-view-card-link-display;
+                align-items: $blocx-horizontal-product-view-align-center;
+
+                .share-link {
+                    right: 0;
+                }
+
+                span {
+                    padding: 0px 10px 0 0;
+                }
+            }
+
+            &_title {
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .work {
+        .blocx-card_body {
+            text-align: $blocx-horizontal-product-view-align-center;
+        }
+
+        .blocx-card_title,
+        .blocx-card_text {
+            margin: 0;
+        }
+
+        .blocx-card_text {
+            line-height: 20px;
+        }
+    }
+
+    .blocx-integrated-details {
+        h2 {
+            font-size: $blocx-horizontal-product-view-details-h2-font-size;
+            font-weight: $blocx-horizontal-product-view-details-h2-font-weight;
+            color: $blocx-horizontal-product-view-details-h2-color;
+        }
+        p {
+            color: $blocx-horizontal-product-view-details-p-color;
+            line-height: $blocx-horizontal-product-view-details-p-line-height;
+        }
+    }
+
+    .blocx-card-img-left {
+        display: $blocx-horizontal-product-view-card-link-display;
+        margin: $blocx-horizontal-product-view-card-full-margin;
+        h3 {
+            font-size: 8px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        img {
+            width: 20%;
+        }
+
+        .blocx-card_body {
+            background: $blocx-horizontal-product-view-card_details-bg;
+            padding: $blocx-horizontal-product-view-card_details-padding;
+        }
+    }
+
+    .blocx-card-img-left {
+        flex-direction: row;
+    }
+
+}
+
+// Sample page template styles end

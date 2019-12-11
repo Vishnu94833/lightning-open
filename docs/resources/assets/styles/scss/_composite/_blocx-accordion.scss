@@ -1,0 +1,134 @@
+ // blocx-accordion component variables
+ $blocx-accordion-float:left !default;
+ $blocx-accordion-display:block !default;
+ $blocx-accordion-width:100% !default;
+ $blocx-accordion-box-sizing:border-box !default;
+ $blocx-accordion-heading-cursor:pointer !default;
+ $blocx-accordion-heading-margin:0px 0px 1px 0px !default;
+ $blocx-accordion-heading-padding:12px 34px 12px !default;
+ $blocx-accordion-heading-background-color:#EBEDED !default;
+ $blocx-accordion-heading-color:#2B2826 !default;
+ $blocx-accordion-heading-width:100% !default;
+ $blocx-accordion-heading-border-radius:6px !default;
+ $blocx-accordion-heading-box-sizing:border-box !default;
+ $blocx-accordion-heading-font-size:16px !default;
+ $blocx-accordion-heading-zero-radius:0px !default;
+ $blocx-accordion-content-padding:7px 12px!default;
+ $blocx-accordion-content-background-color:#fff !default;
+ $blocx-accordion-content-border:1px solid #dddddd !default;
+ $blocx-accordion-content-width:100% !default;
+ $blocx-accordion-content-margin:0px 0px 10px 0px !default;
+ $blocx-accordion-content-transform:scaleY(1) !default;
+ $blocx-accordion-content-transform-origin: top !default;
+ $blocx-accordion-content-transition:0.4s ease-out !default;
+ $blocx-accordion-content-close-height:0px !default;
+ $blocx-accordion-content-close-transition:height 1s ease-out !default;
+ $blocx-accordion-content-close-transform:scaleY(0) !default;
+ $blocx-accordion-heading-font-weight:normal!default;
+ $blocx-accordion-heading-line-height:20px!default;
+$blocx-accordion-position:relative!default;
+$blocx-accordion-icon-position:absolute!default;
+$blocx-accordion-icon-top:15px!default;
+$blocx-accordion-icon-left:10px!default;
+$blocx-accordion-body-font-size:13px!default;
+$blocx-accordion-body-line-height:20px!default;
+$blocx-accordion-body-color:#2B2826!default;
+ // blocx-accordion component styles
+ .blocx-accordion {
+     float: $blocx-accordion-float;
+     display: $blocx-accordion-display;
+     width: $blocx-accordion-width;
+     box-sizing: $blocx-accordion-box-sizing;
+     position: $blocx-accordion-position;
+
+     &_icon{
+        position: $blocx-accordion-icon-position;
+        top: $blocx-accordion-icon-top;
+        left: $blocx-accordion-icon-left;
+     }
+
+     &_heading {
+         // blocx-accordion heading styles
+         cursor: $blocx-accordion-heading-cursor;
+         margin: $blocx-accordion-heading-margin;
+         padding: $blocx-accordion-heading-padding;
+         background-color: $blocx-accordion-heading-background-color;
+         color: $blocx-accordion-heading-color;
+         width: $blocx-accordion-heading-width;
+         -webkit-border-radius: $blocx-accordion-heading-border-radius;
+         -moz-border-radius: $blocx-accordion-heading-border-radius;
+         border-radius: $blocx-accordion-heading-border-radius;
+         box-sizing: $blocx-accordion-heading-box-sizing;
+         font-size: $blocx-accordion-heading-font-size;
+         font-weight:$blocx-accordion-heading-font-weight;
+     line-height:$blocx-accordion-heading-line-height;
+     }
+     &_body
+     {
+        font-size: $blocx-accordion-body-font-size;
+        line-height: $blocx-accordion-body-line-height;
+        color: $blocx-accordion-body-color;
+        margin:0;
+     }
+ }
+
+ // blocx-accordion content styles of close
+ .close .blocx-accordion_content {
+     height: $blocx-accordion-content-close-height;
+     transition: $blocx-accordion-content-close-transition;
+     -webkit-transform: $blocx-accordion-content-close-transform;
+     -o-transform: $blocx-accordion-content-close-transform;
+     -ms-transform: $blocx-accordion-content-close-transform;
+     transform: $blocx-accordion-content-close-transform;
+     float: $blocx-accordion-float;
+     display: $blocx-accordion-display;
+
+ }
+
+
+ // blocx-accordion content styles of open
+ .open .blocx-accordion_content {
+     padding: $blocx-accordion-content-padding;
+     background-color: $blocx-accordion-content-background-color;
+    //  border: $blocx-accordion-content-border;
+     width: $blocx-accordion-content-width;
+     margin: $blocx-accordion-content-margin;
+     display: $blocx-accordion-display;
+     -webkit-transform: $blocx-accordion-content-transform;
+     -o-transform: $blocx-accordion-content-transform;
+     -ms-transform: $blocx-accordion-content-transform;
+     transform: $blocx-accordion-content-transform;
+     -webkit-transform-origin: $blocx-accordion-content-transform-origin;
+     -o-transform-origin: $blocx-accordion-content-transform-origin;
+     -ms-transform-origin: $blocx-accordion-content-transform-origin;
+     transform-origin: $blocx-accordion-content-transform-origin;
+     -webkit-transition: -webkit-transform $blocx-accordion-content-transition;
+     -o-transition: -o-transform $blocx-accordion-content-transition;
+     -ms-transition: -ms-transform $blocx-accordion-content-transition;
+     transition: transform $blocx-accordion-content-transition;
+     box-sizing: $blocx-accordion-box-sizing;
+ }
+
+ // blocx-accordion heading styles of open
+ .open .blocx-accordion_heading {
+     margin: 0px;
+     -webkit-border-top-left-radius: $blocx-accordion-heading-border-radius;
+     -webkit-border-top-right-radius: $blocx-accordion-heading-border-radius;
+     -moz-border-radius-topleft: $blocx-accordion-heading-border-radius;
+     -moz-border-radius-topright: $blocx-accordion-heading-border-radius;
+     border-top-left-radius: $blocx-accordion-heading-border-radius;
+     border-top-right-radius: $blocx-accordion-heading-border-radius;
+    //  -webkit-border-bottom-right-radius: $blocx-accordion-heading-zero-radius;
+    //  -webkit-border-bottom-left-radius: $blocx-accordion-heading-zero-radius;
+    //  -moz-border-radius-bottomright: $blocx-accordion-heading-zero-radius;
+    //  -moz-border-radius-bottomleft: $blocx-accordion-heading-zero-radius;
+    //  border-bottom-right-radius: $blocx-accordion-heading-zero-radius;
+    //  border-bottom-left-radius: $blocx-accordion-heading-zero-radius;
+     background-color: $blocx-accordion-heading-background-color;
+     color: $blocx-accordion-heading-color;
+     font-size: $blocx-accordion-heading-font-size;
+     
+ }
+ .open .blocx-accordion_icon{
+    transform: rotate(90deg);
+ }

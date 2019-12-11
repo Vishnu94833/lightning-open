@@ -1,0 +1,121 @@
+@import '../../../resources/assets/styles/scss/_base/index';
+// blocx-modal variables
+$blocx-modal-position:fixed !default;
+$blocx-modal-top:20% !default;
+$blocx-modal-left:50% !default;
+$blocx-modal-z-index:999 !important;
+$blocx-modal-width:680px !default;
+// $blocx-modal-min-height:312px !default;
+$blocx-modal-left:-300px !default;
+$blocx-modal-background:#fff !default;
+$blocx-modal-border-radius:6px !default;
+$blocx-modal-cursor:default;
+$blocx-modal-display:none !default;
+$blocx-modal-close-icon-position:absolute !default;
+$blocx-modal-close-icon-top:20px !default;
+$blocx-modal-close-icon-right:20px !default;
+$blocx-modal-close-icon-cursor:pointer !default;
+$blocx-modal-header-font-size:16px !default;
+$blocx-modal-header-font-weight:bold !default;
+$blocx-modal-header-margin:0 !default;
+$blocx-modal-header-padding:56px 56px 28px 56px !default;
+$blocx-modal-body-margin-bottom:20px !default;
+$blocx-modal-body-paragraph-font-size:13px !default;
+$blocx-modal-body-paragraph-padding:28px 56px 40px!default;
+$blocx-modal-body-paragraph-color:#A6ADB4 !default;
+$blocx-modal-overlay-position:fixed !default;
+$blocx-modal-overlay-top:0 !default;
+$blocx-modal-overlay-left:0 !default;
+$blocx-modal-overlay-width:100% !default;
+$blocx-modal-overlay-min-height:100% !default;
+$blocx-modal-overlay-background:rgba(0, 0, 0, 0.7) !default;
+$blocx-modal-overlay-z-index:997 !default;
+$blocx-modal-overlay-cursor:pointer !default;
+$blocx-modal-overlay-display:none !default;
+$blocx-modal-button-control-text-align:center !default;
+$blocx-modal-button-control-padding:10px 0 !default;
+$blocx-modal-header-line-height:20px!default;
+$blocx-modal-header-color:#202124!default;
+$blocx-modal-body-line-height:23px!default;
+$blocx-modal-margin-left:-300px!default;
+$blocx-modal-body-margin-bottom:20px!default;
+// blocx-modal styles start
+.blocx-modal {
+    position: $blocx-modal-position;
+    top: $blocx-modal-top;
+    left: $blocx-modal-left;
+    z-index: $blocx-modal-z-index;
+    width: $blocx-modal-width;
+    // min-height: $blocx-modal-min-height;
+    min-height: 312px;
+    margin-left: $blocx-modal-margin-left;
+    background: $blocx-modal-background;
+    border-radius: $blocx-modal-border-radius;
+    cursor: $blocx-modal-cursor;
+    display: $blocx-modal-display;
+
+    &_close {
+        position: $blocx-modal-close-icon-position;
+        top: $blocx-modal-close-icon-top;
+        right: $blocx-modal-close-icon-right;
+        cursor: $blocx-modal-close-icon-cursor;
+    }
+
+    &_header {
+        h4 {
+            font-size: $blocx-modal-header-font-size;
+            font-weight: $blocx-modal-header-font-weight;
+            margin: $blocx-modal-header-margin;
+            padding: $blocx-modal-header-padding;
+            color:$blocx-modal-header-color;
+            line-height: $blocx-modal-header-line-height;
+        }
+    }
+
+    &_body {
+        
+        margin-bottom: $blocx-modal-body-margin-bottom;
+
+        p {
+            font-size: $blocx-modal-body-paragraph-font-size;
+            color: $blocx-modal-body-paragraph-color;
+            padding: $blocx-modal-body-paragraph-padding;
+            line-height: $blocx-modal-body-line-height;
+            overflow: auto;
+            max-height: 200px;
+            margin:0;
+        }
+
+        .btn_controls {
+            text-align: $blocx-modal-button-control-text-align;
+            padding: $blocx-modal-button-control-padding;
+            
+        }
+        
+    }
+}
+
+.modal_overlay {
+    position: $blocx-modal-overlay-position;
+    top: $blocx-modal-overlay-top;
+    left: $blocx-modal-overlay-left;
+    width: $blocx-modal-overlay-width;
+    min-height: $blocx-modal-overlay-min-height;
+    background: $blocx-modal-overlay-background;
+    z-index: $blocx-modal-overlay-z-index;
+    cursor: $blocx-modal-overlay-cursor;
+    display: $blocx-modal-overlay-display;
+}
+@include blocx-responsive-breakpoint('mobile'){
+    .blocx-modal {
+        width: 400px;
+        left:60%;
+    }
+}
+@include blocx-responsive-breakpoint('tab'){
+    .blocx-modal {
+        width: 500px;
+        left:60%;
+    }
+}
+// blocx-modal styles end

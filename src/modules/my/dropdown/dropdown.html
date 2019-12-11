@@ -1,0 +1,16 @@
+<template>
+    <!-- Dropdown html code start -->
+    <div class="blocx-input-group col-3 ">
+        <label>{label}</label>
+        <div class="blocx-input-select">
+            <div class="blocx-parent" lwc:dom="manual"></div>
+            <select class="select_id" name="">
+                <template for:each={options} for:item="option">
+                    <option key={option.id} value={option.value}>{option.label}</option>
+                </template>
+            </select>
+        </div>
+    </div>
+    
+    <!-- Dropdown html code end -->
+</template>

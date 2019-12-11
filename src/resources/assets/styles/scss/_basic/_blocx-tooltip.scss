@@ -1,0 +1,219 @@
+// Tooltip variables
+$blocx-tooltip-before-position:absolute !default;
+$blocx-tooltip-before-padding:10px 15px !default;
+$blocx-tooltip-before-line-height:18px !default;
+$blocx-tooltip-before-text-align: left !default;
+$blocx-tooltip-before-font-size:13px !default;
+$blocx-tooltip-before-white-space:normal !default;
+$blocx-tooltip-before-font-weight:normal !default;
+$blocx-tooltip-before-box-shadow:1px 1px 3px rgba(0, 0, 0, 0.3) !default;
+$blocx-tooltip-before-border-radius:3px !default;
+$blocx-tooltip-position:relative!default;
+$blocx-tooltip-color:#2699FB;
+
+//Tooltip mixins 
+@mixin triangle($direction, $size: 8px, $color: $blocx-tooltip-color) {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 0;
+    width: 0;
+
+    @if ($direction=='up') {
+        border-bottom: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-top: none;
+    }
+
+    @else if ($direction=='down') {
+        border-top: $size solid $color;
+        border-left: $size solid transparent;
+        border-right: $size solid transparent;
+        border-bottom: none;
+    }
+
+    @else if ($direction=='left') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-right: $size solid $color;
+        border-left: none;
+    }
+
+    @else if ($direction=='right') {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+        border-left: $size solid $color;
+        border-right: none;
+    }
+}
+
+
+// Tooltip response styles
+$smartphone: 480px;
+$tabletPortrait: 767px;
+$tabletLandscape: 1024px;
+$desktop: 1174px;
+$largeScreen: 1400px;
+
+@mixin respondTo($media) {
+    @if $media==smartphone {
+        @media (max-width: $smartphone) {
+            @content;
+        }
+    }
+
+    @else if $media==tablet {
+        @media (min-width: $tabletPortrait) and (max-width: $tabletLandscape) {
+            @content;
+        }
+    }
+
+    @else if $media==smallScreen {
+        @media (max-width: $desktop) {
+            @content;
+        }
+    }
+
+    @else if $media==desktop {
+        @media (min-width: $desktop) {
+            @content;
+        }
+    }
+}
+
+/*
+* Tooltip mixins
+*/
+@mixin tooltip($direction: nw, $bg-color: $blocx-tooltip-color, $title: false) {
+    // configuration variables
+    $triangle-size: 6px; // = height of triangle, width is 2x
+    $blocx-tooltip-width: 200px;
+    $fade: 300ms;
+    $white: #fff;
+    $black: #000;
+    
+    position: $blocx-tooltip-position;
+
+    &:before,
+    &:after {
+        opacity: 0;
+        z-index: 98;
+        pointer-events: none;
+
+        @include respondTo(smartphone) {
+            display: none;
+        }
+    }
+
+    &:before {
+        // tooltip body
+        content: attr(data-tooltip);
+        position: $blocx-tooltip-before-position;
+        width: $blocx-tooltip-width;
+        padding: $blocx-tooltip-before-padding;
+        line-height: $blocx-tooltip-before-line-height;
+        text-align: $blocx-tooltip-before-text-align;
+        font-size: $blocx-tooltip-before-font-size;
+        font-weight: $blocx-tooltip-before-font-weight;
+        white-space: $blocx-tooltip-before-white-space;
+        box-shadow: $blocx-tooltip-before-box-shadow;
+        border-radius: $blocx-tooltip-before-border-radius;
+        background-color: $bg-color;
+        color: $white;
+    }
+
+    &:after {
+        content: '';
+    }
+
+    // apply positioning to top and bottom values
+    @if $direction=='nw'or $direction=='ne' {
+        &:before {
+            top: -($triangle-size + 3px);
+            bottom: auto; // override with auto in case this tooltip is overriding a previous instance in another direction
+            transform: translateY(-100%);
+        }
+
+        &:after {
+            @include triangle(down, $triangle-size, $bg-color);
+            top: -($triangle-size + 3px);
+            bottom: auto;
+        }
+    }
+
+    @else if $direction=='se'or $direction=='sw' {
+        &:before {
+            bottom: -($triangle-size + 3px);
+            top: auto; // extra 3px for spacing
+            transform: translateY(-100%);
+        }
+
+        &:after {
+            @include triangle(up, $triangle-size, $bg-color);
+            bottom: -($triangle-size + 3px);
+            top: auto;
+        }
+    }
+
+    // apply positioning to left and right values
+    @if $direction=='ne'or $direction=='se' {
+
+        &:before,
+        &:after {
+            left: 50%;
+            right: auto;
+            margin-left: -$triangle-size;
+        }
+
+        &:before {
+            margin-left: -$triangle-size * 3;
+        }
+    }
+
+    @else if $direction=='nw'or $direction=='sw' {
+
+        &:before,
+        &:after {
+            right: 50%;
+            left: auto;
+            margin-right: -$triangle-size;
+        }
+
+        &:before {
+            margin-right: -$triangle-size * 3;
+        }
+    }
+
+    @else {
+        @warn 'direction not valid in tooltip mixin';
+    }
+
+    &:hover {
+
+        &:before,
+        &:after {
+            opacity: 1;
+            pointer-events: all;
+            // @include transition-delay(0ms);
+        }
+    }
+}
+
+.blocx-tooltip {
+    &.ne {
+        @include tooltip(ne, $primary);
+    }
+
+    &.nw {
+        @include tooltip(nw, $primary);
+    }
+
+    &.se {
+        @include tooltip(se, $primary);
+    }
+
+    &.sw {
+        @include tooltip(sw, $primary);
+    }
+}

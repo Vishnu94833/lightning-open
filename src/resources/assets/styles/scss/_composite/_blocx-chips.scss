@@ -1,0 +1,269 @@
+.blocx-chips {
+    &_input {
+        border-bottom: 2px solid #ddd;
+
+        input {
+            display: inline-block;
+            float: none;
+            width: 120px;
+            min-width: 30px;
+            border: none;
+            outline: none;
+        }
+    }
+    &_action{
+        i {
+            color: #2699FB;
+            font-size: 10px;
+            position: inherit;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &_input-wrapper {
+        background: #2699FB;
+        display: inline-block;
+        border-radius: 10px;
+        padding: 6px 0px 6px 0px;
+        position: relative;
+        margin-right: 5px;
+      
+
+        .blocx-chips_input-label {
+            font-size: 14px;
+            line-height: 20px;
+            padding: 14px 39px 11px 32px;
+            color: #FFFFFF;
+           
+        }
+
+        .blocx-chips-img-container {
+            border-radius: 50%;
+            width: 18px;
+            height: 16px;
+            background: #FFFFFF;
+            display: inline;
+            position: absolute;
+            left: 4px;
+            top: 8px;
+           
+            img {
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                cursor: pointer;
+            }
+        }
+
+        img {
+            position: absolute;
+            right: 2px;
+            top: 8px;
+            // cursor: pointer;
+        }
+    }
+
+
+    &_choice-wrapper {
+        background: #FFFFFF;
+        border-radius: 10px;
+        border: 1px solid #EBEDED;
+        padding: 5px 0px;
+        display: inline-block;
+        margin-right: 5px;
+        cursor: pointer;
+
+        .blocx-chips_choice-label {
+            font-size: 14px;
+            line-height: 20px;
+            color: #2699FB;
+            padding: 11px 31px 7px;
+
+        }
+    }
+
+    &_choice-wrapper-selected {
+        border: 1px solid #2699FB;
+        background: #2699FB24;
+    }
+
+
+
+    &_filter-wrapper {
+        background: #FFFFFF;
+        border-radius: 10px;
+        border: 1px solid #EBEDED;
+        padding: 5px 0px;
+        display: inline-block;
+        margin-right: 5px;
+        cursor: pointer;
+
+        .blocx-chips_filter-label {
+            font-size: 14px;
+            line-height: 20px;
+            color: #2699FB;
+            padding: 11px 12px 7px;
+
+        }
+    }
+
+    &_filter-wrapper-selected {
+        background: #2699FB;
+        padding: 5px 9px;
+
+        .blocx-chips_filter-label {
+            color: #FFFFFF;
+            padding: 11px 11px 7px 0px;
+        }
+
+        &::before {
+            content: "\f00c";
+            font-family: FontAwesome;
+            color: #FFFFFF;
+            font-size: 11px;
+        }
+    }
+
+    &_action-wrapper {
+        background: #FFFFFF;
+        border-radius: 10px;
+        border: 1px solid #2699FB;
+        padding: 5px 0px;
+        display: inline-block;
+        position: relative;
+        margin-right: 5px;
+        cursor: pointer;
+
+        .blocx-chips_action-label {
+            font-size: 14px;
+            line-height: 20px;
+            color: #2699FB;
+            padding: 11px 8px 7px 24px;
+
+        }
+
+        .blocx-chips-img-container {
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background: #FFFFFF;
+            display: inline;
+            position: absolute;
+            left: 4px;
+            top: 7px;
+            border: 1px solid #2699FB;
+            pointer-events: none;
+
+            img {
+                position: absolute;
+                font-size: 12px;
+                top: 3px;
+                left: 4px;
+                color: #2699FB;
+            }
+        }
+    }
+
+    &_action-wrapper-selected {
+        background: #2699FB;
+
+        padding: 5px 0px;
+        position: relative;
+        .blocx-chips_action-label {
+
+            padding: 14px 20px 14px 27px;
+            color: #FFFFFF;
+        }
+
+        .blocx-chips-img-container {
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background: #FFFFFF;
+            display: inline;
+            position: absolute;
+            left: 4px;
+            top: 8px;
+
+            // .fa-heart {
+            //     position: absolute;
+            //     font-size: 12px;
+            //     top: 2px;
+            //     left: 1px;
+            //     color: #2699FB;
+            // }
+        }
+    }
+
+    &_state-wrapper {
+        background: #FFFFFF;
+        border-radius: 10px;
+        border: 1px solid #2699FB;
+        padding: 5px 0px;
+        display: inline-block;
+        margin-right: 5px;
+        cursor: pointer;
+
+        .blocx-chips_state-label {
+            font-size: 14px;
+            line-height: 20px;
+            color: #2699FB;
+            padding: 11px 16px 7px 17px;
+
+        }
+
+        &:hover {
+            background: #F4F4F4;
+            border: 1px solid #EBEDED;
+
+            .blocx-chips_state-label {
+                color: #000000DE;
+                // padding: 11px 15px 7px 15px;
+
+            }
+        }
+
+        &:focus {
+            background: #DEDEDE;
+            border: 1px solid #EBEDED;
+
+            .blocx-chips_state-label {
+                color: #000000DE;
+                padding: 11px 15px 7px 15px;
+
+            }
+        }
+
+    }
+
+    &_state-wrapper-selected {
+        background: #2699FB;
+        border: 1px solid #2699FB;
+
+        .blocx-chips_state-label {
+            color: #FFFFFF;
+        }
+
+        &:hover {
+            background: #2699FB;
+            border: 1px solid #2699FB;
+
+            .blocx-chips_state-label {
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    &_state-wrapper-disabled {
+        border: 1px solid #EBEDED;
+        pointer-events: none;
+
+        .blocx-chips_state-label {
+            color: #00000061;
+            padding: 11px 16px 7px 16px;
+
+        }
+    }
+
+}

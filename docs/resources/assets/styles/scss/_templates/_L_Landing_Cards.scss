@@ -1,0 +1,157 @@
+// Landing page template variables
+$landingpage-cards-column-gap:0 !default;
+$landingpage-cards-column-display:block !default;
+$landingpage-cards-column-padding:5px !default;
+$landingpage-cards-column-count2x:2 !default;
+$landingpage-cards-column-count3x:3 !default;
+$landingpage-item-boxsizing:border-box !default;
+$landingpage-item-padding:10px !default;
+$landingpage-item-break-inside:avoid !default;
+$landingpage-box-bg:#fff !default;
+$landingpage-box-color:#333 !default;
+$landingpage-box-display:flex !default;
+$landingpage-box-flex-direction:column !default;
+$landingpage-card-bgcolor: #EBEDED !default;
+$landingpage-card-h6-color:  #000 !default;
+$landingpage-slidercard-heading-bgcolor: #2699fb8c !default;
+$landingpage-slidercard-heading-color: #ffffff !default;
+$landingpage-slidercard-heading-display: block !default;
+$landingpage-slidercard-display: inline-block !default;
+$landingpage-slidercard-height: 200px !default;
+$landingpage-width: 100% !default;
+$landingpage-height: 100% !default;
+$landingpage-absolute-position: absolute !default;
+$landingpage-relative-position: relative !default;
+$landingpage-display-flex: flex !default;
+
+// Landing page template styles start
+.landing-page {
+    .blocx-cards-grid {
+        column-gap: $landingpage-cards-column-gap;
+        display: $landingpage-cards-column-display;
+        padding: $landingpage-cards-column-padding;
+        -webkit-column-gap: $landingpage-cards-column-gap;
+    }
+
+    // Show card based on resolution 
+    @media (min-width: 500px) {
+        .blocx-cards-grid {
+            column-count: $landingpage-cards-column-count2x;
+            -webkit-column-count: $landingpage-cards-column-count2x;
+        }
+    }
+
+    @media (min-width: 700px) {
+        .blocx-cards-grid {
+            column-count: $landingpage-cards-column-count3x;
+            -webkit-column-count: $landingpage-cards-column-count3x;
+        }
+    }
+
+    .blocx-card_outer {
+        box-sizing: $landingpage-item-boxsizing;
+        padding: $landingpage-item-padding;
+        break-inside: $landingpage-item-break-inside;
+        -webkit-column-break-inside: $landingpage-item-break-inside;
+    }
+
+    .blocx-card_inner-box {
+        background: $landingpage-box-bg;
+        color: $landingpage-box-color;
+        display: $landingpage-box-display;
+        flex-direction: $landingpage-box-flex-direction;
+
+        .blocx-card {
+            &_heading {
+                padding: 20px;
+                background: $landingpage-card-bgcolor;
+
+                h5 {
+                    margin: 0;
+                }
+
+                h6 {
+                    margin: 10px 0;
+                    color: $landingpage-card-h6-color;
+                    opacity: .54;
+                    font-size: 14px;
+                }
+            }
+
+            p {
+                line-height: 20px;
+            }
+        }
+    }
+
+    .images-slider {
+        padding: 16px;
+    }
+
+    .box {
+        background: $landingpage-box-bg;
+        color: $landingpage-box-color;
+        display: $landingpage-display-flex;
+        flex-direction: column;
+    }
+
+    .wrapper {
+        height: $landingpage-slidercard-height;
+        width: $landingpage-width;
+        position: $landingpage-relative-position;
+        overflow: hidden;
+        margin: 0 auto;
+    }
+
+    .button-wrapper {
+        width: $landingpage-width;
+        height: $landingpage-height;
+        display: $landingpage-display-flex;
+        justify-content: space-between;
+        align-items: center;
+        position: $landingpage-absolute-position;
+    }
+
+    .carousel {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        width: $landingpage-width;
+        display: $landingpage-display-flex;
+        position: $landingpage-absolute-position;
+        left: 0;
+        transition: all 1s ease;
+    }
+
+    .slider_card {
+        min-width: calc(25% - 1rem);
+        height: $landingpage-slidercard-height;
+        margin-right: .5rem;
+        margin-left: .5rem;
+        display: $landingpage-slidercard-display;
+        position: $landingpage-relative-position;
+
+        img {
+            width: $landingpage-width;
+            height: $landingpage-height;
+        }
+
+        &_heading {
+            position: $landingpage-absolute-position;
+            bottom: 0px;
+            width: $landingpage-width;
+            margin: 0;
+            text-align: center;
+            width: $landingpage-width;
+            box-sizing: border-box;
+            height: 40px;
+            line-height: 40px;
+            color: $landingpage-slidercard-heading-color;
+            background: $landingpage-slidercard-heading-bgcolor;
+            display: $landingpage-slidercard-heading-display;
+
+        }
+    }
+}
+
+// Landing page template styles end

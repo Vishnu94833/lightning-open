@@ -1,0 +1,79 @@
+// Multi selection form variables
+$multiform-heading-font-size:16px !default;
+$multiform-heading-color:#2B2826 !default;
+$multiform-heading-font-weight:normal !default;
+$multiform-heading-margin-bottom:0 !default;
+$multiform-input-group-width:80%!default;
+$multiform-address-textarea-min-height:120px!default;
+$multiform-address-textarea-resize:none!default;
+$multiform-checkbox-label-color:rgba(0, 0, 0, .38)!default;
+$multiform-checkbox-label-font-weight:normal!default;
+$multiform-tabs-section-bg-color:  rgba(233, 237, 239, .36) !default;
+$multiform-tabs-section-width: 100% !default;
+$multiform-tabs-section-height: 100% !default;
+$multiform-controls-text-align: right !default;
+$multiform-controls-a-color: #2699FB !default;
+$multiform-controls-a-text-decoration: none !default;
+$multiform-controls-a-font-size: 12px !default;
+$multiform-controls-a-text-transform: uppercase !default; 
+$multiform-controls-a-margin-right: 20px !default;
+$multiform-controls-display: inline-block !default;
+
+// Multi selection form styles start
+.form-multiselection {
+    .multi-selection_form {
+
+        &_heading {
+            font-size: $multiform-heading-font-size;
+            color: $multiform-heading-color;
+            font-weight: $multiform-heading-font-weight;
+            margin-bottom: $multiform-heading-margin-bottom;
+        }
+
+        .blocx-input-group {
+            width: $multiform-input-group-width;
+        }
+        
+        .address_textarea {
+            min-height: $multiform-address-textarea-min-height;
+            resize: $multiform-address-textarea-resize;
+        }
+       
+        .checkbox-label {
+            color: $multiform-checkbox-label-color;
+            font-weight: $multiform-checkbox-label-font-weight;
+        }
+       
+        .form-tabs-section {
+            width: $multiform-tabs-section-width;
+            height: $multiform-tabs-section-height;
+            background: $multiform-tabs-section-bg-color;
+
+            .blocx-tabs_navigation {
+                width: auto;
+                display: $multiform-controls-display;
+            }
+        }
+        
+        .form-controls {
+            display: $multiform-controls-display;
+            width: $multiform-tabs-section-width;
+            text-align: $multiform-controls-text-align;
+
+            a {
+                color: $multiform-controls-a-color;
+                text-decoration: $multiform-controls-a-text-decoration;
+                font-size: $multiform-controls-a-font-size;
+                text-transform: $multiform-controls-a-text-transform;
+                margin-right:$multiform-controls-a-margin-right;
+            }
+
+            .blocx-button {
+                text-transform: $multiform-controls-a-text-transform;
+                font-size: $multiform-controls-a-font-size;
+            }
+        }
+    }
+    
+}
+// Multi selection form styles end

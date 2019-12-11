@@ -1,0 +1,182 @@
+//L-content-f-pattern template variables
+$l-content-f-pattern-nav-aside-text-transform: none !default;
+$l-content-f-pattern-nav-aside-color: #2B2826 !default;
+$l-content-f-pattern-tabs-nav-border: none !default;
+$l-content-f-pattern-tabs-content-bg-color: #F5F5F5 !default;
+$l-content-f-pattern-tabs-content-revenue-bg-color: white !default;
+$l-content-f-pattern-tabs-content-revenue-line-height: 6px !default;
+$l-content-f-pattern-revenue-section-heading-padding: 6px !default;
+$l-content-f-pattern-tabs-content-revenue-year-font-size: 11px !default;
+$l-content-f-pattern-tabs-content-revenue-stock-value-text-align: left !default;
+$l-content-f-pattern-tabs-content-revenue-a-font-size: 12px !default;
+$l-content-f-pattern-tabs-content-revenue-a-line-height: 16px !default;
+$l-content-f-pattern-tabs-content-revenue-year-text-align: right !default;
+$l-content-f-pattern-tabs-content-revenue-value-holder-font-size: 10px !default;
+$l-content-f-pattern-tabs-content-revenue-value1-color: #4BCA81 !default;
+$l-content-f-pattern-tabs-content-revenue-value-float: right !default;
+$l-content-f-pattern-tabs-content-revenue-value2-color: #2B2826 !default;
+$l-content-f-pattern-tabs-content-revenue-value3-color: #FF4E4E !default;
+$l-content-f-pattern-tabs-content-autocomplete-border-color: #EBEDED !default;
+$l-content-f-pattern-tabs-content-account-sec-heading-font-weight: normal !default;
+$l-content-f-pattern-tabs-content-account-sec-heading-text-transform: uppercase !default;
+$l-content-f-pattern-tabs-content-account-sec-heading-font-size: 16px !default;
+$l-content-f-pattern-tabs-content-account-navigation-font-size: 13px !default;
+$l-content-f-pattern-tabs-content-account-navigation-line-height: 19px !default;
+$l-content-f-pattern-account-section-heading-line-height: 22px !default;
+$l-content-f-pattern-p-revenue-year-color:#717171 !default;
+
+//L-content-f-pattern template style starts
+.l-content-f-pattern {
+    .section-heading {
+        text-transform: $l-content-f-pattern-tabs-content-account-sec-heading-text-transform;
+        font-size: $l-content-f-pattern-tabs-content-account-navigation-font-size;
+        line-height: $l-content-f-pattern-tabs-content-revenue-line-height;
+        padding: $l-content-f-pattern-revenue-section-heading-padding;
+    }
+    .blocx-autocomplete_input.fpattern{
+        font-size: $l-content-f-pattern-tabs-content-revenue-a-font-size;
+        line-height: $l-content-f-pattern-tabs-content-revenue-a-line-height;
+    }
+
+    p.revenue-year {
+        font-size: 15px;
+        line-height: 21px;
+        display: inline-block;
+        color: $l-content-f-pattern-p-revenue-year-color;
+        margin: 0;
+
+    }
+
+    p.revenue-text {
+        font-size: 20px;
+        line-height: 28px;
+        display: inline-block;
+        margin: 0;
+    }
+    p.revenue-stock-value {
+        font-size: 18px;
+        line-height: 26px;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+
+    &_nav-aside {
+        a {
+            text-transform: $l-content-f-pattern-nav-aside-text-transform;
+            color: $l-content-f-pattern-nav-aside-color;
+            font-size: $l-content-f-pattern-tabs-content-revenue-a-font-size;
+            line-height: $l-content-f-pattern-tabs-content-revenue-a-line-height;
+        }
+    }
+
+    &-table {
+        >div {
+            padding-bottom: 5px;
+
+            >div {
+                margin: 0;
+            }
+        }
+
+        &-padding-top {
+            padding-top: 5px;
+        }
+    }
+
+
+    .blocx-tabs {
+        &_navigation {
+            border: $l-content-f-pattern-tabs-nav-border;
+            font-size: $l-content-f-pattern-tabs-content-account-navigation-font-size;
+            line-height: $l-content-f-pattern-tabs-content-account-navigation-line-height;
+        }
+
+        &_content {
+            background-color: $l-content-f-pattern-tabs-content-bg-color;
+
+            .account-sec_heading {
+                font-size: $l-content-f-pattern-tabs-content-account-sec-heading-font-size;
+                font-weight: $l-content-f-pattern-tabs-content-account-sec-heading-font-weight;
+                text-transform: $l-content-f-pattern-tabs-content-account-sec-heading-text-transform;
+                margin: 0;
+                padding: 0 15px;
+                line-height: $l-content-f-pattern-account-section-heading-line-height;
+            }
+
+            .revenue-columns-bg {
+                background-color: $l-content-f-pattern-tabs-content-revenue-bg-color;
+                line-height: $l-content-f-pattern-tabs-content-revenue-line-height;
+                position: relative;
+
+                .revenue-year {
+                    font-size: $l-content-f-pattern-tabs-content-revenue-year-font-size;
+                    text-align: $l-content-f-pattern-tabs-content-revenue-year-text-align;
+                    position: absolute;
+                    right: 15px;
+                    top: 25px;
+                }
+
+                .revenue-stock-value {
+                    text-align: $l-content-f-pattern-tabs-content-revenue-stock-value-text-align;
+                }
+
+                .revenue-value-1 {
+                    font-size: $l-content-f-pattern-tabs-content-revenue-value-holder-font-size;
+                    color: $l-content-f-pattern-tabs-content-revenue-value1-color;
+                    float: $l-content-f-pattern-tabs-content-revenue-value-float;
+                }
+
+                .revenue-value-2 {
+                    font-size: $l-content-f-pattern-tabs-content-revenue-value-holder-font-size;
+                    color: $l-content-f-pattern-tabs-content-revenue-value2-color;
+                    float: $l-content-f-pattern-tabs-content-revenue-value-float;
+                }
+
+                .revenue-value-3 {
+                    font-size: $l-content-f-pattern-tabs-content-revenue-value-holder-font-size;
+                    color: $l-content-f-pattern-tabs-content-revenue-value3-color;
+                    float: $l-content-f-pattern-tabs-content-revenue-value-float;
+                }
+            }
+        }
+
+        .blocx-autocomplete {
+            &_input {
+                border: 2px solid $l-content-f-pattern-tabs-content-autocomplete-border-color;
+            }
+        }
+
+    }
+
+    .blocx-datepicker-wrapper {
+
+        input {
+            padding: 10px;
+        }
+
+        .blocx-datepicker_img img {
+            top: -27px;
+        }
+    }
+    .blocx-input-group label{
+        margin-bottom: 8px;
+        line-height:unset;
+    }
+    .blocx-table {
+        border-spacing: 0px;
+        thead tr td:first-child,
+        tbody tr td:first-child {
+            padding-left: 16px;
+        }
+        thead td, tbody td{
+            padding: 8px;
+        }
+        .blocx-checkbox{
+            margin:0;
+        }
+    }
+
+}
+
+//L-content-f-pattern template style ends

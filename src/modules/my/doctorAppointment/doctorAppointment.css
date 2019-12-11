@@ -1,0 +1,29 @@
+.first-row .first-row-contents {
+  display: flex;
+  justify-content: flex-end;
+  margin: 25px; }
+
+.verticalBorder {
+  padding-right: 10px;
+  border-right: 1px solid gray;
+  padding-left: 10px;
+  color: gray;
+  font-size: 16px; }
+
+.withoutBorder {
+  padding-right: 10px;
+  padding-left: 10px;
+  color: gray;
+  font-size: 16px; }
+
+.second-row .centerMenus {
+  text-align: center;
+  display: flex;
+  justify-content: center; }
+  .second-row .centerMenus .active {
+    font-weight: bold; }
+  .second-row .centerMenus .centerMenu {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: gray;
+    font-size: 20px; }

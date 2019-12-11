@@ -1,0 +1,213 @@
+<template>
+    <my-doctor-appointment></my-doctor-appointment>
+    <div style="padding: 10px 0px 10px 0px;"></div>
+    <my-hero slide-array={slides}></my-hero>
+    <h1 class="container" style="font-size: 30px;color: #898989;font-weight: bold;padding:15px;">Book Appointment</h1>
+
+    <!-- <my-progress-step step-value="1"></my-progress-step> -->
+
+    <template if:true={isFirstPage}>
+        <section style="background: #EFEFEF; padding: 25px;">
+            <div class="container" style="padding-left: 15%;padding-right: 15%;">
+                <my-progress-step step-value={value}></my-progress-step>
+            </div>
+        </section>
+        <div class="container">
+            <my-select-dropdown label="State" placeholder="Select State" options={stateOptions}
+                onselectchange={stateChange}></my-select-dropdown>
+            <my-select-dropdown label="City" placeholder="Select City" options={cityOptions}
+                onselectchange={cityChange}></my-select-dropdown>
+
+            <!-- <button style="background: gray;
+        margin-top: 25px;
+        float: right;
+        border: none;
+        padding: 8px;
+        padding-left: 25px;
+        padding-right: 25px;" onclick={Value}>Search</button> -->
+            <my-button style="float: right;margin-top: 25px;" type="button" btnclass="blocx-button " onclick={Value} label="Select">Search
+            </my-button>
+
+        </div>
+
+        <template if:true={isFirstCard}>
+            <section style="width: 50%;" class="container">
+                <div style="border-right: 1px solid gray;border-bottom: 1px solid gray;padding: 25px;">
+                    <p style="font-weight: bold;">Apolo Hospital</p>
+                    <p>No 107/3, 80 Feet Road, 4th Block, {city} Central,</p>
+                    <p>{city}-560034, {state}</p>
+                    <p>Tel. +91 802296294</p>
+                    <p>Fax +91 80 22273533</p>
+                    <p>doctorAppointment@doc.com</p>
+                    <p>www.doctorAppointment.com
+
+                        <!-- <button style="background: gray;
+                    float: right;
+                    border: none;
+                    padding: 8px;
+                    padding-left: 25px;
+                    padding-right: 25px;" onclick={sencondPage}>Select</button> -->
+
+                        <my-button style="float: right;" type="button" btnclass="blocx-button " onclick={sencondPage}
+                            label="Select"></my-button>
+                    </p>
+
+
+                </div>
+
+            </section>
+        </template>
+    </template>
+
+    <template if:true={isSecondPage}>
+        <section style="background: #EFEFEF; padding: 25px;">
+            <div class="container" style="padding-left: 15%;padding-right: 15%;">
+                <my-progress-step step-value="1"></my-progress-step>
+            </div>
+        </section>
+        <div class="container">
+            <my-select-dropdown label="Specialist" options={speciaists}></my-select-dropdown>
+            <my-select-dropdown label="Hospital" options={hospital}></my-select-dropdown>
+
+            <!-- <button style="background: gray;
+            margin-top: 25px;
+            float: right;
+            border: none;
+            padding: 8px;
+            padding-left: 25px;
+            padding-right: 25px;" onclick={Value}>Search</button> -->
+            <my-button style="float: right;margin-top: 25px;" type="button" btnclass="blocx-button " onclick={Value} label="Search">
+            </my-button>
+
+        </div>
+
+        <template if:true={isFirstCard}>
+            <section>
+                <div class="container">
+
+                    <div class="blocx-grid doctorBock">
+                        <div class="col-md-12 doctorIntro">
+                            <div class="col-md-1"> <img class="docImg"
+                                    src=".././../../resources/assets/images/pharma/Image27.png" alt="carousel image">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="docName">doctor.doctorName</div>
+                                <div class="docDegree">doctor.degreedoctor.speciality</div>
+                                <div class="docDegree">doctor.hospitalLandmark doctor.city</div>
+                            </div>
+                            <div class="col-md-4">Experience: doctor.Experience Years</div>
+                            <div class="col-md-3">Mon-Friday 10AM - 6PM</div>
+                        </div>
+                        <div class="col-md-12 timeImage">
+                            <div class="col-md-1"><img class="docImg"
+                                    src=".././../../resources/assets/images/pharma/Image34@2x.png" alt="carousel image">
+                            </div>
+                            <div class="col-md-1"><img class="docImg"
+                                    src=".././../../resources/assets/images/pharma/Image31.png" alt="carousel image">
+                            </div>
+                            <div class="col-md-1"><img class="docImg"
+                                    src=".././../../resources/assets/images/pharma/Image32.png" alt="carousel image">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="timeDisplay">09.00AM-09.30AM</div>
+                            <div class="timeDisplay">09.30AM-10.00AM</div>
+                            <div class="timeDisplay">10.00AM-10.30AM</div>
+                            <div class="timeDisplay">10.30AM-11.00AM</div>
+                            <div class="docSelect">
+                                <my-button type="button" btnclass="blocx-button "
+                                    onclick={showThirdPage} label="Select"></my-button>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </template>
+
+
+    </template>
+    <template if:true={isThirdPage}>
+        <section style="background: #EFEFEF; padding: 25px;">
+            <div class="container" style="padding-left: 15%;padding-right: 15%;">
+                <my-progress-step step-value="2"></my-progress-step>
+            </div>
+        </section>
+        <div class="col-6 container" style="padding:20px">
+            <my-input input-style="blocx-input-control" type="text" placeholder="Enter Username"
+                oninputhandler={change}>
+            </my-input>
+
+            <my-input input-style="blocx-input-control" type="email" placeholder="Enter Email" oninputhandler={change}>
+            </my-input>
+
+
+            <my-input input-style="blocx-input-control" type="text" placeholder="Enter Mobile no"
+                oninputhandler={change}>
+            </my-input>
+
+            <my-button style="float: right;" type="button" btnclass="blocx-button " onclick={showFourthPage}
+                label="Select"></my-button>
+
+        </div>
+    </template>
+
+    <template if:true={isFourthPage}>
+        <section style="background: #EFEFEF; padding: 25px;">
+            <div class="container" style="padding-left: 15%;padding-right: 15%;">
+                <my-progress-step step-value="3"></my-progress-step>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="blocx-grid">
+                    <div class="col-md-12 confirmDetail1">
+                        <div class="col-md-4">
+                            <div class="headingConfirm">Location</div>
+                            <div class="contentConfirm">Bangalore</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="headingConfirm">Hospital</div>
+                            <div class="contentConfirm">Apolo, Bannergatta Road</div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="headingConfirm">Speciality</div>
+                            <div class="contentConfirm">Cardiology</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 confirmDetail1">
+                        <div class="col-md-4">
+                            <div class="headingConfirm">Doctor Name</div>
+                            <div class="contentConfirm">Atul Prakash
+                                <div class="docDegree marginTop10">MBBS MD (Gen Med) DM (Cardiology)</div>
+                                <div class="marginTop10">Senior Cardiologist (Experience: 10 Years)</div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="headingConfirm">Appointment Time</div>
+                            <div class="contentConfirm">Monday 09.30AM - 10.30AM</div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 confirmDetail1">
+                        <div class="col-md-4">
+                            <div class="headingConfirm">Your details</div>
+                            <div class="contentConfirm">Aliena
+                                <div class="marginTop10">aliena.t@gmail.com</div>
+                                <div class="marginTop10">+91 6865467889</div>
+                            </div>
+                        </div>
+
+                    </div>
+                                 <div class="col-md-12 form-sumbit">
+                                        <div class="confirm-details-button">
+                                                <my-button style="float: right;" class="DetailsButton" type="button" btnclass="blocx-button blocx-button-primary" onclick={showFourthPage}
+                                                label="Confirm"></my-button>        
+                                        </div>
+                                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+</template>
